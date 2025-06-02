@@ -558,6 +558,56 @@ export default function Home() {
           Authentic Home-Cooked Flavors from UP & Bihar
         </Typography>
         <Divider sx={{ my: 2, bgcolor: "#FFD54F" }} />
+        <Typography
+          variant="body1"
+          sx={{
+            color: "#A87600",
+            fontWeight: 500,
+            fontSize: { xs: "1.1rem", md: "1.2rem" },
+            mb: 1,
+          }}
+        >
+          <strong>Contact Us</strong>
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#6D4C1B",
+            fontSize: { xs: "1rem", md: "1.05rem" },
+            mb: 0.5,
+          }}
+        >
+          <strong>Address:</strong> A-64, Himalya Enclave, Khora Colony, Ghaziabad, UP, 201309
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#6D4C1B",
+            fontSize: { xs: "1rem", md: "1.05rem" },
+            mb: 0.5,
+          }}
+        >
+          <strong>Phone:</strong> <a href="tel:+919876543210" style={{ color: "#BF5500", textDecoration: "none" }}>+91 8826-8826-76</a>
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#6D4C1B",
+            fontSize: { xs: "1rem", md: "1.05rem" },
+            mb: 0.5,
+          }}
+        >
+          <strong>Email:</strong> <a href="mailto:swadika.ghareludelights@gmail.com" style={{ color: "#BF5500", textDecoration: "none" }}>swadika.ghareludelights@gmail.com</a>
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "#6D4C1B",
+            fontSize: { xs: "1rem", md: "1.05rem" },
+          }}
+        >
+          <strong>Hours:</strong> 06:00 AM – 11:00 PM (All Days)
+        </Typography>
       </Box>
 
       {/* Menu Sections */}
