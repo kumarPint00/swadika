@@ -2,7 +2,6 @@
 import {
   Box,
   Container,
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -27,37 +26,44 @@ const menuData = {
   comboMeals: [
     {
       name: "Daal Bhat Chokha",
-      description: "Steamed rice with lentil curry and mashed roasted vegetables (chokha).",
+      description:
+        "Steamed rice with lentil curry and mashed roasted vegetables (chokha).",
       price: "₹130",
     },
     {
       name: "Roti Sabji Combo",
-      description: "Whole wheat rotis with your choice of seasonal vegetable curry.",
+      description:
+        "Whole wheat rotis with your choice of seasonal vegetable curry.",
       price: "₹100",
     },
     {
       name: "Litti Chokha Meal",
-      description: "Three littis served with chokha and a side of tangy chutneys.",
+      description:
+        "Three littis served with chokha and a side of tangy chutneys.",
       price: "₹140",
     },
     {
       name: "Poori Bhaji Plate",
-      description: "Fluffy pooris served with spicy potato curry and pickle.",
+      description:
+        "Fluffy pooris served with spicy potato curry and pickle.",
       price: "₹110",
     },
     {
       name: "Khichdi with Kadhi",
-      description: "Rice and lentil porridge served with yogurt-based curry.",
+      description:
+        "Rice and lentil porridge served with yogurt-based curry.",
       price: "₹120",
     },
     {
       name: "Thali - Vegetarian",
-      description: "Rotis, rice, dal, sabji, raita, and pickle – a complete Punjabi/UP meal.",
+      description:
+        "Rotis, rice, dal, sabji, raita, and pickle – a complete Punjabi/UP meal.",
       price: "₹180",
     },
     {
       name: "Thali - Non-Vegetarian",
-      description: "Rotis, rice, dal, sabji, chicken/mutton curry, raita, and pickle.",
+      description:
+        "Rotis, rice, dal, sabji, chicken/mutton curry, raita, and pickle.",
       price: "₹250",
     },
   ],
@@ -69,7 +75,8 @@ const menuData = {
     },
     {
       name: "Kachori",
-      description: "Flaky dough stuffed with spicy lentils, served with chutney.",
+      description:
+        "Flaky dough stuffed with spicy lentils, served with chutney.",
       price: "₹35",
     },
     {
@@ -79,7 +86,8 @@ const menuData = {
     },
     {
       name: "Paneer Pakora",
-      description: "Soft paneer cubes dipped in gram flour batter and deep-fried.",
+      description:
+        "Soft paneer cubes dipped in gram flour batter and deep-fried.",
       price: "₹60",
     },
     {
@@ -104,7 +112,8 @@ const menuData = {
     },
     {
       name: "Puchka (Bihari Golgappa)",
-      description: "Crispy hollow puris filled with spicy tamarind water and potato.",
+      description:
+        "Crispy hollow puris filled with spicy tamarind water and potato.",
       price: "₹35",
     },
     {
@@ -126,7 +135,8 @@ const menuData = {
   mainCourse: [
     {
       name: "Litti Chokha",
-      description: "Traditional baked wheat balls stuffed with sattu, served with mashed roasted eggplant and tomato chutney.",
+      description:
+        "Traditional baked wheat balls stuffed with sattu, served with mashed roasted eggplant and tomato chutney.",
       price: "₹120",
     },
     {
@@ -141,7 +151,8 @@ const menuData = {
     },
     {
       name: "Sattu Paratha w/ Curd & Pickle",
-      description: "Stuffed flatbread with roasted gram flour, served with curd & pickle.",
+      description:
+        "Stuffed flatbread with roasted gram flour, served with curd & pickle.",
       price: "₹80",
     },
     {
@@ -211,7 +222,8 @@ const menuData = {
     },
     {
       name: "Chicken Curry (Bihari Style)",
-      description: "Spicy chicken curry made with traditional Bihari flavors.",
+      description:
+        "Spicy chicken curry made with traditional Bihari flavors.",
       price: "₹160",
     },
     {
@@ -260,7 +272,8 @@ const menuData = {
     },
     {
       name: "Thekua (Sweet Biscuit)",
-      description: "Deep-fried sweet biscuit made with jaggery & wheat flour.",
+      description:
+        "Deep-fried sweet biscuit made with jaggery & wheat flour.",
       price: "₹40",
     },
     {
@@ -280,7 +293,8 @@ const menuData = {
     },
     {
       name: "Anarsa (Rice Flour Biscuit)",
-      description: "Crispy rice flour sweet with sesame topping.",
+      description:
+        "Crispy rice flour sweet with sesame topping.",
       price: "₹50",
     },
     {
@@ -295,17 +309,20 @@ const menuData = {
     },
     {
       name: "Balushahi (Indian Doughnut)",
-      description: "Fried sweet dough balls glazed with sugar syrup.",
+      description:
+        "Fried sweet dough balls glazed with sugar syrup.",
       price: "₹50",
     },
     {
       name: "Kachori Chaat",
-      description: "Crispy kachori topped with yogurt, chutneys, and spices.",
+      description:
+        "Crispy kachori topped with yogurt, chutneys, and spices.",
       price: "₹55",
     },
     {
       name: "Chura Matar",
-      description: "Flattened rice with peas, lightly spiced & refreshing.",
+      description:
+        "Flattened rice with peas, lightly spiced & refreshing.",
       price: "₹40",
     },
     {
@@ -354,27 +371,31 @@ const menuData = {
       name: "Curd (Plain Yogurt)",
       description: "Cooling plain yogurt side.",
       price: "₹25",
-    },
+    },  
   ],
   desserts: [
     {
       name: "Thekua",
-      description: "Traditional sweet biscuit made with jaggery & wheat flour.",
+      description:
+        "Traditional sweet biscuit made with jaggery & wheat flour.",
       price: "₹40",
     },
     {
       name: "Rabri",
-      description: "Thickened sweetened milk flavored with cardamom & saffron.",
+      description:
+        "Thickened sweetened milk flavored with cardamom & saffron.",
       price: "₹60",
     },
     {
       name: "Phirni",
-      description: "Creamy rice pudding flavored with nuts & saffron.",
+      description:
+        "Creamy rice pudding flavored with nuts & saffron.",
       price: "₹50",
     },
     {
       name: "Kheer",
-      description: "Traditional rice pudding sweetened with jaggery or sugar.",
+      description:
+        "Traditional rice pudding sweetened with jaggery or sugar.",
       price: "₹50",
     },
     {
@@ -384,7 +405,8 @@ const menuData = {
     },
     {
       name: "Jalebi",
-      description: "Spiral-shaped fried sweet soaked in saffron syrup.",
+      description:
+        "Spiral-shaped fried sweet soaked in saffron syrup.",
       price: "₹40",
     },
     {
@@ -394,17 +416,20 @@ const menuData = {
     },
     {
       name: "Imarti",
-      description: "Sweet fried circular dessert made with urad dal batter.",
+      description:
+        "Sweet fried circular dessert made with urad dal batter.",
       price: "₹50",
     },
     {
       name: "Balushahi",
-      description: "Fried sweet dough balls glazed with sugar syrup.",
+      description:
+        "Fried sweet dough balls glazed with sugar syrup.",
       price: "₹50",
     },
     {
       name: "Cham Cham",
-      description: "Soft spongy sweet soaked in sugar syrup (Rosogolla variant).",
+      description:
+        "Soft spongy sweet soaked in sugar syrup (Rosogolla variant).",
       price: "₹55",
     },
     {
@@ -540,7 +565,10 @@ export default function Home() {
       <MenuSection title="Starters & Snacks" items={menuData.starters} />
       <MenuSection title="Main Course" items={menuData.mainCourse} />
       <MenuSection title="Traditional Breads" items={menuData.breads} />
-      <MenuSection title="Special Regional Delights & Street Food" items={menuData.streetFood} />
+      <MenuSection
+        title="Special Regional Delights & Street Food"
+        items={menuData.streetFood}
+      />
       <MenuSection title="Sides" items={menuData.sides} />
       <MenuSection title="Desserts" items={menuData.desserts} />
       <MenuSection title="Beverages" items={menuData.beverages} />
@@ -590,9 +618,23 @@ function MenuSection({ title, items }: MenuSectionProps) {
       >
         {title}
       </Typography>
-      <Grid container spacing={3}>
+
+      {/* Instead of Grid, use flex-wrap */}
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 3,
+          justifyContent: { xs: "center", md: "flex-start" },
+        }}
+      >
         {items.map((item, idx) => (
-          <Grid key={item.name + idx} item xs={12} sm={6} md={4}>
+          <Box
+            key={item.name + idx}
+            sx={{
+              width: { xs: "100%", sm: "48%", md: "30%" },
+            }}
+          >
             <Card
               elevation={3}
               sx={{
@@ -606,7 +648,12 @@ function MenuSection({ title, items }: MenuSectionProps) {
               }}
             >
               <CardContent>
-                <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
+                <Box
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  mb={1}
+                >
                   <Typography
                     variant="subtitle1"
                     sx={{
@@ -641,9 +688,9 @@ function MenuSection({ title, items }: MenuSectionProps) {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 }
