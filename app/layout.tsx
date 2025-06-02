@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "../mui/theme";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <title>Swadika GhareluDelights</title>
       </Head>
       <body>
+        <SpeedInsights/>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           {children}
