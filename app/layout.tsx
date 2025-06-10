@@ -15,6 +15,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="stylesheet" href="slick-carousel/slick/slick.css" />
+        <link rel="stylesheet" href="slick-carousel/slick/slick-theme.css" />
+
         {/* App Logo */}
         <link
           rel="icon"
