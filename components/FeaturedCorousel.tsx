@@ -3,6 +3,7 @@
 import Slider from "react-slick";
 import Image from "next/image";
 import { Box, Typography, useTheme } from "@mui/material";
+import ImageOptim from "./ImageOptim";
 
 const slides = [
   { src: "/logo.jpeg", caption: "Litti Chokha" },
@@ -32,7 +33,7 @@ export default function FeaturedCarousel() {
       <Slider {...settings}>
         {slides.map((s) => (
           <Box key={s.caption} position="relative">
-            <Image
+            <ImageOptim
               src={s.src}
               alt={s.caption}
               width={1200}

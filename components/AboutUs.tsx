@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { Box,  Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import ImageOptim from "./ImageOptim";
 
 export default function AboutUs() {
   return (
     <Box py={10}>
       <Grid container spacing={6} alignItems="center">
         <Grid size={{ xs: 12, sm: 6 }}>
-          <Image
+          <ImageOptim
             src="/logo.jpeg"        /* add a kitchen / chef shot in /public */
             alt="About Swadika"
             width={600}

@@ -13,6 +13,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
+import ImageOptim from "@/components/ImageOptim";
 
 interface MenuItem {
   name: string;
@@ -1094,7 +1095,7 @@ export default function Home() {
 
       {/* Header */}
       <Box display="flex" justifyContent="center" mb={2}>
-        <Image
+        <ImageOptim
           src="/logo.jpeg"
           alt={`${t.header.brand} Logo`}
           width={80}

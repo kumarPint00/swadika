@@ -1,5 +1,6 @@
 // @ts-nocheck
 import type { NextConfig } from "next";
+const withMDX = require('@next/mdx')();
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -10,5 +11,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
 };
+export default withMDX({
+  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+});
 
 export default nextConfig;

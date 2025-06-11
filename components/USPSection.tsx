@@ -3,6 +3,7 @@
 import { Box, Typography, Grid, Paper } from "@mui/material";
 import { LocalDining, Verified, DeliveryDining } from "@mui/icons-material";
 import { motion } from "framer-motion";
+import LottieIcon from "./LottieIcon";
 
 const usps = [
   {
@@ -52,6 +53,8 @@ export default function USPSection() {
           </Grid>
         ))}
       </Grid>
+      <LottieIcon json="/lotties/cooking.json" />
+
     </Box>
   );
 }

@@ -25,15 +25,15 @@ export default function MiniContact() {
       </Typography>
       <Button
         startIcon={<PhoneIcon />}
-        href="tel:+9199583822020"
+        href="tel:+919958382202"
         sx={{ mr: 2, color: "#fff", borderColor: "#fff" }}
         variant="outlined"
       >
-        +91 98765 43210
+        +91 99583 82202
       </Button>
       <Button
         startIcon={<WhatsAppIcon />}
-        href="https://wa.me/9199583822020"
+        href="https://wa.me/919958382202"
         target="_blank"
         variant="contained"
         sx={{ background: "#25D366", "&:hover": { background: "#1EBE5D" } }}

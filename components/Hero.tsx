@@ -1,11 +1,16 @@
-// src/components/Hero.tsx
 "use client";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import OfferCountdown from "./OfferCountdown";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import { useColorMode } from "../context/ColorModeContent";
+import theme from "@/mui/theme";
 
 export default function Hero() {
+const { toggle } = useColorMode();
+const isDark = theme.palette.mode === "dark";
   return (
     <Box
       sx={{
@@ -14,6 +19,9 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
+      <IconButton onClick={toggle} sx={{ position:"fixed", top:16, right:16, zIndex:1500 }}>
+        {isDark ? <LightModeIcon /> : <DarkModeIcon />}
+      </IconButton>
       {/* background video */}
       <video
         autoPlay
@@ -83,7 +91,7 @@ export default function Hero() {
             </Button>
           </Link>
           <Button
-            href="https://wa.me/9199583822020"
+            href="https://wa.me/919958382202"
             target="_blank"
             variant="outlined"
             size="large"

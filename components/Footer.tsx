@@ -56,7 +56,7 @@ export default function Footer() {
             <IconButton href="https://instagram.com" target="_blank" sx={{ color: "#E1306C" }}>
               <InstagramIcon />
             </IconButton>
-            <IconButton href="https://wa.me/9199583822020" target="_blank" sx={{ color: "#25D366" }}>
+            <IconButton href="https://wa.me/919958382202" target="_blank" sx={{ color: "#25D366" }}>
               <WhatsAppIcon />
             </IconButton>
           </Grid>
