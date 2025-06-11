@@ -3,9 +3,11 @@ import { useEffect } from "react";
 
 export default function InstagramFeed() {
   useEffect(() => {
-    const s=document.createElement("script");
-    s.src="https://cdn2.woxo.tech/a.js"; s.async=true;
-    document.body.appendChild(s);
+    if (typeof window !== "undefined") {
+      const s=document.createElement("script");
+      s.src="https://cdn2.woxo.tech/a.js"; s.async=true;
+      document.body.appendChild(s);
+    }
   }, []);
   return (
     <div
