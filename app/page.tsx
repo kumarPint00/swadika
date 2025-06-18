@@ -21,7 +21,6 @@ export default function LandingPage() {
 
   return (
     <>
-    <CookieConsent />
       <FlashBanner />
       <Hero />
       <USPSection />
@@ -34,7 +33,6 @@ export default function LandingPage() {
       <NewsletterModal />
       <MapSection />
       <StampCard />
-      <Footer />
     </>
   );
 }

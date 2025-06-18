@@ -1,9 +1,9 @@
-// src/components/TestimonialDeck.tsx
 "use client";
 import { Box, Paper, Typography, Grid } from "@mui/material";
 import { FormatQuote } from "@mui/icons-material";
-import InstagramFeed from "./InstagramFeed";
+import dynamic from "next/dynamic";
 
+const InstagramFeed = dynamic(() => import("@/components/InstagramFeed"), { ssr: false });
 const reviews = [
   { name: "Rohit S.", msg: "Best litti chokha in NCR—tastes like home!" },
   { name: "Ananya P.", msg: "Packaging was neat, food arrived piping hot." },
