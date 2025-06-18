@@ -1,3 +1,4 @@
+"use client";
 import CartItem from "@/components/CartItem";
 import { useCart } from "@/context/CartContext";
 import { Container, Typography, Box, Button } from "@mui/material";
