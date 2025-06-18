@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MapSection from "@/components/MapSection";
 import MiniContact from "@/components/MiniContact";
-import NewsletterModal from "@/components/NeswletterModal";
+import NewsletterModal from "@/components/NewsletterModal";
 import OpeningHours from "@/components/OpeningHours";
 import ProcessSteps from "@/components/ProcessStep";
 import StampCard from "@/components/StampCard";
