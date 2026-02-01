@@ -9,10 +9,12 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import LiveChatWidget from "@/components/LiveChatWidget";
 
 // Context Providers
 import { CartProvider } from "@/context/CartContext";
 import { ColorModeProvider } from "@/context/ColorModeContent";
+import { AuthProvider } from "@/context/AuthContext";
 
 // Theme
 import theme from "../mui/theme";
@@ -73,6 +75,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {/* External Resources */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
         {/* Schema.org */}
         <script
@@ -99,14 +103,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <SpeedInsights />
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <CartProvider>
-            <Header />
-            <CookieConsent />
-            <ColorModeProvider>
-              {children}
-            </ColorModeProvider>
-            <Footer />
-          </CartProvider>
+          <AuthProvider>
+            <CartProvider>
+              <ColorModeProvider>
+                <Header />
+                <CookieConsent />
+                {children}
+                <Footer />
+                <LiveChatWidget />
+              </ColorModeProvider>
+            </CartProvider>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
