@@ -2,7 +2,7 @@
 import AboutUs from "@/components/AboutUs";
 import CookieConsent from "@/components/CookieConsent";
 import FAQSection from "@/components/FAQSection";
-import FeaturedCarousel from "@/components/FeaturedCorousel";
+// import FeaturedCarousel from "@/components/FeaturedCorousel";
 import FlashBanner from "@/components/FlashBanner";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";

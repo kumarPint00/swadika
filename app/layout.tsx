@@ -72,8 +72,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         
         {/* External Resources */}
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="slick-carousel/slick/slick.css" />
-        <link rel="stylesheet" href="slick-carousel/slick/slick-theme.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 
         {/* Schema.org */}
