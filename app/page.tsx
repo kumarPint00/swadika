@@ -4,15 +4,10 @@ import { Restaurant, Verified, LocalShipping, Star, ArrowForward } from "@mui/ic
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
+import { getBestsellers } from "@/lib/menuData";
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
-
-const featuredDishes = [
-  { name: "Litti Chokha", price: 299, image: "/logo.jpeg", rating: 4.8, tag: "Bestseller" },
-  { name: "Sattu Paratha", price: 249, image: "/logo.jpeg", rating: 4.9, tag: "Chef's Choice" },
-  { name: "Dal Baati", price: 349, image: "/logo.jpeg", rating: 4.7, tag: "New" },
-];
 
 const benefits = [
   { icon: <LocalShipping />, title: "30-Min Delivery", desc: "Lightning fast to your door" },
@@ -23,6 +18,7 @@ const benefits = [
 
 export default function HomePage() {
   const { isAuthenticated } = useAuth();
+  const featuredDishes = getBestsellers().slice(0, 3);
 
   return (
     <Box>
@@ -333,7 +329,7 @@ export default function HomePage() {
                       />
                     </MotionBox>
                     <Chip 
-                      label={dish.tag} 
+                      label={dish.isBestseller ? "Bestseller" : "Popular"} 
                       size="small" 
                       sx={{
                         position: "absolute",
@@ -347,7 +343,7 @@ export default function HomePage() {
                   </Box>
                   <CardContent>
                     <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
-                      <Chip label={dish.tag} size="small" color="secondary" />
+                      <Chip label={dish.category} size="small" color="secondary" />
                       <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                         <Star sx={{ fontSize: 16, color: "#FFC107" }} />
                         <Typography variant="body2">{dish.rating}</Typography>
@@ -356,12 +352,15 @@ export default function HomePage() {
                     <Typography variant="h6" sx={{ mb: 1 }}>
                       {dish.name}
                     </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2, minHeight: 40 }}>
+                      {dish.description.slice(0, 60)}...
+                    </Typography>
                     <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                       <Typography variant="h6" color="primary">
                         ₹{dish.price}
                       </Typography>
-                      <Button size="small" variant="outlined">
-                        Add to Cart
+                      <Button size="small" variant="outlined" component={Link} href="/menu">
+                        View Details
                       </Button>
                     </Box>
                   </CardContent>
