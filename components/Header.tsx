@@ -150,20 +150,20 @@ export default function Header() {
                 open={Boolean(anchorEl)}
                 onClose={() => setAnchorEl(null)}
               >
-                <MenuItem component={Link} href="/profile">
+                <MenuItem component={Link} href="/profile" onClick={() => setAnchorEl(null)}>
                   <Person sx={{ mr: 1 }} /> Profile
                 </MenuItem>
-                <MenuItem component={Link} href="/orders">
-                  <Restaurant sx={{ mr: 1 }} /> Orders
+                <MenuItem component={Link} href="/orders" onClick={() => setAnchorEl(null)}>
+                  <Restaurant sx={{ mr: 1 }} /> My Orders
                 </MenuItem>
-                <MenuItem component={Link} href="/rewards">
+                <MenuItem component={Link} href="/rewards" onClick={() => setAnchorEl(null)}>
                   <LocalOffer sx={{ mr: 1 }} /> Rewards ({user?.rewards} pts)
                 </MenuItem>
-                <MenuItem component={Link} href="/favorites">
+                <MenuItem component={Link} href="/favorites" onClick={() => setAnchorEl(null)}>
                   <FavoriteBorder sx={{ mr: 1 }} /> Favorites
                 </MenuItem>
                 <Divider />
-                <MenuItem onClick={logout}>
+                <MenuItem onClick={() => { logout(); setAnchorEl(null); }}>
                   <Logout sx={{ mr: 1 }} /> Logout
                 </MenuItem>
               </Menu>

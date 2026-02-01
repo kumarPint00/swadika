@@ -1,16 +1,15 @@
+// Enhanced Cart & Checkout Page
 "use client";
-import { useState } from "react";
-import { useCart } from "@/context/CartContext";
-import { useAuth } from "@/context/AuthContext";
 import {
+  Box,
   Container,
   Typography,
-  Box,
-  Button,
   Card,
   CardContent,
-  IconButton,
+  Grid,
+  Button,
   Divider,
+  IconButton,
   TextField,
   Stepper,
   Step,
@@ -19,309 +18,540 @@ import {
   RadioGroup,
   FormControlLabel,
   FormControl,
-  Paper,
   Chip,
-  Grid,
+  Stack,
 } from "@mui/material";
-import { Add, Remove, Delete, ArrowBack, ArrowForward, LocalOffer } from "@mui/icons-material";
-import Link from "next/link";
+import {
+  Delete,
+  Add,
+  Remove,
+  LocalOffer,
+  CreditCard,
+  AccountBalanceWallet,
+  Payment,
+  CheckCircle,
+} from "@mui/icons-material";
+import { motion } from "framer-motion";
+import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/context/AuthContext";
+import { useAddresses } from "@/context/AddressContext";
+import { useOrders } from "@/context/OrderContext";
+import { useToast } from "@/context/ToastContext";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-const steps = ["Cart", "Address & Time", "Payment"];
+const MotionBox = motion(Box);
+const MotionCard = motion(Card);
 
 export default function CartPage() {
-  const { cart, remove, clear, add } = useCart();
-  const { user, isAuthenticated } = useAuth();
+  const { cart, remove, clear } = useCart();
+  const { isAuthenticated } = useAuth();
+  const { defaultAddress, addresses } = useAddresses();
+  const { createOrder } = useOrders();
+  const { success, error } = useToast();
   const router = useRouter();
-  const [activeStep, setActiveStep] = useState(0);
-  const [promoCode, setPromoCode] = useState("");
-  const [deliveryOption, setDeliveryOption] = useState("standard");
-  const [paymentMethod, setPaymentMethod] = useState("online");
 
-  const subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
-  const deliveryFee = deliveryOption === "express" ? 49 : 0;
-  const discount = promoCode === "FIRST10" ? subtotal * 0.1 : 0;
+  const [activeStep, setActiveStep] = useState(0);
+  const [selectedAddress, setSelectedAddress] = useState(defaultAddress?.id || "");
+  const [paymentMethod, setPaymentMethod] = useState("cod");
+  const [promoCode, setPromoCode] = useState("");
+  const [discount, setDiscount] = useState(0);
+
+  const steps = ["Cart", "Address", "Payment"];
+
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const deliveryFee = subtotal >= 299 ? 0 : 40;
   const total = subtotal + deliveryFee - discount;
 
-  const handleNext = () => {
-    if (activeStep === 0 && cart.length === 0) return;
-    if (activeStep === 2) {
-      // Complete order
-      router.push("/order-confirmation");
-      clear();
+  const handleApplyPromo = () => {
+    const promoCodes: { [key: string]: number } = {
+      FIRST20: 0.2,
+      SAVE10: 0.1,
+      WELCOME15: 0.15,
+    };
+
+    if (promoCodes[promoCode]) {
+      const discountAmount = subtotal * promoCodes[promoCode];
+      setDiscount(discountAmount);
+      success(`Promo code applied! You saved ₹${discountAmount}`);
+    } else {
+      error("Invalid promo code");
+    }
+  };
+
+  const handlePlaceOrder = () => {
+    if (!isAuthenticated) {
+      error("Please login to place order");
+      router.push("/login");
       return;
     }
-    setActiveStep((prev) => prev + 1);
-  };
 
-  const handleBack = () => {
-    setActiveStep((prev) => prev - 1);
-  };
-
-  const updateQuantity = (id: string, newQty: number) => {
-    if (newQty === 0) {
-      remove(id);
-    } else {
-      const item = cart.find((i) => i.id === id);
-      if (item) {
-        remove(id);
-        add({ ...item, qty: newQty });
-      }
+    if (!selectedAddress) {
+      error("Please select a delivery address");
+      return;
     }
+
+    const address = addresses.find((a) => a.id === selectedAddress);
+    if (!address) return;
+
+    const orderId = createOrder(cart, address, paymentMethod);
+    clear();
+    success("Order placed successfully! 🎉");
+    router.push(`/orders`);
   };
+
+  if (cart.length === 0) {
+    return (
+      <Box sx={{ bgcolor: "background.default", minHeight: "100vh", py: 10 }}>
+        <Container maxWidth="md">
+          <MotionBox
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            sx={{ textAlign: "center" }}
+          >
+            <Typography variant="h3" sx={{ mb: 3, fontWeight: 800 }}>
+              Your cart is empty
+            </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+              Add some delicious items to get started!
+            </Typography>
+            <Button component={Link} href="/menu" variant="contained" size="large">
+              Browse Menu
+            </Button>
+          </MotionBox>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
-    <Box sx={{ bgcolor: "background.default", minHeight: "100vh", py: 6 }}>
+    <Box sx={{ bgcolor: "background.default", minHeight: "100vh", py: 8 }}>
       <Container maxWidth="lg">
-        <Typography variant="h3" sx={{ mb: 4 }}>
-          Checkout
-        </Typography>
-
-        <Stepper activeStep={activeStep} sx={{ mb: 6 }}>
-          {steps.map((label) => (
-            <Step key={label}>
-              <StepLabel>{label}</StepLabel>
-            </Step>
-          ))}
-        </Stepper>
+        {/* Header */}
+        <MotionBox
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          sx={{ mb: 6 }}
+        >
+          <Typography variant="h2" sx={{ mb: 2, fontWeight: 800 }}>
+            Checkout
+          </Typography>
+          <Stepper activeStep={activeStep} sx={{ mb: 4 }}>
+            {steps.map((label) => (
+              <Step key={label}>
+                <StepLabel>{label}</StepLabel>
+              </Step>
+            ))}
+          </Stepper>
+        </MotionBox>
 
         <Grid container spacing={4}>
+          {/* Main Content */}
           <Grid size={{ xs: 12, md: 8 }}>
-            {/* Step 0: Cart */}
+            {/* Step 1: Cart Items */}
             {activeStep === 0 && (
-              <Box>
-                {cart.length === 0 ? (
-                  <Card>
-                    <CardContent sx={{ textAlign: "center", py: 8 }}>
-                      <Typography variant="h6" color="text.secondary" sx={{ mb: 3 }}>
-                        Your cart is empty
-                      </Typography>
-                      <Button component={Link} href="/menu" variant="contained">
-                        Browse Menu
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ) : (
-                  cart.map((item) => (
-                    <Card key={item.id} sx={{ mb: 2 }}>
-                      <CardContent>
-                        <Grid container spacing={2} alignItems="center">
-                          <Grid size={{ xs: 12, sm: 6 }}>
+              <MotionCard
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                elevation={0}
+                sx={{ border: "1px solid", borderColor: "divider" }}
+              >
+                <CardContent>
+                  <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
+                    Cart Items ({cart.length})
+                  </Typography>
+
+                  <Stack spacing={2}>
+                    {cart.map((item, index) => (
+                      <MotionBox
+                        key={item.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Box
+                          sx={{
+                            p: 2,
+                            border: "1px solid",
+                            borderColor: "divider",
+                            borderRadius: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 2,
+                          }}
+                        >
+                          <Box sx={{ flex: 1 }}>
                             <Typography variant="h6">{item.name}</Typography>
                             <Typography variant="body2" color="text.secondary">
                               ₹{item.price} each
                             </Typography>
-                          </Grid>
-                          <Grid size={{ xs: 6, sm: 3 }}>
-                            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                              <IconButton
-                                size="small"
-                                onClick={() => updateQuantity(item.id, item.qty - 1)}
-                              >
-                                <Remove />
-                              </IconButton>
-                              <Typography>{item.qty}</Typography>
-                              <IconButton
-                                size="small"
-                                onClick={() => updateQuantity(item.id, item.qty + 1)}
-                              >
-                                <Add />
-                              </IconButton>
-                            </Box>
-                          </Grid>
-                          <Grid size={{ xs: 6, sm: 2 }}>
-                            <Typography variant="h6">₹{item.price * item.qty}</Typography>
-                          </Grid>
-                          <Grid size={{ xs: 12, sm: 1 }}>
-                            <IconButton color="error" onClick={() => remove(item.id)}>
-                              <Delete />
+                          </Box>
+
+                          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                            <IconButton size="small">
+                              <Remove />
                             </IconButton>
-                          </Grid>
-                        </Grid>
-                      </CardContent>
-                    </Card>
-                  ))
-                )}
-              </Box>
-            )}
-
-            {/* Step 1: Address & Time */}
-            {activeStep === 1 && (
-              <Card>
-                <CardContent>
-                  <Typography variant="h6" sx={{ mb: 3 }}>
-                    Delivery Details
-                  </Typography>
-                  <Grid container spacing={3}>
-                    <Grid size={{ xs: 12, sm: 6 }}>
-                      <TextField fullWidth label="Full Name" defaultValue={user?.name} />
-                    </Grid>
-                    <Grid size={{ xs: 12, sm: 6 }}>
-                      <TextField fullWidth label="Phone" defaultValue={user?.phone} />
-                    </Grid>
-                    <Grid size={{ xs: 12 }}>
-                      <TextField
-                        fullWidth
-                        label="Delivery Address"
-                        multiline
-                        rows={3}
-                        placeholder="House number, street, landmark..."
-                      />
-                    </Grid>
-                    <Grid size={{ xs: 12, sm: 6 }}>
-                      <TextField fullWidth label="City" defaultValue="Ghaziabad" />
-                    </Grid>
-                    <Grid size={{ xs: 12, sm: 6 }}>
-                      <TextField fullWidth label="Pincode" />
-                    </Grid>
-                  </Grid>
-
-                  <Divider sx={{ my: 3 }} />
-
-                  <Typography variant="h6" sx={{ mb: 2 }}>
-                    Delivery Speed
-                  </Typography>
-                  <FormControl>
-                    <RadioGroup value={deliveryOption} onChange={(e) => setDeliveryOption(e.target.value)}>
-                      <FormControlLabel
-                        value="standard"
-                        control={<Radio />}
-                        label={
-                          <Box>
-                            <Typography>Standard Delivery (40-60 min)</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              Free
+                            <Typography sx={{ minWidth: 30, textAlign: "center" }}>
+                              {item.qty}
                             </Typography>
+                            <IconButton size="small">
+                              <Add />
+                            </IconButton>
                           </Box>
-                        }
-                      />
-                      <FormControlLabel
-                        value="express"
-                        control={<Radio />}
-                        label={
-                          <Box>
-                            <Typography>Express Delivery (20-30 min)</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              +₹49
-                            </Typography>
-                          </Box>
-                        }
-                      />
-                    </RadioGroup>
-                  </FormControl>
+
+                          <Typography variant="h6" sx={{ minWidth: 80, textAlign: "right" }}>
+                            ₹{item.price * item.qty}
+                          </Typography>
+
+                          <IconButton color="error" onClick={() => remove(item.id)}>
+                            <Delete />
+                          </IconButton>
+                        </Box>
+                      </MotionBox>
+                    ))}
+                  </Stack>
+
+                  <Box sx={{ mt: 4, display: "flex", justifyContent: "space-between" }}>
+                    <Button variant="outlined" onClick={clear}>
+                      Clear Cart
+                    </Button>
+                    <Button variant="contained" onClick={() => setActiveStep(1)}>
+                      Proceed to Address
+                    </Button>
+                  </Box>
                 </CardContent>
-              </Card>
+              </MotionCard>
             )}
 
-            {/* Step 2: Payment */}
-            {activeStep === 2 && (
-              <Card>
+            {/* Step 2: Address Selection */}
+            {activeStep === 1 && (
+              <MotionCard
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                elevation={0}
+                sx={{ border: "1px solid", borderColor: "divider" }}
+              >
                 <CardContent>
-                  <Typography variant="h6" sx={{ mb: 3 }}>
+                  <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
+                    <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                      Delivery Address
+                    </Typography>
+                    <Button
+                      component={Link}
+                      href="/profile"
+                      variant="outlined"
+                      size="small"
+                    >
+                      Add New
+                    </Button>
+                  </Box>
+
+                  {addresses.length === 0 ? (
+                    <Box sx={{ textAlign: "center", py: 4 }}>
+                      <Typography color="text.secondary" sx={{ mb: 2 }}>
+                        No saved addresses
+                      </Typography>
+                      <Button component={Link} href="/profile" variant="contained">
+                        Add Address
+                      </Button>
+                    </Box>
+                  ) : (
+                    <FormControl component="fieldset" fullWidth>
+                      <RadioGroup
+                        value={selectedAddress}
+                        onChange={(e) => setSelectedAddress(e.target.value)}
+                      >
+                        {addresses.map((address) => (
+                          <Box
+                            key={address.id}
+                            sx={{
+                              p: 2,
+                              mb: 2,
+                              border: "2px solid",
+                              borderColor:
+                                selectedAddress === address.id ? "primary.main" : "divider",
+                              borderRadius: 2,
+                              cursor: "pointer",
+                            }}
+                            onClick={() => setSelectedAddress(address.id)}
+                          >
+                            <FormControlLabel
+                              value={address.id}
+                              control={<Radio />}
+                              label={
+                                <Box>
+                                  <Box sx={{ display: "flex", gap: 1, mb: 0.5 }}>
+                                    <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                                      {address.name}
+                                    </Typography>
+                                    {address.isDefault && (
+                                      <Chip label="Default" size="small" color="primary" />
+                                    )}
+                                  </Box>
+                                  <Typography variant="body2" color="text.secondary">
+                                    {address.addressLine1}, {address.city}, {address.state} -{" "}
+                                    {address.pincode}
+                                  </Typography>
+                                  <Typography variant="body2" color="text.secondary">
+                                    📞 {address.phone}
+                                  </Typography>
+                                </Box>
+                              }
+                            />
+                          </Box>
+                        ))}
+                      </RadioGroup>
+                    </FormControl>
+                  )}
+
+                  <Box sx={{ mt: 4, display: "flex", justifyContent: "space-between" }}>
+                    <Button variant="outlined" onClick={() => setActiveStep(0)}>
+                      Back
+                    </Button>
+                    <Button
+                      variant="contained"
+                      onClick={() => setActiveStep(2)}
+                      disabled={!selectedAddress}
+                    >
+                      Proceed to Payment
+                    </Button>
+                  </Box>
+                </CardContent>
+              </MotionCard>
+            )}
+
+            {/* Step 3: Payment */}
+            {activeStep === 2 && (
+              <MotionCard
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                elevation={0}
+                sx={{ border: "1px solid", borderColor: "divider" }}
+              >
+                <CardContent>
+                  <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
                     Payment Method
                   </Typography>
-                  <FormControl fullWidth>
-                    <RadioGroup value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                      <FormControlLabel
-                        value="online"
-                        control={<Radio />}
-                        label="Pay Online (UPI / Card / Wallet)"
-                      />
-                      <FormControlLabel
-                        value="cod"
-                        control={<Radio />}
-                        label="Cash on Delivery"
-                      />
+
+                  <FormControl component="fieldset" fullWidth>
+                    <RadioGroup
+                      value={paymentMethod}
+                      onChange={(e) => setPaymentMethod(e.target.value)}
+                    >
+                      <Box
+                        sx={{
+                          p: 3,
+                          mb: 2,
+                          border: "2px solid",
+                          borderColor: paymentMethod === "cod" ? "primary.main" : "divider",
+                          borderRadius: 2,
+                          cursor: "pointer",
+                        }}
+                        onClick={() => setPaymentMethod("cod")}
+                      >
+                        <FormControlLabel
+                          value="cod"
+                          control={<Radio />}
+                          label={
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                              <Payment sx={{ fontSize: 32, color: "primary.main" }} />
+                              <Box>
+                                <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                                  Cash on Delivery
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                  Pay when you receive
+                                </Typography>
+                              </Box>
+                            </Box>
+                          }
+                        />
+                      </Box>
+
+                      <Box
+                        sx={{
+                          p: 3,
+                          mb: 2,
+                          border: "2px solid",
+                          borderColor: paymentMethod === "card" ? "primary.main" : "divider",
+                          borderRadius: 2,
+                          cursor: "pointer",
+                        }}
+                        onClick={() => setPaymentMethod("card")}
+                      >
+                        <FormControlLabel
+                          value="card"
+                          control={<Radio />}
+                          label={
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                              <CreditCard sx={{ fontSize: 32, color: "primary.main" }} />
+                              <Box>
+                                <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                                  Credit/Debit Card
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                  Visa, Mastercard, RuPay
+                                </Typography>
+                              </Box>
+                            </Box>
+                          }
+                        />
+                      </Box>
+
+                      <Box
+                        sx={{
+                          p: 3,
+                          border: "2px solid",
+                          borderColor: paymentMethod === "upi" ? "primary.main" : "divider",
+                          borderRadius: 2,
+                          cursor: "pointer",
+                        }}
+                        onClick={() => setPaymentMethod("upi")}
+                      >
+                        <FormControlLabel
+                          value="upi"
+                          control={<Radio />}
+                          label={
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                              <AccountBalanceWallet sx={{ fontSize: 32, color: "primary.main" }} />
+                              <Box>
+                                <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                                  UPI
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                  Google Pay, PhonePe, Paytm
+                                </Typography>
+                              </Box>
+                            </Box>
+                          }
+                        />
+                      </Box>
                     </RadioGroup>
                   </FormControl>
 
-                  {paymentMethod === "online" && (
-                    <Box sx={{ mt: 3, p: 3, bgcolor: "success.light", borderRadius: 2 }}>
-                      <Typography variant="body2" color="success.dark">
-                        ✓ Get 5% instant discount on online payment
-                      </Typography>
-                    </Box>
-                  )}
+                  <Box sx={{ mt: 4, display: "flex", justifyContent: "space-between" }}>
+                    <Button variant="outlined" onClick={() => setActiveStep(1)}>
+                      Back
+                    </Button>
+                    <Button
+                      variant="contained"
+                      size="large"
+                      startIcon={<CheckCircle />}
+                      onClick={handlePlaceOrder}
+                    >
+                      Place Order
+                    </Button>
+                  </Box>
                 </CardContent>
-              </Card>
+              </MotionCard>
             )}
           </Grid>
 
-          {/* Order Summary Sidebar */}
+          {/* Order Summary */}
           <Grid size={{ xs: 12, md: 4 }}>
-            <Paper sx={{ p: 3, position: "sticky", top: 100 }}>
-              <Typography variant="h6" sx={{ mb: 3 }}>
-                Order Summary
-              </Typography>
+            <MotionCard
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              elevation={0}
+              sx={{
+                position: "sticky",
+                top: 100,
+                border: "1px solid",
+                borderColor: "divider",
+              }}
+            >
+              <CardContent>
+                <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
+                  Order Summary
+                </Typography>
 
-              <Box sx={{ mb: 3 }}>
-                <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1 }}>
-                  <Typography>Subtotal</Typography>
-                  <Typography>₹{subtotal}</Typography>
-                </Box>
-                <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1 }}>
-                  <Typography>Delivery Fee</Typography>
-                  <Typography>{deliveryFee === 0 ? "Free" : `₹${deliveryFee}`}</Typography>
-                </Box>
-                {discount > 0 && (
-                  <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1, color: "success.main" }}>
-                    <Typography>Discount</Typography>
-                    <Typography>-₹{discount.toFixed(2)}</Typography>
-                  </Box>
-                )}
-                <Divider sx={{ my: 2 }} />
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                  <Typography variant="h6">Total</Typography>
-                  <Typography variant="h6">₹{total.toFixed(2)}</Typography>
-                </Box>
-              </Box>
-
-              <Box sx={{ mb: 3 }}>
-                <TextField
-                  fullWidth
-                  size="small"
-                  placeholder="Enter promo code"
-                  value={promoCode}
-                  onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
-                  InputProps={{
-                    endAdornment: <LocalOffer color="action" />,
-                  }}
-                />
-                {promoCode === "FIRST10" && (
-                  <Chip
-                    label="10% discount applied!"
-                    color="success"
+                {/* Promo Code */}
+                <Box sx={{ mb: 3 }}>
+                  <TextField
+                    fullWidth
                     size="small"
-                    sx={{ mt: 1 }}
+                    placeholder="Enter promo code"
+                    value={promoCode}
+                    onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
+                    InputProps={{
+                      endAdornment: (
+                        <Button size="small" onClick={handleApplyPromo}>
+                          Apply
+                        </Button>
+                      ),
+                    }}
                   />
-                )}
-              </Box>
+                  <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
+                    <Chip
+                      label="FIRST20"
+                      size="small"
+                      onClick={() => setPromoCode("FIRST20")}
+                      clickable
+                    />
+                    <Chip
+                      label="SAVE10"
+                      size="small"
+                      onClick={() => setPromoCode("SAVE10")}
+                      clickable
+                    />
+                  </Box>
+                </Box>
 
-              <Box sx={{ display: "flex", gap: 2 }}>
-                {activeStep > 0 && (
-                  <Button fullWidth variant="outlined" onClick={handleBack} startIcon={<ArrowBack />}>
-                    Back
-                  </Button>
-                )}
-                <Button
-                  fullWidth
-                  variant="contained"
-                  onClick={handleNext}
-                  disabled={activeStep === 0 && cart.length === 0}
-                  endIcon={<ArrowForward />}
-                >
-                  {activeStep === 2 ? "Place Order" : "Continue"}
-                </Button>
-              </Box>
+                <Divider sx={{ my: 2 }} />
 
-              {user?.rewards && user.rewards > 0 && (
-                <Box sx={{ mt: 3, p: 2, bgcolor: "secondary.light", borderRadius: 2 }}>
-                  <Typography variant="body2">
-                    You have <strong>{user.rewards}</strong> reward points worth ₹{user.rewards}
+                {/* Price Breakdown */}
+                <Stack spacing={1.5}>
+                  <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                    <Typography variant="body2">Subtotal</Typography>
+                    <Typography variant="body2">₹{subtotal}</Typography>
+                  </Box>
+                  <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                    <Typography variant="body2">Delivery Fee</Typography>
+                    <Typography variant="body2" color={deliveryFee === 0 ? "success.main" : "text.primary"}>
+                      {deliveryFee === 0 ? "FREE" : `₹${deliveryFee}`}
+                    </Typography>
+                  </Box>
+                  {discount > 0 && (
+                    <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                      <Typography variant="body2" color="success.main">
+                        Discount
+                      </Typography>
+                      <Typography variant="body2" color="success.main">
+                        -₹{discount}
+                      </Typography>
+                    </Box>
+                  )}
+                </Stack>
+
+                <Divider sx={{ my: 2 }} />
+
+                <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                    Total
+                  </Typography>
+                  <Typography variant="h6" sx={{ fontWeight: 700, color: "primary.main" }}>
+                    ₹{total}
                   </Typography>
                 </Box>
-              )}
-            </Paper>
+
+                {subtotal < 299 && (
+                  <Box
+                    sx={{
+                      p: 2,
+                      bgcolor: "info.main",
+                      color: "#fff",
+                      borderRadius: 2,
+                      textAlign: "center",
+                    }}
+                  >
+                    <Typography variant="body2">
+                      Add ₹{299 - subtotal} more for FREE delivery! 🎉
+                    </Typography>
+                  </Box>
+                )}
+              </CardContent>
+            </MotionCard>
           </Grid>
         </Grid>
       </Container>

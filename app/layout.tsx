@@ -15,6 +15,11 @@ import LiveChatWidget from "@/components/LiveChatWidget";
 import { CartProvider } from "@/context/CartContext";
 import { ColorModeProvider } from "@/context/ColorModeContent";
 import { AuthProvider } from "@/context/AuthContext";
+import { ToastProvider } from "@/context/ToastContext";
+import { OrderProvider } from "@/context/OrderContext";
+import { AddressProvider } from "@/context/AddressContext";
+import { ReviewProvider } from "@/context/ReviewContext";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 
 // Theme
 import theme from "../mui/theme";
@@ -103,17 +108,27 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <SpeedInsights />
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <AuthProvider>
-            <CartProvider>
-              <ColorModeProvider>
-                <Header />
-                <CookieConsent />
-                {children}
-                <Footer />
-                <LiveChatWidget />
-              </ColorModeProvider>
-            </CartProvider>
-          </AuthProvider>
+          <ToastProvider>
+            <AuthProvider>
+              <CartProvider>
+                <OrderProvider>
+                  <AddressProvider>
+                    <ReviewProvider>
+                      <FavoritesProvider>
+                        <ColorModeProvider>
+                          <Header />
+                          <CookieConsent />
+                          {children}
+                          <Footer />
+                          <LiveChatWidget />
+                        </ColorModeProvider>
+                      </FavoritesProvider>
+                    </ReviewProvider>
+                  </AddressProvider>
+                </OrderProvider>
+              </CartProvider>
+            </AuthProvider>
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

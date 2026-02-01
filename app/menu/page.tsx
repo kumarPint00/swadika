@@ -42,7 +42,7 @@ import {
 } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/context/CartContext";
-import { menuData, categories, type Dish } from "@/lib/menuData";
+import { menuData, getAllCategories, type Dish } from "@/lib/menuData";
 
 const MotionCard = motion(Card);
 const MotionBox = motion(Box);
@@ -56,6 +56,8 @@ export default function MenuPage() {
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [selectedDish, setSelectedDish] = useState<Dish | null>(null);
   const { add } = useCart();
+  
+  const categories = ["All", ...getAllCategories()];
 
   const filteredDishes = useMemo(() => {
     let dishes = menuData;
@@ -538,34 +540,37 @@ export default function MenuPage() {
               <Divider sx={{ my: 3 }} />
 
               {/* Ingredients */}
-              <Box sx={{ mb: 3 }}>
-                <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                  🥘 Ingredients
-                </Typography>
-                <List dense>
-                  {selectedDish.ingredients.map((ingredient, index) => (
-                    <ListItem key={index} sx={{ py: 0.5 }}>
-                      <ListItemText
-                        primary={`• ${ingredient}`}
-                        sx={{ "& .MuiListItemText-primary": { fontSize: "0.95rem" } }}
-                      />
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
+              {selectedDish.ingredients && (
+                <Box sx={{ mb: 3 }}>
+                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
+                    🥘 Ingredients
+                  </Typography>
+                  <List dense>
+                    {selectedDish.ingredients.map((ingredient, index) => (
+                      <ListItem key={index} sx={{ py: 0.5 }}>
+                        <ListItemText
+                          primary={`• ${ingredient}`}
+                          sx={{ "& .MuiListItemText-primary": { fontSize: "0.95rem" } }}
+                        />
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
+              )}
 
               <Divider sx={{ my: 3 }} />
 
               {/* Instructions */}
-              <Box sx={{ mb: 3 }}>
-                <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                  👨‍🍳 Preparation Method
-                </Typography>
-                <List>
-                  {selectedDish.instructions.map((step, index) => (
-                    <ListItem key={index} sx={{ alignItems: "flex-start", py: 1 }}>
-                      <ListItemText
-                        primary={
+              {selectedDish.instructions && (
+                <Box sx={{ mb: 3 }}>
+                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
+                    👨‍🍳 Preparation Method
+                  </Typography>
+                  <List>
+                    {selectedDish.instructions.map((step, index) => (
+                      <ListItem key={index} sx={{ alignItems: "flex-start", py: 1 }}>
+                        <ListItemText
+                          primary={
                           <Box>
                             <Typography component="span" sx={{ fontWeight: 700, color: "primary.main" }}>
                               Step {index + 1}:
@@ -580,24 +585,27 @@ export default function MenuPage() {
                   ))}
                 </List>
               </Box>
+              )}
 
               <Divider sx={{ my: 3 }} />
 
               {/* Nutrition & Origin */}
               <Grid container spacing={3}>
-                <Grid size={{ xs: 12, md: 6 }}>
-                  <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                    🍽️ Nutrition (per serving)
-                  </Typography>
-                  <Stack spacing={1}>
-                    <Typography variant="body2">Calories: {selectedDish.nutrition.calories} kcal</Typography>
-                    <Typography variant="body2">Protein: {selectedDish.nutrition.protein}</Typography>
-                    <Typography variant="body2">Carbs: {selectedDish.nutrition.carbs}</Typography>
-                    <Typography variant="body2">Fat: {selectedDish.nutrition.fat}</Typography>
-                  </Stack>
-                </Grid>
+                {selectedDish.nutrition && (
+                  <Grid size={{ xs: 12, md: 6 }}>
+                    <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
+                      🍽️ Nutrition (per serving)
+                    </Typography>
+                    <Stack spacing={1}>
+                      <Typography variant="body2">Calories: {selectedDish.nutrition.calories} kcal</Typography>
+                      <Typography variant="body2">Protein: {selectedDish.nutrition.protein}</Typography>
+                      <Typography variant="body2">Carbs: {selectedDish.nutrition.carbs}</Typography>
+                      <Typography variant="body2">Fat: {selectedDish.nutrition.fat}</Typography>
+                    </Stack>
+                  </Grid>
+                )}
 
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid size={{ xs: 12, md: selectedDish.nutrition ? 6 : 12 }}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
                     🏛️ Regional Info
                   </Typography>
