@@ -1,4 +1,4 @@
-# Swadika GhareluDelights - AI Coding Assistant Guide
+# Swadika Delights - AI Coding Assistant Guide
 
 ## Project Overview
 Next.js 15 restaurant website with Material-UI (v7), TypeScript, Firebase integration, and Sentry monitoring. Uses App Router architecture with client-side interactivity.

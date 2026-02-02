@@ -65,7 +65,7 @@ export default function Footer() {
           variant="caption"
           sx={{ mt: 4, display: "block", textAlign: "center", color: "#666" }}
         >
-          © {new Date().getFullYear()} Swadika GhareluDelights. All rights reserved.
+          © {new Date().getFullYear()} Swadika Delights. All rights reserved.
         </Typography>
       </Container>
     </Box>

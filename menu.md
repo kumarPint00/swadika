@@ -1,4 +1,4 @@
-## Swadika GhareluDelights
+## Swadika Delights
 
 ## Authentic Home-Cooked Flavors from UP & Bihar
 
@@ -535,7 +535,7 @@ Phone: +91 8826 8826 76
 Email: support@ghareluswad.com
 ```
 ```
-Thank you for choosing Swadika GhareluDelights
+Thank you for choosing Swadika Delights
 Home is where the heart (and food) is.
 ```
 

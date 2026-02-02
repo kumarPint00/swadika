@@ -53,7 +53,7 @@ export default function MenuPage() {
   const [category, setCategory] = useState("All");
   const [vegOnly, setVegOnly] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState("popular");
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [favorites, setFavorites] = useState<string[]>([]);
   const [selectedDish, setSelectedDish] = useState<Dish | null>(null);
   const { add } = useCart();
   
@@ -94,13 +94,11 @@ export default function MenuPage() {
 
   const toggleFavorite = (id: string) => {
     setFavorites((prev) => {
-      const newFavorites = new Set(prev);
-      if (newFavorites.has(id)) {
-        newFavorites.delete(id);
+      if (prev.includes(id)) {
+        return prev.filter(favId => favId !== id);
       } else {
-        newFavorites.add(id);
+        return [...prev, id];
       }
-      return newFavorites;
     });
   };
 
@@ -332,7 +330,7 @@ export default function MenuPage() {
                       }}
                       size="small"
                     >
-                      {favorites.has(dish.id) ? (
+                      {favorites.includes(dish.id) ? (
                         <Favorite sx={{ color: "#FF6B35" }} />
                       ) : (
                         <FavoriteBorder />

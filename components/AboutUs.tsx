@@ -23,7 +23,7 @@ export default function AboutUs() {
             Our Story
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            Swadika GhareluDelights started as a humble home kitchen in Ghaziabad,
+            Swadika Delights started as a humble home kitchen in Ghaziabad,
             driven by a single mission—<strong>bring the true taste of
             UP & Bihar to busy urban food-lovers</strong>.
           </Typography>

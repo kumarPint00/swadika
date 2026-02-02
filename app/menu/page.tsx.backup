@@ -30,7 +30,7 @@ interface MenuSectionProps {
 const translations = {
   en: {
     header: {
-      brand: "Swadika GhareluDelights",
+      brand: "Swadika Delights",
       tagline: "Authentic Home-Cooked Flavors from UP & Bihar",
     },
     sections: {
@@ -56,7 +56,7 @@ const translations = {
     },
     footer: {
       text: "Thank you for choosing ",
-      brandBold: "Swadika GhareluDelights",
+      brandBold: "Swadika Delights",
       tagline: "Home is where the heart (and food) is.",
     },
     menuData: {

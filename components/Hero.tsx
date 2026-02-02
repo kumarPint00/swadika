@@ -73,7 +73,7 @@ const isDark = theme.palette.mode === "dark";
             mb: 1,
           }}
         >
-          Swadika GhareluDelights
+          Swadika Delights
         </Typography>
         <Typography variant="h6" sx={{ fontStyle: "italic", mb: 3 }}>
           Authentic UP & Bihar home-style flavours

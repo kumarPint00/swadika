@@ -51,7 +51,7 @@ export default function TestimonialDeck() {
               help us serve you better.”
             </Typography>
             <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
-              — GhareluDelights Team
+              — Delights Team
             </Typography>
           </Paper>
         </Grid>

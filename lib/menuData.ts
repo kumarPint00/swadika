@@ -1,4 +1,4 @@
-// Complete Swadika GhareluDelights Menu with Stories & Recipes
+// Complete Swadika Delights Menu with Stories & Recipes
 
 export interface Dish {
   id: string;

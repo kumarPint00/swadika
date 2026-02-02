@@ -10,6 +10,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import LiveChatWidget from "@/components/LiveChatWidget";
+import AIChatWidget from "@/components/AIChatWidget";
+import PromoBanner from "@/components/PromoBanner";
+import PWAInstallPrompt from "@/components/PWAInstallPrompt";
+import PWARegister from "@/components/PWARegister";
 
 // Context Providers
 import { CartProvider } from "@/context/CartContext";
@@ -26,19 +30,19 @@ import theme from "../mui/theme";
 
 // Constants
 const META_DATA = {
-  title: "Swadika GhareluDelights",
-  description: "Swadika GhareluDelights offers authentic home-cooked meals in Ghaziabad and Noida. Enjoy hygienic, FSSAI certified dishes delivered fast to your doorstep.",
+  title: "Swadika Delights",
+  description: "Swadika Delights offers authentic home-cooked meals in Ghaziabad and Noida. Enjoy hygienic, FSSAI certified dishes delivered fast to your doorstep.",
   keywords: "home-cooked meals, Ghaziabad food delivery, Bihari cuisine, Indian food, hygienic meals, FSSAI certified, fast delivery",
-  author: "Swadika GhareluDelights",
+  author: "Swadika Delights",
   image: "/images/hero.jpg",
-  url: "https://yourdomain.com"
+  url: "https://swadikadelights.in"
 };
 
 const SCHEMA_DATA = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "name": "Swadika GhareluDelights",
-  "image": "https://yourdomain.com/hero.jpg",
+  "name": "Swadika Delights",
+  "image": "https://swadikadelights.in/images/hero.jpg",
   "telephone": "+919958382202",
   "address": {
     "@type": "PostalAddress",
@@ -66,6 +70,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="keywords" content={META_DATA.keywords} />
         <meta name="author" content={META_DATA.author} />
         
+        {/* PWA Meta Tags */}
+        <meta name="theme-color" content="#FF6B35" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Swadika" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/logo.jpeg" />
+        
         {/* Open Graph Tags */}
         <meta property="og:title" content={META_DATA.title} />
         <meta property="og:description" content={META_DATA.description} />
@@ -81,7 +94,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
         {/* Schema.org */}
         <script
@@ -116,11 +129,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     <ReviewProvider>
                       <FavoritesProvider>
                         <ColorModeProvider>
+                          <PWARegister />
                           <Header />
+                          <PromoBanner />
                           <CookieConsent />
                           {children}
                           <Footer />
                           <LiveChatWidget />
+                          <AIChatWidget />
+                          <PWAInstallPrompt />
                         </ColorModeProvider>
                       </FavoritesProvider>
                     </ReviewProvider>

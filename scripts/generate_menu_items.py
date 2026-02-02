@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to generate comprehensive menu items with stories and recipes
-for Swadika GhareluDelights restaurant.
+for Swadika Delights restaurant.
 """
 
 # Menu items data from menu.md that need to be added with full details
