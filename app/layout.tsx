@@ -8,6 +8,7 @@ import Script from "next/script";
 // Components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BottomNav from "@/components/BottomNav";
 import CookieConsent from "@/components/CookieConsent";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import AIChatWidget from "@/components/AIChatWidget";
@@ -79,6 +80,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/logo.jpeg" />
         
+        {/* Favicon */}
+        <link rel="icon" type="image/png" href="/swadikalogo.png" />
+        <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
+        <link rel="shortcut icon" href="/logo.jpeg" />
+        
         {/* Open Graph Tags */}
         <meta property="og:title" content={META_DATA.title} />
         <meta property="og:description" content={META_DATA.description} />
@@ -91,7 +97,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="twitter:title" content={META_DATA.title} />
         
         {/* External Resources */}
-        <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -133,8 +138,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
                           <Header />
                           <PromoBanner />
                           <CookieConsent />
-                          {children}
+                          <div style={{ paddingBottom: "70px" }}>
+                            {children}
+                          </div>
                           <Footer />
+                          <BottomNav />
                           <LiveChatWidget />
                           <AIChatWidget />
                           <PWAInstallPrompt />
