@@ -19,7 +19,6 @@ import {
   Divider,
   IconButton,
   Avatar,
-  Grid,
 } from "@mui/material";
 import { 
   AccessTime, 
@@ -87,341 +86,263 @@ export default function BlogPage() {
   };
 
   return (
-    <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>
-      {/* Hero Section with Gradient */}
-      <Box
-        sx={{
-          position: "relative",
-          minHeight: "55vh",
-          display: "flex",
-          alignItems: "center",
-          overflow: "hidden",
-          background: "linear-gradient(135deg, #FF3D71 0%, #8B5CF6 50%, #00D9FF 100%)",
+    <Box 
+      sx={{ 
+        background: "linear-gradient(180deg, rgba(255, 61, 113, 0.03) 0%, rgba(0, 217, 255, 0.03) 100%)",
+        minHeight: "100vh", 
+        py: 8,
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Animated Background Blobs */}
+      <MotionBox
+        animate={{
+          scale: [1, 1.2, 1],
+          rotate: [0, 90, 0],
         }}
-      >
-        {/* Animated Background Blobs */}
-        <MotionBox
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, 120, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          sx={{
-            position: "absolute",
-            top: "-15%",
-            right: "-8%",
-            width: "500px",
-            height: "500px",
-            borderRadius: "50%",
-            background: "rgba(255, 255, 255, 0.12)",
-            filter: "blur(80px)",
-          }}
-        />
-        <MotionBox
-          animate={{
-            scale: [1, 1.4, 1],
-            rotate: [0, -120, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          sx={{
-            position: "absolute",
-            bottom: "-15%",
-            left: "-8%",
-            width: "550px",
-            height: "550px",
-            borderRadius: "50%",
-            background: "rgba(0, 217, 255, 0.15)",
-            filter: "blur(80px)",
-          }}
-        />
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        sx={{
+          position: "absolute",
+          top: "-10%",
+          right: "-5%",
+          width: "400px",
+          height: "400px",
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(255, 61, 113, 0.1) 0%, rgba(255, 61, 113, 0) 70%)",
+          filter: "blur(60px)",
+          zIndex: 0,
+        }}
+      />
+      <MotionBox
+        animate={{
+          scale: [1, 1.3, 1],
+          rotate: [0, -90, 0],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        sx={{
+          position: "absolute",
+          bottom: "-10%",
+          left: "-5%",
+          width: "500px",
+          height: "500px",
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, rgba(0, 217, 255, 0) 70%)",
+          filter: "blur(60px)",
+          zIndex: 0,
+        }}
+      />
 
-        <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+        {/* Header */}
+        <MotionBox 
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          sx={{ mb: 6, textAlign: "center" }}
+        >
           <MotionBox
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            sx={{ textAlign: "center", color: "#fff" }}
+            animate={{ 
+              rotate: [0, 10, -10, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           >
-            {/* Animated Icon */}
-            <MotionBox
-              animate={{ 
-                rotate: [0, 15, -15, 0],
-                scale: [1, 1.15, 1],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 110,
-                  height: 110,
-                  borderRadius: "28px",
-                  background: "rgba(255, 255, 255, 0.2)",
-                  backdropFilter: "blur(20px)",
-                  boxShadow: "0 16px 48px rgba(0, 0, 0, 0.3)",
-                  mb: 3,
-                  border: "3px solid rgba(255, 255, 255, 0.3)",
-                }}
-              >
-                <MenuBook sx={{ fontSize: 60, color: "#fff" }} />
-              </Box>
-            </MotionBox>
-            
-            <MotionBox
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <Chip 
-                label="📚 Recipe Collection" 
-                size="medium"
-                sx={{ 
-                  mb: 3, 
-                  bgcolor: "rgba(255, 255, 255, 0.25)", 
-                  color: "#fff",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  backdropFilter: "blur(10px)",
-                  px: 3,
-                  border: "1px solid rgba(255, 255, 255, 0.3)",
-                }}
-              />
-            </MotionBox>
-            
-            <Typography 
-              variant="h1" 
-              sx={{ 
+            <Box
+              sx={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 100,
+                height: 100,
+                borderRadius: "24px",
+                background: "linear-gradient(135deg, #FF3D71 0%, #00D9FF 100%)",
+                boxShadow: "0 12px 40px rgba(255, 61, 113, 0.3)",
                 mb: 3,
-                fontSize: { xs: "2.5rem", md: "4.5rem" },
-                fontWeight: 900,
-                textShadow: "0 8px 32px rgba(0,0,0,0.4)",
-                letterSpacing: "-0.02em",
               }}
             >
-              Traditional{" "}
-              <Box component="span" sx={{ 
-                background: "linear-gradient(90deg, #FFD700 0%, #FFA500 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}>
-                Recipes
-              </Box>
-              {" "}& Stories
-            </Typography>
-            
-            <Typography 
-              variant="h5" 
-              sx={{ 
-                mb: 5, 
-                opacity: 0.95, 
-                maxWidth: 800, 
-                mx: "auto",
-                fontWeight: 400,
-                lineHeight: 1.8,
-              }}
-            >
-              Discover {recipeDishes.length}+ authentic Bihar & UP recipes with complete 
-              cooking instructions and cultural stories
-            </Typography>
-
-            {/* Stats Row */}
-            <Box sx={{ display: "flex", gap: 3, justifyContent: "center", flexWrap: "wrap" }}>
-              <MotionBox
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                sx={{
-                  px: 4,
-                  py: 2,
-                  borderRadius: "16px",
-                  background: "rgba(255, 255, 255, 0.2)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.3)",
-                }}
-              >
-                <Typography variant="h4" sx={{ fontWeight: 800, mb: 0.5 }}>
-                  {recipeDishes.length}+
-                </Typography>
-                <Typography variant="body2" sx={{ opacity: 0.95 }}>
-                  Total Recipes
-                </Typography>
-              </MotionBox>
-              {favorites.length > 0 && (
-                <MotionBox
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", delay: 0.4 }}
-                  sx={{
-                    px: 4,
-                    py: 2,
-                    borderRadius: "16px",
-                    background: "rgba(255, 61, 113, 0.3)",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255, 255, 255, 0.4)",
-                  }}
-                >
-                  <Typography variant="h4" sx={{ fontWeight: 800, mb: 0.5 }}>
-                    ❤️ {favorites.length}
-                  </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.95 }}>
-                    Your Favorites
-                  </Typography>
-                </MotionBox>
-              )}
+              <MenuBook sx={{ fontSize: 50, color: "#fff" }} />
             </Box>
           </MotionBox>
-        </Container>
-      </Box>
-
-      {/* Search & Filter Section */}
-      <Box 
-        sx={{ 
-          position: "relative",
-          py: 6,
-          background: "linear-gradient(180deg, rgba(255, 61, 113, 0.03) 0%, rgba(0, 217, 255, 0.03) 100%)",
-        }}
-      >
-        <Container maxWidth="lg">
+          
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: 2, 
+              fontWeight: 800,
+              background: "linear-gradient(135deg, #FF3D71 0%, #00D9FF 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Traditional Recipes & Stories
+          </Typography>
+          
           <MotionBox
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          > 
-            {/* Search Bar - Enhanced */}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Typography variant="h6" color="text.secondary" sx={{ mb: 4, fontWeight: 400 }}>
+              Discover <Chip 
+                label={`${recipeDishes.length} recipes`} 
+                size="small" 
+                sx={{ 
+                  background: "linear-gradient(135deg, #FF3D71 0%, #FF6B9D 100%)",
+                  color: "#fff",
+                  fontWeight: 700,
+                  mx: 1,
+                }} 
+              /> with authentic Bihar & UP flavors
+            </Typography>
+          </MotionBox>
+          
+          {/* Search Bar */}
+          <MotionBox
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
             <TextField 
               fullWidth 
               placeholder="Search recipes by name, ingredients, or story..." 
               value={searchQuery} 
               onChange={(e) => setSearchQuery(e.target.value)} 
               sx={{ 
-                maxWidth: 700, 
+                maxWidth: 600, 
                 mb: 4,
                 "& .MuiOutlinedInput-root": {
-                  borderRadius: "20px",
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)",
-                  backdropFilter: "blur(20px)",
-                  border: "2px solid",
-                  borderColor: "rgba(255, 61, 113, 0.2)",
-                  fontSize: "1.05rem",
-                  py: 0.5,
+                  borderRadius: "16px",
+                  background: "rgba(255, 255, 255, 0.9)",
+                  backdropFilter: "blur(10px)",
                   transition: "all 0.3s ease",
-                  "& fieldset": { border: "none" },
                   "&:hover": {
                     background: "#fff",
-                    borderColor: "#FF3D71",
-                    boxShadow: "0 12px 32px rgba(255, 61, 113, 0.2)",
-                    transform: "translateY(-2px)",
+                    boxShadow: "0 8px 24px rgba(255, 61, 113, 0.15)",
                   },
                   "&.Mui-focused": {
-                    background: "#fff",
-                    borderColor: "#FF3D71",
-                    boxShadow: "0 16px 40px rgba(255, 61, 113, 0.3)",
+                    boxShadow: "0 8px 32px rgba(255, 61, 113, 0.25)",
                   },
                 },
               }} 
               InputProps={{ 
                 startAdornment: (
                   <InputAdornment position="start">
-                    <Search sx={{ color: "#FF3D71", fontSize: 28 }} />
+                    <Search sx={{ color: "primary.main" }} />
                   </InputAdornment>
                 ) 
               }} 
             />
-            
-            {/* Category Filters - Enhanced */}
-            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
-              {categories.map((c, index) => (
-                <MotionChip 
-                  key={c}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ delay: 0.1 + index * 0.05, type: "spring" }}
-                  whileHover={{ scale: 1.12, y: -4 }}
-                  whileTap={{ scale: 0.95 }}
-                  label={c} 
-                  onClick={() => setSelectedCategory(c)} 
-                  sx={{ 
-                    cursor: "pointer",
-                    fontWeight: 700,
-                    fontSize: "1rem",
-                    px: 3,
-                    py: 3,
-                    borderRadius: "16px",
-                    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                    ...(selectedCategory === c ? {
-                      background: "linear-gradient(135deg, #FF3D71 0%, #FF6B9D 100%)",
-                      color: "#fff",
-                      boxShadow: "0 8px 24px rgba(255, 61, 113, 0.5)",
-                      border: "none",
-                    } : {
-                      background: "rgba(255, 255, 255, 0.9)",
-                      border: "2px solid",
-                      borderColor: "rgba(255, 61, 113, 0.25)",
-                      color: "text.primary",
-                      "&:hover": {
-                        borderColor: "#FF3D71",
-                        background: "rgba(255, 61, 113, 0.08)",
-                        boxShadow: "0 4px 16px rgba(255, 61, 113, 0.2)",
-                      },
-                    }),
-                  }} 
-                />
-              ))}
-            </Box>
           </MotionBox>
-        </Container>
-      </Box>
-
-      {/* Recipe Cards Section */}
-      <Box sx={{ bgcolor: "background.default", py: 6 }}>
-        <Container maxWidth="lg">
-          {/* Results Count */}
+          
+          {/* Category Filters */}
           <MotionBox 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            sx={{ 
-              mb: 5, 
-              display: "flex", 
-              gap: 2, 
-              flexWrap: "wrap",
-              alignItems: "center",
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            sx={{ display: "flex", gap: 1.5, flexWrap: "wrap", justifyContent: "center" }}
+          >
+            {categories.map((c, index) => (
+              <MotionChip 
+                key={c}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 + index * 0.05 }}
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                label={c} 
+                onClick={() => setSelectedCategory(c)} 
+                sx={{ 
+                  cursor: "pointer",
+                  fontWeight: 600,
+                  fontSize: "0.9rem",
+                  px: 2,
+                  py: 2.5,
+                  borderRadius: "12px",
+                  transition: "all 0.3s ease",
+                  ...(selectedCategory === c ? {
+                    background: "linear-gradient(135deg, #FF3D71 0%, #FF6B9D 100%)",
+                    color: "#fff",
+                    boxShadow: "0 6px 20px rgba(255, 61, 113, 0.4)",
+                  } : {
+                    background: "rgba(255, 255, 255, 0.8)",
+                    border: "2px solid",
+                    borderColor: "rgba(255, 61, 113, 0.2)",
+                    "&:hover": {
+                      borderColor: "primary.main",
+                      background: "rgba(255, 61, 113, 0.1)",
+                    },
+                  }),
+                }} 
+              />
+            ))}
+          </MotionBox>
+        </MotionBox>
+        
+        {/* Results Count with Stats */}
+        <MotionBox 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          sx={{ 
+            mb: 4, 
+            display: "flex", 
+            gap: 2, 
+            flexWrap: "wrap",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              px: 3,
+              py: 1.5,
+              borderRadius: "12px",
+              background: "linear-gradient(135deg, rgba(255, 61, 113, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%)",
+              border: "1px solid rgba(255, 61, 113, 0.2)",
             }}
           >
-            <Box
+            <Typography variant="body1" sx={{ fontWeight: 600 }}>
+              📖 {filteredDishes.length} recipes found
+            </Typography>
+          </Box>
+          {favorites.length > 0 && (
+            <MotionBox
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
               sx={{
-                px: 4,
-                py: 2,
-                borderRadius: "16px",
-                background: "linear-gradient(135deg, rgba(255, 61, 113, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%)",
-                border: "2px solid",
-                borderColor: "rgba(255, 61, 113, 0.25)",
+                px: 3,
+                py: 1.5,
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #FF3D71 0%, #FF6B9D 100%)",
+                color: "#fff",
+                boxShadow: "0 4px 12px rgba(255, 61, 113, 0.3)",
               }}
             >
-              <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                📖 {filteredDishes.length} recipes found
+              <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                ❤️ {favorites.length} favorites
               </Typography>
-            </Box>
-          </MotionBox>
-          <Grid container spacing={4}>
-            <AnimatePresence mode="wait">
-              {filteredDishes.map((dish, idx) => (
-                <Grid size={{ xs: 12 }}>
-                  <MotionCard
+            </MotionBox>
+          )}
+        </MotionBox>
+        
+        {/* Recipe Cards */}
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <AnimatePresence mode="wait">
+            {filteredDishes.map((dish, idx) => (
+              <MotionCard
                 key={dish.id}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }} 
                 animate={{ opacity: 1, y: 0, scale: 1 }} 
@@ -1036,11 +957,10 @@ export default function BlogPage() {
                     </CardContent>
                   </Box>
                 </Box>
-                </MotionCard>
-              </Grid>
+              </MotionCard>
             ))}
           </AnimatePresence>
-        </Grid>
+        </Box>
         
         {/* No Results State */}
         {filteredDishes.length === 0 && (
@@ -1105,7 +1025,6 @@ export default function BlogPage() {
           </MotionBox>
         )}
       </Container>
-    </Box>
     </Box>
   );
 }
