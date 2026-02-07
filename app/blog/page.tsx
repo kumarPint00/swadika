@@ -325,6 +325,8 @@ export default function BlogPage() {
                     boxShadow: "0 16px 40px rgba(255, 61, 113, 0.3)",
                   },
                 },
+                "& input": { color: "#0A0E27" },
+                "& input::placeholder": { color: "rgba(10, 14, 39, 0.6)" },
               }} 
               InputProps={{ 
                 startAdornment: (

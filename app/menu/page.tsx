@@ -199,6 +199,7 @@ export default function MenuPage() {
                   "& fieldset": { borderColor: "rgba(255,255,255,0.3)" },
                   "&:hover fieldset": { borderColor: "rgba(255,255,255,0.5)" },
                 },
+                "& input": { color: "#fff" },
                 "& input::placeholder": { color: "rgba(255,255,255,0.7)" },
               }}
             />
