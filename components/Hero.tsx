@@ -1,15 +1,15 @@
 "use client";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import OfferCountdown from "./OfferCountdown";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useColorMode } from "../context/ColorModeContent";
-import theme from "@/mui/theme";
 
 export default function Hero() {
 const { toggle } = useColorMode();
+const theme = useTheme();
 const isDark = theme.palette.mode === "dark";
   return (
     <Box
@@ -60,7 +60,7 @@ const isDark = theme.palette.mode === "dark";
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          color: "#fff",
+          color: "common.white",
           px: 2,
         }}
       >
@@ -95,9 +95,17 @@ const isDark = theme.palette.mode === "dark";
             target="_blank"
             variant="outlined"
             size="large"
-            sx={{ color: "#fff", borderColor: "#fff" }}
+            sx={{ 
+              color: "common.white", 
+              borderColor: "common.white",
+              "&:hover": {
+                borderColor: "common.white",
+                bgcolor: "rgba(255, 255, 255, 0.1)",
+              }
+            }}
           >
             Order on WhatsApp
+          </Button>
           </Button>
         </Box>
       </Box>

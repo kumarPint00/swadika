@@ -27,6 +27,7 @@ import {
   ListItem,
   ListItemText,
   Grid,
+  useTheme,
 } from "@mui/material";
 import { 
   Search, 
@@ -50,6 +51,8 @@ const MotionBox = motion(Box);
 const MotionChip = motion(Chip);
 
 export default function MenuPage() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const { t, getDishTranslation } = useLocale();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
@@ -225,6 +228,21 @@ export default function MenuPage() {
                       cursor: "pointer",
                       fontWeight: category === cat ? 700 : 500,
                       fontSize: "0.9rem",
+                      bgcolor: category === cat 
+                        ? undefined 
+                        : isDark 
+                          ? "rgba(255,255,255,0.08)" 
+                          : "rgba(0,0,0,0.06)",
+                      color: category === cat
+                        ? undefined
+                        : "text.primary",
+                      "&:hover": {
+                        bgcolor: category === cat
+                          ? undefined
+                          : isDark
+                            ? "rgba(255,255,255,0.12)"
+                            : "rgba(0,0,0,0.1)",
+                      },
                     }}
                   />
                 ))}
@@ -281,6 +299,7 @@ export default function MenuPage() {
                     cursor: "pointer",
                     position: "relative",
                     overflow: "hidden",
+                    bgcolor: isDark ? "#1A1F3A" : "background.paper",
                   }}
                   onClick={() => setSelectedDish(dish)}
                 >
@@ -369,12 +388,12 @@ export default function MenuPage() {
                   <CardContent sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
                     {/* Name & Rating */}
                     <Box sx={{ mb: 1 }}>
-                      <Typography variant="h6" sx={{ mb: 0.5, fontWeight: 600 }}>
+                      <Typography variant="h6" sx={{ mb: 0.5, fontWeight: 700, color: isDark ? "#F8F9FA" : "#0A0E27" }}>
                         {dish.name}
                       </Typography>
                       <Stack direction="row" spacing={1} alignItems="center">
                         <Rating value={dish.rating} precision={0.1} size="small" readOnly />
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" sx={{ color: isDark ? "#F8F9FA" : "#0A0E27", fontWeight: 600 }}>
                           {dish.rating}
                         </Typography>
                       </Stack>
@@ -383,8 +402,16 @@ export default function MenuPage() {
                     {/* Description */}
                     <Typography
                       variant="body2"
-                      color="text.secondary"
-                      sx={{ mb: 2, flex: 1, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+                      sx={{ 
+                        mb: 2, 
+                        flex: 1, 
+                        display: "-webkit-box", 
+                        WebkitLineClamp: 2, 
+                        WebkitBoxOrient: "vertical", 
+                        overflow: "hidden",
+                        color: isDark ? "rgba(248, 249, 250, 0.85)" : "#4A5568",
+                        fontWeight: 500,
+                      }}
                     >
                       {dish.description}
                     </Typography>
@@ -478,8 +505,8 @@ export default function MenuPage() {
                   position: "absolute",
                   top: 16,
                   right: 16,
-                  bgcolor: "rgba(255,255,255,0.9)",
-                  "&:hover": { bgcolor: "#fff" },
+                  bgcolor: isDark ? "rgba(0,0,0,0.7)" : "rgba(255,255,255,0.9)",
+                  "&:hover": { bgcolor: isDark ? "rgba(0,0,0,0.85)" : "#fff" },
                 }}
               >
                 <Close />

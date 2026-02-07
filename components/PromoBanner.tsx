@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Box, Typography, Button, IconButton, Container } from "@mui/material";
+import { Box, Typography, Button, IconButton, Container, useTheme } from "@mui/material";
 import { Close, LocalOffer } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -18,6 +18,8 @@ export default function PromoBanner({
   linkTo = "/menu?promo=PG50",
   dismissible = true,
 }: PromoBannerProps) {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const [visible, setVisible] = useState(true);
   const [currentPromo, setCurrentPromo] = useState(0);
 
@@ -132,10 +134,10 @@ export default function PromoBanner({
                 variant="contained"
                 size="small"
                 sx={{
-                  bgcolor: "#fff",
+                  bgcolor: isDark ? "background.paper" : "common.white",
                   color: "#FF6B35",
                   fontWeight: 700,
-                  "&:hover": { bgcolor: "rgba(255,255,255,0.9)" },
+                  "&:hover": { bgcolor: isDark ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.9)" },
                   display: { xs: "none", sm: "flex" },
                 }}
               >
@@ -146,7 +148,7 @@ export default function PromoBanner({
                 <IconButton
                   size="small"
                   onClick={() => setVisible(false)}
-                  sx={{ color: "#fff" }}
+                  sx={{ color: "common.white" }}
                 >
                   <Close fontSize="small" />
                 </IconButton>
@@ -170,7 +172,7 @@ export default function PromoBanner({
                   width: 6,
                   height: 6,
                   borderRadius: "50%",
-                  bgcolor: currentPromo === index ? "#fff" : "rgba(255,255,255,0.4)",
+                  bgcolor: currentPromo === index ? "common.white" : "rgba(255,255,255,0.4)",
                   transition: "all 0.3s",
                   cursor: "pointer",
                 }}

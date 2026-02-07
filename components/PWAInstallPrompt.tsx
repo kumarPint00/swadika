@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Box, Button, Paper, Typography, IconButton } from "@mui/material";
+import { Box, Button, Paper, Typography, IconButton, useTheme } from "@mui/material";
 import { Close, GetApp, Apple, Android } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function PWAInstallPrompt() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const [showPrompt, setShowPrompt] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isIOS, setIsIOS] = useState(false);
@@ -139,10 +141,10 @@ export default function PWAInstallPrompt() {
                     startIcon={<GetApp />}
                     onClick={handleInstall}
                     sx={{
-                      bgcolor: "#fff",
+                      bgcolor: isDark ? "background.paper" : "common.white",
                       color: "#FF6B35",
                       fontWeight: 700,
-                      "&:hover": { bgcolor: "rgba(255,255,255,0.9)" },
+                      "&:hover": { bgcolor: isDark ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.9)" },
                     }}
                   >
                     Install Now

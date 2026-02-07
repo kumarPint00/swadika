@@ -48,7 +48,7 @@ export default function FeaturedCarousel() {
                 position: "absolute",
                 bottom: 16,
                 left: 24,
-                color: "#fff",
+                color: "common.white",
                 textShadow: "1px 1px 6px rgba(0,0,0,0.6)",
               }}
             >

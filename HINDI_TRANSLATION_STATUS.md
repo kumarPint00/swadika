@@ -2,8 +2,8 @@
 
 ## Overview
 - **Total Dishes**: 83
-- **Fully Translated to Hindi**: 11 dishes (~13.3%)
-- **Needing Translation**: 72 dishes (~86.7%)
+- **Fully Translated to Hindi**: 23 dishes (~27.7%)
+- **Needing Translation**: 60 dishes (~72.3%)
 
 ## ✅ Completed Hindi Translations (11 dishes)
 

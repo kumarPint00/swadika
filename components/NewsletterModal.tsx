@@ -1,9 +1,10 @@
 // src/components/NewsletterModal.tsx
 "use client";
 import { useState, useEffect } from "react";
-import { Modal, Box, TextField, Button, Typography } from "@mui/material";
+import { Modal, Box, TextField, Button, Typography, useTheme } from "@mui/material";
 
 export default function NewsletterModal() {
+  const theme = useTheme();
   const [open, setOpen] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setOpen(true), 10000);
@@ -14,7 +15,7 @@ export default function NewsletterModal() {
       <Box
         sx={{
           p: 4,
-          bgcolor: "#fff",
+          bgcolor: "background.paper",
           mx: "auto",
           mt: "15vh",
           borderRadius: 2,

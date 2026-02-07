@@ -1,5 +1,5 @@
 "use client";
-import { Box, Paper, Typography, Grid } from "@mui/material";
+import { Box, Paper, Typography, Grid, useTheme } from "@mui/material";
 import { FormatQuote } from "@mui/icons-material";
 import dynamic from "next/dynamic";
 
@@ -11,8 +11,13 @@ const reviews = [
 ];
 
 export default function TestimonialDeck() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+  
   return (
-    <Box py={8} sx={{ backgroundColor: "#FFF8E1" }}>
+    <Box py={8} sx={{ 
+      backgroundColor: isDark ? "background.paper" : "#FFF8E1" 
+    }}>
       <Typography
         variant="h3"
         textAlign="center"

@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 
 interface DigitBlockProps {
   digit: number;
 }
 
 export default function DigitBlock({ digit }: DigitBlockProps) {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const display = String(digit).padStart(2, "0");
   // We render each character separately so '04' → two blocks '0' and '4'
   return (
@@ -27,8 +29,8 @@ export default function DigitBlock({ digit }: DigitBlockProps) {
           <Box
             sx={{
               height: "50%",
-              backgroundColor: "white",
-              borderBottom: "2px solid #000", // the dividing line
+              backgroundColor: isDark ? "background.paper" : "white",
+              borderBottom: isDark ? "2px solid rgba(255,255,255,0.2)" : "2px solid #000",
             }}
           />
           {/* Bottom half teal with digit */}
@@ -43,7 +45,7 @@ export default function DigitBlock({ digit }: DigitBlockProps) {
           >
             <Typography
               variant="h4"
-              sx={{ color: "#fff", fontWeight: 700, lineHeight: 1 }}
+              sx={{ color: "common.white", fontWeight: 700, lineHeight: 1 }}
             >
               {char}
             </Typography>

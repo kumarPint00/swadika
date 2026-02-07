@@ -1,42 +1,53 @@
 // src/components/Footer.tsx
 "use client";
-import { Box, Container, Grid, Typography, IconButton } from "@mui/material";
+import { Box, Container, Grid, Typography, IconButton, useTheme } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocalDiningIcon from "@mui/icons-material/LocalDining";
 
 export default function Footer() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+  
   return (
-    <Box sx={{ background: "#212121", color: "#bbb", pt: 6, pb: 3 }}>
+    <Box sx={{ 
+      background: isDark 
+        ? "linear-gradient(135deg, #1A1F3A 0%, #0F1528 100%)"
+        : "#212121",
+      color: isDark ? "text.secondary" : "#bbb", 
+      pt: 6, 
+      pb: 3,
+      borderTop: isDark ? "1px solid rgba(255, 61, 113, 0.2)" : "none",
+    }}>
       <Container>
         <Grid container spacing={4}>
           {/* brand */}
           <Grid size={{ xs: 12, sm: 4 }}>
-            <Typography variant="h5" sx={{ color: "#fff", mb: 1, display: "flex", alignItems: "center" }}>
+            <Typography variant="h5" sx={{ color: isDark ? "text.primary" : "#fff", mb: 1, display: "flex", alignItems: "center" }}>
               <LocalDiningIcon sx={{ mr: 1 }} /> Swadika
             </Typography>
             <Typography variant="body2" sx={{ mb: 2 }}>
               Authentic home-style cuisine from Uttar Pradesh & Bihar cooked fresh every day.
             </Typography>
-            <Typography variant="caption" sx={{ color: "#888" }}>
+            <Typography variant="caption" sx={{ color: isDark ? "text.secondary" : "#888" }}>
               FSSAI #22725105001188
             </Typography>
           </Grid>
 
           {/* quick links */}
           <Grid size={{ xs: 6, md: 2 }}>
-            <Typography variant="subtitle1" sx={{ color: "#fff", mb: 1 }}>
+            <Typography variant="subtitle1" sx={{ color: isDark ? "text.primary" : "#fff", mb: 1 }}>
               Links
             </Typography>
-            <Typography variant="body2"><a href="/" style={{ color: "#bbb", textDecoration: "none" }}>Home</a></Typography>
-            <Typography variant="body2"><a href="/menu" style={{ color: "#bbb", textDecoration: "none" }}>Menu</a></Typography>
-            <Typography variant="body2"><a href="#faq" style={{ color: "#bbb", textDecoration: "none" }}>FAQ</a></Typography>
+            <Typography variant="body2"><a href="/" style={{ color: isDark ? theme.palette.text.secondary : "#bbb", textDecoration: "none" }}>Home</a></Typography>
+            <Typography variant="body2"><a href="/menu" style={{ color: isDark ? theme.palette.text.secondary : "#bbb", textDecoration: "none" }}>Menu</a></Typography>
+            <Typography variant="body2"><a href="#faq" style={{ color: isDark ? theme.palette.text.secondary : "#bbb", textDecoration: "none" }}>FAQ</a></Typography>
           </Grid>
 
           {/* contact */}
           <Grid size={{ xs: 6, md: 3 }}>
-            <Typography variant="subtitle1" sx={{ color: "#fff", mb: 1 }}>
+            <Typography variant="subtitle1" sx={{ color: isDark ? "text.primary" : "#fff", mb: 1 }}>
               Contact
             </Typography>
             <Typography variant="body2">A-64 Himalaya Enclave, Khora Colony</Typography>
@@ -47,7 +58,7 @@ export default function Footer() {
 
           {/* social */}
           <Grid size={{ xs: 12, sm: 3 }}>
-            <Typography variant="subtitle1" sx={{ color: "#fff", mb: 1 }}>
+            <Typography variant="subtitle1" sx={{ color: isDark ? "text.primary" : "#fff", mb: 1 }}>
               Follow Us
             </Typography>
             <IconButton href="https://facebook.com" target="_blank" sx={{ color: "#2196F3" }}>
@@ -63,7 +74,7 @@ export default function Footer() {
         </Grid>
         <Typography
           variant="caption"
-          sx={{ mt: 4, display: "block", textAlign: "center", color: "#666" }}
+          sx={{ mt: 4, display: "block", textAlign: "center", color: isDark ? "text.secondary" : "#666" }}
         >
           © {new Date().getFullYear()} Swadika Delights. All rights reserved.
         </Typography>
