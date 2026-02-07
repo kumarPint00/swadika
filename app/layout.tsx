@@ -79,12 +79,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Swadika" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/logo.jpeg" />
+        <link rel="apple-touch-icon" href="/swadikalogo.png" />
         
         {/* Favicon */}
-        <link rel="icon" type="image/png" href="/swadikalogo.png" />
-        <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
-        <link rel="shortcut icon" href="/logo.jpeg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/swadikalogo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/swadikalogo.png" />
+        <link rel="shortcut icon" href="/swadikalogo.png" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content={META_DATA.title} />
