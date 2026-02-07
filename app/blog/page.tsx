@@ -420,7 +420,7 @@ export default function BlogPage() {
           <Grid container spacing={4}>
             <AnimatePresence mode="wait">
               {filteredDishes.map((dish, idx) => (
-                <Grid size={{ xs: 12 }}>
+                <Grid size={{ xs: 12, md: 6 }}>
                   <MotionCard
                 key={dish.id}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }} 
@@ -450,24 +450,23 @@ export default function BlogPage() {
                   },
                 }}
               >
-                <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" } }}>
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
                   {/* Image Section */}
                   <MotionBox
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
                     sx={{ 
-                      width: { xs: "100%", md: "35%" },
+                      width: "100%",
                       position: "relative",
                       overflow: "hidden",
                     }}
                   >
                     <CardMedia
                       component="img"
-                      height="100%"
+                      height="280"
                       image={dish.image}
                       alt={dish.name}
                       sx={{ 
-                        minHeight: 350, 
                         objectFit: "cover",
                         transition: "transform 0.6s ease",
                       }}
@@ -548,8 +547,8 @@ export default function BlogPage() {
                   </MotionBox>
                   
                   {/* Content Section */}
-                  <Box sx={{ width: { xs: "100%", md: "65%" } }}>
-                    <CardContent sx={{ p: { xs: 3, md: 4 } }}>
+                  <Box sx={{ width: "100%" }}>
+                    <CardContent sx={{ p: 3 }}>
                       {/* Header Info */}
                       <Box sx={{ mb: 3 }}>
                         <Box sx={{ display: "flex", gap: 1, mb: 2, flexWrap: "wrap" }}>
@@ -592,7 +591,7 @@ export default function BlogPage() {
                         </Box>
                         
                         <Typography 
-                          variant="h4" 
+                          variant="h5" 
                           sx={{ 
                             mb: 1.5, 
                             fontWeight: 800,
