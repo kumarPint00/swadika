@@ -135,7 +135,7 @@ export default function PromoBanner({
                 size="small"
                 sx={{
                   bgcolor: isDark ? "background.paper" : "common.white",
-                  color: "#FF6B35",
+                  color: "#e6edb0",
                   fontWeight: 700,
                   "&:hover": { bgcolor: isDark ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.9)" },
                   display: { xs: "none", sm: "flex" },

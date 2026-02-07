@@ -178,7 +178,7 @@ export function OrderProvider({ children }: { children: ReactNode }) {
     // Add delivery partner when out for delivery
     if (status === "out-for-delivery" && !deliveryPartner) {
       const partners = [
-        { name: "Rajesh Kumar", phone: "+91 98765 43210", vehicle: "Royal Enfield Classic 350" },
+        { name: "Mukesh Kumar", phone: "+91 9958382202", vehicle: "Royal Enfield Classic 350" },
         { name: "Amit Singh", phone: "+91 98765 43211", vehicle: "Honda Activa" },
         { name: "Priya Sharma", phone: "+91 98765 43212", vehicle: "Hero Splendor" },
       ];

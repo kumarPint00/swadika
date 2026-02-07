@@ -28,9 +28,37 @@ import {
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLocale } from "@/context/LocaleContext";
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
+
+export default function ContactPage() {
+  const { t } = useLocale();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    }, 3000);
+  };
 
 const contactInfo = [
   { 
@@ -43,8 +71,8 @@ const contactInfo = [
   { 
     icon: <Email sx={{ fontSize: 40 }} />, 
     label: "Email", 
-    value: "info@swadika.com",
-    action: "mailto:info@swadika.com",
+    value: "swadikadelights@gmail.com",
+    action: "mailto:swadikadelights@gmail.com",
     color: "#00D9FF",
   },
   { 
@@ -68,25 +96,6 @@ const socialLinks = [
   { icon: <Instagram />, label: "Instagram", url: "https://instagram.com/swadikadelights", color: "#E1306C" },
   { icon: <Facebook />, label: "Facebook", url: "https://facebook.com/swadikadelights", color: "#1877F2" },
 ];
-
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 3000);
-  };
 
   return (
     <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>

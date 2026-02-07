@@ -139,9 +139,17 @@ export default function HomePage() {
                       sx={{ 
                         bgcolor: "#fff",
                         color: "#FF6B35",
-                        px: 4,
-                        py: 1.5,
-                        "&:hover": { bgcolor: "rgba(255,255,255,0.95)" },
+                        px: 5,
+                        py: 2,
+                        fontSize: "1.1rem",
+                        fontWeight: 800,
+                        borderRadius: 3,
+                        boxShadow: "0 8px 24px rgba(255, 255, 255, 0.3)",
+                        "&:hover": { 
+                          bgcolor: "rgba(255,255,255,0.95)",
+                          boxShadow: "0 12px 32px rgba(255, 255, 255, 0.4)",
+                          transform: "translateY(-2px)",
+                        },
                       }}
                       endIcon={<ArrowForward />}
                     >

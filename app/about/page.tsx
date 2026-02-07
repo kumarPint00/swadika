@@ -28,10 +28,14 @@ import {
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLocale } from "@/context/LocaleContext";
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
 const MotionPaper = motion(Paper);
+
+export default function AboutPage() {
+  const { t } = useLocale();
 
 const values = [
   { 
@@ -97,7 +101,6 @@ const milestones = [
   { year: "2026", title: "Award Winner", desc: "Best Cloud Kitchen in Ghaziabad" },
 ];
 
-export default function AboutPage() {
   return (
     <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>
       {/* Hero Section with Animated Background */}
@@ -263,7 +266,7 @@ export default function AboutPage() {
                 size="large"
                 sx={{
                   bgcolor: "#fff",
-                  color: "#FF3D71",
+                  color: "#58d8ab",
                   px: 5,
                   py: 2,
                   fontSize: "1.1rem",
@@ -687,7 +690,7 @@ export default function AboutPage() {
                   size="large"
                   sx={{
                     bgcolor: "#fff",
-                    color: "#FF3D71",
+                    color: "#e1bfc8",
                     px: 6,
                     py: 2,
                     fontSize: "1.2rem",

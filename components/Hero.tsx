@@ -106,7 +106,6 @@ const isDark = theme.palette.mode === "dark";
           >
             Order on WhatsApp
           </Button>
-          </Button>
         </Box>
       </Box>
     </Box>

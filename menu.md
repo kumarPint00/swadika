@@ -532,7 +532,7 @@ Rich homemade butter or clarified butter.
 Address: House No. 64, Himalaya Enclave, Khora Colony, Ghaziabad, Uttar Pradesh –
 201001
 Phone: +91 8826 8826 76
-Email: support@ghareluswad.com
+Email: swadikadelights@gmail.com
 ```
 ```
 Thank you for choosing Swadika Delights

@@ -51,7 +51,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   };
 
   const getDishTranslation = (dishId: string, field: 'story' | 'ingredients' | 'instructions'): string | string[] => {
-    const dishTranslations = translations[locale].dishes;
+    const dishTranslations = translations[locale].dishes as Record<string, any>;
     if (dishTranslations && dishTranslations[dishId]) {
       return dishTranslations[dishId][field] || '';
     }

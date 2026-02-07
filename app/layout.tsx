@@ -36,7 +36,7 @@ const META_DATA = {
   description: "Swadika Delights offers authentic home-cooked meals in Ghaziabad and Noida. Enjoy hygienic, FSSAI certified dishes delivered fast to your doorstep.",
   keywords: "home-cooked meals, Ghaziabad food delivery, Bihari cuisine, Indian food, hygienic meals, FSSAI certified, fast delivery",
   author: "Swadika Delights",
-  image: "/images/hero.jpg",
+  image: "/littichhokhameal.png",
   url: "https://swadikadelights.in"
 };
 
@@ -44,7 +44,7 @@ const SCHEMA_DATA = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Swadika Delights",
-  "image": "https://swadikadelights.in/images/hero.jpg",
+  "image": "https://swadikadelights.in/littichhokhameal.png",
   "telephone": "+919958382202",
   "address": {
     "@type": "PostalAddress",

@@ -31,9 +31,13 @@ import {
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useLocale } from "@/context/LocaleContext";
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
+
+export default function SubscriptionsPage() {
+  const { t } = useLocale();
 
 const plans = [
   {
@@ -116,7 +120,6 @@ const benefits = [
   },
 ];
 
-export default function SubscriptionsPage() {
   return (
     <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>
       {/* Hero Section with Animated Background */}

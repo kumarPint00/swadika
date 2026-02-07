@@ -52,7 +52,7 @@ const translations = {
       phoneLabel: "Phone:",
       phoneValue: "+91 8826 8826 76",
       emailLabel: "Email:",
-      emailValue: "support@ghareluswad.com",
+      emailValue: "swadikadelights@gmail.com",
     },
     footer: {
       text: "Thank you for choosing ",
@@ -567,7 +567,7 @@ const translations = {
       phoneLabel: "फ़ोन:",
       phoneValue: "+91 8826 8826 76",
       emailLabel: "ई-मेल:",
-      emailValue: "support@ghareluswad.com",
+      emailValue: "swadikadelights@gmail.com",
     },
     footer: {
       text: "चयन करने के लिए धन्यवाद ",

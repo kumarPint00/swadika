@@ -52,8 +52,8 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2">A-64 Himalaya Enclave, Khora Colony</Typography>
             <Typography variant="body2">Ghaziabad 201001</Typography>
-            <Typography variant="body2">+91 98765 43210</Typography>
-            <Typography variant="body2">support@ghareluswad.com</Typography>
+            <Typography variant="body2">+91 9958382202</Typography>
+            <Typography variant="body2">swadikadelights@gmail.com</Typography>
           </Grid>
 
           {/* social */}

@@ -61,7 +61,7 @@ export default function MapSection() {
             <strong>Phone:</strong> +91 99583 82202
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
-            <strong>Email:</strong> info@swadika.com
+            <strong>Email:</strong> swadikadelights@gmail.com
           </Typography> 
           <Typography variant="body1">
             <strong>Hours:</strong> Mon-Sun 10:00 AM - 10:00 PM
