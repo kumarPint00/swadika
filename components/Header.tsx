@@ -42,6 +42,7 @@ import {
 import { useColorMode } from "@/context/ColorModeContent";
 import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
+import { useLocale } from "@/context/LocaleContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,6 +54,7 @@ export default function Header() {
   const { toggle } = useColorMode();
   const { user, isAuthenticated, logout } = useAuth();
   const { cart } = useCart();
+  const { locale, setLocale, t } = useLocale();
   const muiTheme = useTheme();
   const isMobile = useMediaQuery(muiTheme.breakpoints.down("md"));
   const pathname = usePathname();
@@ -74,13 +76,16 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { label: "Menu", href: "/menu", icon: <Restaurant /> },
-    { label: "Recipes", href: "/blog", icon: <Book /> },
-    { label: "Subscriptions", href: "/subscriptions", icon: <LocalOffer /> },
-    { label: "About", href: "/about", icon: <Info /> },
-    { label: "Contact", href: "/contact", icon: <ContactPage /> },
+    { label: t("header.menu"), href: "/menu", icon: <Restaurant /> },
+    { label: t("header.recipes"), href: "/blog", icon: <Book /> },
+    { label: t("header.subscriptions"), href: "/subscriptions", icon: <LocalOffer /> },
+    { label: t("header.about"), href: "/about", icon: <Info /> },
+    { label: t("header.contact"), href: "/contact", icon: <ContactPage /> },
   ];
 
+  const toggleLanguage = () => {
+    setLocale(locale === "en" ? "hi" : "en");
+  };
 
   const isActive = (href: string) => pathname === href;
 
@@ -191,6 +196,29 @@ export default function Header() {
 
           {/* Right Actions */}
           <Box sx={{ display: "flex", gap: { xs: 0.5, md: 1 }, alignItems: "center" }}>
+            {/* Language Toggle */}
+            <MotionBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                onClick={toggleLanguage}
+                size="small"
+                sx={{
+                  minWidth: "auto",
+                  px: 1.5,
+                  py: 0.5,
+                  borderRadius: 2,
+                  bgcolor: "rgba(0, 217, 255, 0.1)",
+                  fontWeight: 700,
+                  fontSize: "0.75rem",
+                  color: "text.primary",
+                  "&:hover": {
+                    bgcolor: "rgba(0, 217, 255, 0.2)",
+                  },
+                }}
+              >
+                {locale === "en" ? "हिं" : "EN"}
+              </Button>
+            </MotionBox>
+
             {/* Theme Toggle */}
             <MotionBox whileHover={{ rotate: 180 }} transition={{ duration: 0.3 }}>
               <IconButton 
@@ -291,7 +319,7 @@ export default function Header() {
                     sx={{ py: 1.5 }}
                   >
                     <ListItemIcon><Person fontSize="small" /></ListItemIcon>
-                    <ListItemText>Profile</ListItemText>
+                    <ListItemText>{t("header.profile")}</ListItemText>
                   </MenuItem>
                   <MenuItem 
                     component={Link} 
@@ -300,7 +328,7 @@ export default function Header() {
                     sx={{ py: 1.5 }}
                   >
                     <ListItemIcon><Restaurant fontSize="small" /></ListItemIcon>
-                    <ListItemText>My Orders</ListItemText>
+                    <ListItemText>{t("header.myOrders")}</ListItemText>
                   </MenuItem>
                   <MenuItem 
                     component={Link} 
@@ -310,7 +338,7 @@ export default function Header() {
                   >
                     <ListItemIcon><LocalOffer fontSize="small" /></ListItemIcon>
                     <ListItemText>
-                      Rewards
+                      {t("header.rewards")}
                       <Chip 
                         label={`${user?.rewards || 0} pts`} 
                         size="small" 
@@ -326,7 +354,7 @@ export default function Header() {
                     sx={{ py: 1.5 }}
                   >
                     <ListItemIcon><FavoriteBorder fontSize="small" /></ListItemIcon>
-                    <ListItemText>Favorites</ListItemText>
+                    <ListItemText>{t("header.favorites")}</ListItemText>
                   </MenuItem>
                   <Divider sx={{ my: 1 }} />
                   <MenuItem 
@@ -334,7 +362,7 @@ export default function Header() {
                     sx={{ py: 1.5, color: "error.main" }}
                   >
                     <ListItemIcon><Logout fontSize="small" color="error" /></ListItemIcon>
-                    <ListItemText>Logout</ListItemText>
+                    <ListItemText>{t("header.signOut")}</ListItemText>
                   </MenuItem>
                 </Menu>
               </>
@@ -357,7 +385,7 @@ export default function Header() {
                     },
                   }}
                 >
-                  Sign In
+                  {t("header.signIn")}
                 </MotionButton>
               </Link>
             )}
@@ -466,7 +494,7 @@ export default function Header() {
                 <Home sx={{ color: pathname === "/" ? "primary.main" : "text.secondary" }} />
               </ListItemIcon>
               <ListItemText 
-                primary="Home" 
+                primary={t("header.home")} 
                 primaryTypographyProps={{
                   fontWeight: pathname === "/" ? 700 : 500,
                   color: pathname === "/" ? "primary.main" : "text.primary",
@@ -514,7 +542,7 @@ export default function Header() {
                 sx={{ borderRadius: 2, mb: 1, "&:hover": { bgcolor: "rgba(0, 0, 0, 0.04)" } }}
               >
                 <ListItemIcon><Person /></ListItemIcon>
-                <ListItemText primary="Profile" />
+                <ListItemText primary={t("header.profile")} />
               </ListItem>
               <ListItem 
                 component={Link}
@@ -523,7 +551,7 @@ export default function Header() {
                 sx={{ borderRadius: 2, mb: 1, "&:hover": { bgcolor: "rgba(0, 0, 0, 0.04)" } }}
               >
                 <ListItemIcon><Restaurant /></ListItemIcon>
-                <ListItemText primary="My Orders" />
+                <ListItemText primary={t("header.myOrders")} />
               </ListItem>
               <ListItem 
                 component={Link}
@@ -532,7 +560,7 @@ export default function Header() {
                 sx={{ borderRadius: 2, mb: 1, "&:hover": { bgcolor: "rgba(0, 0, 0, 0.04)" } }}
               >
                 <ListItemIcon><FavoriteBorder /></ListItemIcon>
-                <ListItemText primary="Favorites" />
+                <ListItemText primary={t("header.favorites")} />
               </ListItem>
               <ListItem 
                 onClick={() => { logout(); setMobileOpen(false); }}
@@ -543,7 +571,7 @@ export default function Header() {
                 }}
               >
                 <ListItemIcon><Logout color="error" /></ListItemIcon>
-                <ListItemText primary="Logout" />
+                <ListItemText primary={t("header.signOut")} />
               </ListItem>
             </List>
           ) : (
@@ -559,7 +587,7 @@ export default function Header() {
                 background: "linear-gradient(135deg, #FF3D71 0%, #FF6B9D 100%)",
               }}
             >
-              Sign In
+              {t("header.signIn")}
             </Button>
           )}
         </Box>

@@ -25,6 +25,7 @@ import { OrderProvider } from "@/context/OrderContext";
 import { AddressProvider } from "@/context/AddressContext";
 import { ReviewProvider } from "@/context/ReviewContext";
 import { FavoritesProvider } from "@/context/FavoritesContext";
+import { LocaleProvider } from "@/context/LocaleContext";
 
 // Theme
 import theme from "../mui/theme";
@@ -127,13 +128,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <ToastProvider>
-            <AuthProvider>
-              <CartProvider>
-                <OrderProvider>
-                  <AddressProvider>
-                    <ReviewProvider>
-                      <FavoritesProvider>
-                        <ColorModeProvider>
+            <LocaleProvider>
+              <AuthProvider>
+                <CartProvider>
+                  <OrderProvider>
+                    <AddressProvider>
+                      <ReviewProvider>
+                        <FavoritesProvider>
+                          <ColorModeProvider>
                           <PWARegister />
                           <Header />
                           <PromoBanner />
@@ -146,13 +148,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
                           <LiveChatWidget />
                           <AIChatWidget />
                           <PWAInstallPrompt />
-                        </ColorModeProvider>
-                      </FavoritesProvider>
-                    </ReviewProvider>
-                  </AddressProvider>
-                </OrderProvider>
-              </CartProvider>
-            </AuthProvider>
+                          </ColorModeProvider>
+                        </FavoritesProvider>
+                      </ReviewProvider>
+                    </AddressProvider>
+                  </OrderProvider>
+                </CartProvider>
+              </AuthProvider>
+            </LocaleProvider>
           </ToastProvider>
         </ThemeProvider>
       </body>

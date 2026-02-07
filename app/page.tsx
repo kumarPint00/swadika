@@ -4,21 +4,23 @@ import { Restaurant, Verified, LocalShipping, Star, ArrowForward } from "@mui/ic
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
+import { useLocale } from "@/context/LocaleContext";
 import { getBestsellers } from "@/lib/menuData";
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
 
-const benefits = [
-  { icon: <LocalShipping />, title: "30-Min Delivery", desc: "Lightning fast to your door" },
-  { icon: <Verified />, title: "Live Tracking", desc: "Watch your order in real-time" },
-  { icon: <Restaurant />, title: "Cloud Kitchen", desc: "100% hygiene certified" },
-  { icon: <Star />, title: "Always Fresh", desc: "Cooked on order, delivered hot" },
-];
-
 export default function HomePage() {
   const { isAuthenticated } = useAuth();
+  const { t } = useLocale();
   const featuredDishes = getBestsellers().slice(0, 3);
+
+  const benefits = [
+    { icon: <LocalShipping />, title: t("home.deliveryGuarantee"), desc: t("home.deliveryDesc") },
+    { icon: <Verified />, title: t("home.liveTracking"), desc: t("home.liveTrackingDesc") },
+    { icon: <Restaurant />, title: t("home.cloudKitchen"), desc: t("home.cloudKitchenDesc") },
+    { icon: <Star />, title: t("home.alwaysFresh"), desc: t("home.alwaysFreshDesc") },
+  ];
 
   return (
     <Box>
@@ -92,7 +94,7 @@ export default function HomePage() {
                   transition={{ duration: 2, repeat: Infinity }}
                 >
                   <Chip 
-                    label="⚡ 30-Min Delivery Guarantee" 
+                    label={`⚡ ${t("home.deliveryGuarantee")} ${t("home.deliveryDesc")}`} 
                     size="medium"
                     sx={{ 
                       mb: 3, 
@@ -114,16 +116,15 @@ export default function HomePage() {
                     textShadow: "0 4px 20px rgba(0,0,0,0.3)",
                   }}
                 >
-                  Cloud Kitchen
+                  {t("home.heroTitle")}
                   <br />
-                  <Box component="span" sx={{ color: "#FFD700" }}>Delivered Fresh</Box>
+                  <Box component="span" sx={{ color: "#FFD700" }}>{t("home.heroSubtitle")}</Box>
                 </Typography>
                 <Typography 
                   variant="h5" 
                   sx={{ color: "rgba(255,255,255,0.95)", mb: 4, fontWeight: 400, lineHeight: 1.6 }}
                 >
-                  Authentic UP & Bihar flavors from our hygiene-certified kitchen
-                  straight to your door. Track live, enjoy hot! 🔥
+                  {t("home.heroDescription")}
                 </Typography>
                 <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                   <MotionBox
@@ -144,7 +145,7 @@ export default function HomePage() {
                       }}
                       endIcon={<ArrowForward />}
                     >
-                      Order Now
+                      {t("home.orderNow")}
                     </Button>
                   </MotionBox>
                   <MotionBox
@@ -169,7 +170,7 @@ export default function HomePage() {
                         },
                       }}
                     >
-                      Track Order
+                      {t("trackOrder")}
                     </Button>
                   </MotionBox>
                 </Stack>
@@ -294,13 +295,13 @@ export default function HomePage() {
             sx={{ textAlign: "center", mb: 6 }}
           >
             <Typography variant="overline" color="primary" sx={{ fontSize: "1rem", fontWeight: 700 }}>
-              🔥 Hot & Ready
+              🔥 {t("home.hotReady")}
             </Typography>
             <Typography variant="h2" sx={{ mt: 1, mb: 2 }}>
-              Order in 30 Seconds
+              {t("home.orderInSeconds")}
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ fontSize: "1.1rem" }}>
-              Delivered piping hot in 30 minutes or less
+              {t("home.deliveredHot")}
             </Typography>
           </MotionBox>
           
@@ -329,7 +330,7 @@ export default function HomePage() {
                       />
                     </MotionBox>
                     <Chip 
-                      label={dish.isBestseller ? "Bestseller" : "Popular"} 
+                      label={dish.isBestseller ? t("menu.bestseller") : t("menu.popular")} 
                       size="small" 
                       sx={{
                         position: "absolute",
@@ -377,7 +378,7 @@ export default function HomePage() {
               size="large"
               endIcon={<ArrowForward />}
             >
-              View Full Menu
+              {t("home.viewFullMenu")}
             </Button>
           </Box>
         </Container>
@@ -417,10 +418,10 @@ export default function HomePage() {
           
           <Box sx={{ position: "relative", zIndex: 1 }}>
             <Typography variant="h3" sx={{ mb: 2, fontWeight: 800 }}>
-              Get 20% Off Your First Order! 🎉
+              {t("home.firstOrderOffer")} 🎉
             </Typography>
             <Typography variant="h6" sx={{ mb: 4, opacity: 0.95, fontWeight: 400 }}>
-              Join Swadika today • Free delivery on orders above ₹299
+              {t("home.joinToday")}
             </Typography>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2} justifyContent="center">
               <MotionBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -438,7 +439,7 @@ export default function HomePage() {
                     "&:hover": { bgcolor: "rgba(255,255,255,0.95)" },
                   }}
                 >
-                  Sign Up Now
+                  {t("home.signUpNow")}
                 </Button>
               </MotionBox>
               <MotionBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -461,7 +462,7 @@ export default function HomePage() {
                     },
                   }}
                 >
-                  Browse Menu
+                  {t("browseMenu")}
                 </Button>
               </MotionBox>
             </Stack>

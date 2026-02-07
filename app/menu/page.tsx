@@ -42,6 +42,7 @@ import {
 } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/context/CartContext";
+import { useLocale } from "@/context/LocaleContext";
 import { menuData, getAllCategories, type Dish } from "@/lib/menuData";
 
 const MotionCard = motion(Card);
@@ -49,6 +50,7 @@ const MotionBox = motion(Box);
 const MotionChip = motion(Chip);
 
 export default function MenuPage() {
+  const { t, getDishTranslation } = useLocale();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [vegOnly, setVegOnly] = useState<string | null>(null);
@@ -156,13 +158,13 @@ export default function MenuPage() {
             sx={{ textAlign: "center", mb: 4 }}
           >
             <Typography variant="overline" sx={{ fontSize: "1rem", fontWeight: 700 }}>
-              🍛 Authentic UP & Bihar Cuisine
+              🍛 {t("menu.authenticCuisine")}
             </Typography>
             <Typography variant="h2" sx={{ mt: 2, mb: 2, fontWeight: 800 }}>
-              Our Full Menu
+              {t("menu.ourFullMenu")}
             </Typography>
             <Typography variant="h6" sx={{ opacity: 0.95, maxWidth: 700, mx: "auto" }}>
-              Every dish tells a story. Explore traditional recipes passed down through generations.
+              {t("menu.menuDescription")}
             </Typography>
           </MotionBox>
 
@@ -175,7 +177,7 @@ export default function MenuPage() {
           >
             <TextField
               fullWidth
-              placeholder="Search dishes, ingredients, stories..."
+              placeholder={t("common.search")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               InputProps={{
@@ -236,21 +238,21 @@ export default function MenuPage() {
               onChange={(_, val) => setVegOnly(val)}
               size="small"
             >
-              <ToggleButton value="all">All</ToggleButton>
-              <ToggleButton value="veg">🌱 Veg Only</ToggleButton>
+              <ToggleButton value="all">{t("common.all")}</ToggleButton>
+              <ToggleButton value="veg">🌱 {t("menu.veg")}</ToggleButton>
             </ToggleButtonGroup>
 
             {/* Sort */}
             <FormControl size="small" sx={{ minWidth: 150 }}>
-              <InputLabel>Sort By</InputLabel>
+              <InputLabel>{t("menu.sortBy")}</InputLabel>
               <Select
                 value={sortBy}
-                label="Sort By"
+                label={t("menu.sortBy")}
                 onChange={(e) => setSortBy(e.target.value)}
               >
-                <MenuItem value="popular">Most Popular</MenuItem>
-                <MenuItem value="price-low">Price: Low to High</MenuItem>
-                <MenuItem value="price-high">Price: High to Low</MenuItem>
+                <MenuItem value="popular">{t("menu.mostPopular")}</MenuItem>
+                <MenuItem value="price-low">{t("menu.priceLowToHigh")}</MenuItem>
+                <MenuItem value="price-high">{t("menu.priceHighToLow")}</MenuItem>
               </Select>
             </FormControl>
           </Stack>
@@ -301,14 +303,14 @@ export default function MenuPage() {
                       {dish.isBestseller && (
                         <Chip
                           icon={<LocalFireDepartment sx={{ fontSize: 16 }} />}
-                          label="Bestseller"
+                          label={t("menu.bestseller")}
                           size="small"
                           sx={{ bgcolor: "#FF6B35", color: "#fff", fontWeight: 700 }}
                         />
                       )}
                       {dish.isNew && (
                         <Chip
-                          label="New"
+                          label={t("menu.newItem")}
                           size="small"
                           sx={{ bgcolor: "#00C853", color: "#fff", fontWeight: 700 }}
                         />
@@ -421,7 +423,7 @@ export default function MenuPage() {
                           fontWeight: 600,
                         }}
                       >
-                        Add
+                        {t("common.addToCart")}
                       </Button>
                     </Box>
                   </CardContent>
@@ -439,10 +441,10 @@ export default function MenuPage() {
           >
             <Restaurant sx={{ fontSize: 80, color: "text.secondary", mb: 2 }} />
             <Typography variant="h5" color="text.secondary">
-              No dishes found
+              {t("menu.noDishesFound")}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-              Try adjusting your filters
+              {t("menu.tryDifferentFilters")}
             </Typography>
           </MotionBox>
         )}
@@ -489,12 +491,12 @@ export default function MenuPage() {
               <Box sx={{ mb: 3 }}>
                 <Stack direction="row" spacing={1} sx={{ mb: 2, flexWrap: "wrap", gap: 1 }}>
                   {selectedDish.isBestseller && (
-                    <Chip icon={<LocalFireDepartment />} label="Bestseller" color="primary" size="small" />
+                    <Chip icon={<LocalFireDepartment />} label={t("menu.bestseller")} color="primary" size="small" />
                   )}
                   {selectedDish.isNew && (
-                    <Chip label="New" sx={{ bgcolor: "#00C853", color: "#fff" }} size="small" />
+                    <Chip label={t("menu.newItem")} sx={{ bgcolor: "#00C853", color: "#fff" }} size="small" />
                   )}
-                  <Chip label={selectedDish.isVeg ? "🌱 Vegetarian" : "🍗 Non-Veg"} size="small" />
+                  <Chip label={selectedDish.isVeg ? `🌱 ${t("menu.veg")}` : `🍗 ${t("menu.nonVeg")}`} size="small" />
                 </Stack>
 
                 <Typography variant="h4" sx={{ mb: 1, fontWeight: 700 }}>
@@ -528,10 +530,10 @@ export default function MenuPage() {
               {/* Story */}
               <Box sx={{ mb: 3 }}>
                 <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                  📖 The Story
+                  📖 {t("recipe.story")}
                 </Typography>
                 <Typography variant="body1" sx={{ lineHeight: 1.8, color: "text.secondary" }}>
-                  {selectedDish.story}
+                  {getDishTranslation(selectedDish.id, 'story') || selectedDish.story}
                 </Typography>
               </Box>
 
@@ -541,10 +543,10 @@ export default function MenuPage() {
               {selectedDish.ingredients && (
                 <Box sx={{ mb: 3 }}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                    🥘 Ingredients
+                    🥘 {t("recipe.ingredients")}
                   </Typography>
                   <List dense>
-                    {selectedDish.ingredients.map((ingredient, index) => (
+                    {(getDishTranslation(selectedDish.id, 'ingredients') as string[] || selectedDish.ingredients).map((ingredient, index) => (
                       <ListItem key={index} sx={{ py: 0.5 }}>
                         <ListItemText
                           primary={`• ${ingredient}`}
@@ -562,16 +564,16 @@ export default function MenuPage() {
               {selectedDish.instructions && (
                 <Box sx={{ mb: 3 }}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                    👨‍🍳 Preparation Method
+                    👨‍🍳 {t("recipe.instructions")}
                   </Typography>
                   <List>
-                    {selectedDish.instructions.map((step, index) => (
+                    {(getDishTranslation(selectedDish.id, 'instructions') as string[] || selectedDish.instructions).map((step, index) => (
                       <ListItem key={index} sx={{ alignItems: "flex-start", py: 1 }}>
                         <ListItemText
                           primary={
                           <Box>
                             <Typography component="span" sx={{ fontWeight: 700, color: "primary.main" }}>
-                              Step {index + 1}:
+                              {t("recipe.instructionsCount")} {index + 1}:
                             </Typography>
                             <Typography component="span" sx={{ ml: 1 }}>
                               {step}
@@ -592,13 +594,13 @@ export default function MenuPage() {
                 {selectedDish.nutrition && (
                   <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>
-                      🍽️ Nutrition (per serving)
+                      🍽️ {t("recipe.nutrition")}
                     </Typography>
                     <Stack spacing={1}>
-                      <Typography variant="body2">Calories: {selectedDish.nutrition.calories} kcal</Typography>
-                      <Typography variant="body2">Protein: {selectedDish.nutrition.protein}</Typography>
-                      <Typography variant="body2">Carbs: {selectedDish.nutrition.carbs}</Typography>
-                      <Typography variant="body2">Fat: {selectedDish.nutrition.fat}</Typography>
+                      <Typography variant="body2">{t("recipe.calories")}: {selectedDish.nutrition.calories} kcal</Typography>
+                      <Typography variant="body2">{t("recipe.protein")}: {selectedDish.nutrition.protein}</Typography>
+                      <Typography variant="body2">{t("recipe.carbs")}: {selectedDish.nutrition.carbs}</Typography>
+                      <Typography variant="body2">{t("recipe.fat")}: {selectedDish.nutrition.fat}</Typography>
                     </Stack>
                   </Grid>
                 )}
@@ -634,7 +636,7 @@ export default function MenuPage() {
                 }}
                 sx={{ mt: 4, py: 1.5, fontSize: "1.1rem", fontWeight: 700 }}
               >
-                Add to Cart - ₹{selectedDish.price}
+                {t("common.addToCart")} - ₹{selectedDish.price}
               </Button>
             </DialogContent>
           </>

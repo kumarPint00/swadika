@@ -1,0 +1,2200 @@
+{
+  "header": {
+    "home": "होम",
+    "menu": "मेनू",
+    "recipes": "रेसिपी",
+    "subscriptions": "सब्सक्रिप्शन",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क",
+    "signIn": "साइन इन",
+    "signOut": "लॉगआउट",
+    "profile": "प्रोफाइल",
+    "myOrders": "मेरे ऑर्डर",
+    "rewards": "रिवॉर्ड्स",
+    "favorites": "पसंदीदा",
+    "cart": "कार्ट"
+  },
+  "home": {
+    "heroTitle": "क्लाउड किचन",
+    "heroSubtitle": "ताज़ा डिलीवरी",
+    "heroDescription": "हमारी स्वच्छता प्रमाणित किचन से प्रामाणिक उत्तर प्रदेश और बिहार के स्वाद सीधे आपके दरवाजे तक। लाइव ट्रैक करें, गर्मागर्म आनंद लें!",
+    "orderNow": "अभी ऑर्डर करें",
+    "trackOrder": "ऑर्डर ट्रैक करें",
+    "deliveryGuarantee": "30 मिनट डिलीवरी",
+    "deliveryDesc": "बिजली की तेजी से आपके दरवाजे तक",
+    "liveTracking": "लाइव ट्रैकिंग",
+    "liveTrackingDesc": "अपने ऑर्डर को रियल-टाइम में देखें",
+    "cloudKitchen": "क्लाउड किचन",
+    "cloudKitchenDesc": "100% स्वच्छता प्रमाणित",
+    "alwaysFresh": "हमेशा ताज़ा",
+    "alwaysFreshDesc": "ऑर्डर पर पकाया गया, गर्म डिलीवर किया गया",
+    "hotReady": "गर्म और तैयार",
+    "orderInSeconds": "30 सेकंड में ऑर्डर करें",
+    "deliveredHot": "30 मिनट या उससे कम में गर्मागर्म डिलीवर किया गया",
+    "viewFullMenu": "पूरा मेनू देखें",
+    "firstOrderOffer": "अपने पहले ऑर्डर पर 20% की छूट पाएं!",
+    "joinToday": "आज ही स्वादिका में शामिल हों • ₹299 से अधिक के ऑर्डर पर मुफ़्त डिलीवरी",
+    "signUpNow": "अभी साइन अप करें",
+    "browseMenu": "मेनू ब्राउज़ करें"
+  },
+  "common": {
+    "search": "खोजें",
+    "searchPlaceholder": "नाम, सामग्री द्वारा रेसिपी खोजें...",
+    "filter": "फ़िल्टर",
+    "all": "सभी",
+    "order": "अभी ऑर्डर करें",
+    "share": "शेयर करें",
+    "loading": "लोड हो रहा है...",
+    "noResults": "कोई परिणाम नहीं मिला",
+    "noResultsDesc": "अपने फ़िल्टर या खोज शब्दों को समायोजित करने का प्रयास करें",
+    "clearFilters": "फ़िल्टर साफ़ करें",
+    "viewDetails": "विवरण देखें",
+    "addToCart": "कार्ट में जोड़ें",
+    "buyNow": "अभी खरीदें",
+    "viewMore": "और देखें",
+    "showLess": "कम दिखाएं"
+  },
+  "menu": {
+    "ourMenu": "हमारा मेनू",
+    "exploreMenu": "हमारे स्वादिष्ट मेनू का अन्वेषण करें",
+    "comboMeals": "कॉम्बो मील्स",
+    "littis": "लिट्टी",
+    "thalis": "थाली",
+    "addOns": "एड-ऑन्स",
+    "snacks": "नाश्ता",
+    "chaat": "चाट",
+    "desserts": "मिठाई",
+    "beverages": "पेय पदार्थ",
+    "veg": "केवल शाकाहारी",
+    "nonVeg": "मांसाहारी",
+    "bestseller": "बेस्टसेलर",
+    "popular": "लोकप्रिय",
+    "newItem": "नया",
+    "dishesFound": "व्यंजन मिले",
+    "authenticCuisine": "प्रामाणिक उत्तर प्रदेश और बिहार व्यंजन",
+    "ourFullMenu": "हमारा पूरा मेनू",
+    "menuDescription": "हर व्यंजन एक कहानी कहता है। पीढ़ियों से चली आ रही पारंपरिक रेसिपी खोजें।",
+    "sortBy": "क्रमबद्ध करें",
+    "mostPopular": "सबसे लोकप्रिय",
+    "priceLowToHigh": "कीमत: कम से ज्यादा",
+    "priceHighToLow": "कीमत: ज्यादा से कम",
+    "noDishesFound": "कोई व्यंजन नहीं मिला",
+    "tryDifferentFilters": "विभिन्न फ़िल्टर या खोज शब्द आज़माएं"
+  },
+  "recipe": {
+    "recipesFound": "रेसिपी मिली",
+    "recipeCollection": "रेसिपी संग्रह",
+    "traditionalRecipes": "पारंपरिक रेसिपी और कहानियां",
+    "totalRecipes": "कुल रेसिपी",
+    "myFavorites": "मेरे पसंदीदा",
+    "yourFavorites": "आपकी पसंदीदा",
+    "discoverRecipes": "{count}+ प्रामाणिक बिहार और उत्तर प्रदेश की रेसिपी खोजें जिनमें पूर्ण खाना पकाने के निर्देश और सांस्कृतिक कहानियां हैं",
+    "searchRecipes": "नाम, सामग्री या कहानी से रेसिपी खोजें...",
+    "story": "कहानी और उत्पत्ति",
+    "ingredients": "सामग्री",
+    "ingredientsCount": "सामग्री",
+    "instructions": "पकाने के निर्देश",
+    "instructionsCount": "चरण",
+    "nutrition": "पोषण जानकारी",
+    "pairings": "परफेक्ट पेयरिंग",
+    "servings": "सर्विंग्स",
+    "prepTime": "तैयारी का समय",
+    "cookTime": "पकाने का समय",
+    "calories": "कैलोरी",
+    "protein": "प्रोटीन",
+    "carbs": "कार्ब्स",
+    "fat": "फैट",
+    "shareRecipe": "रेसिपी शेयर करें",
+    "orderThis": "यह व्यंजन ऑर्डर करें",
+    "noRecipesFound": "कोई रेसिपी नहीं मिली",
+    "tryDifferentSearch": "एक अलग खोज आज़माएं या सभी श्रेणियां ब्राउज़ करें"
+  },
+  "spice": {
+    "mild": "हल्का",
+    "medium": "मध्यम",
+    "hot": "तीखा",
+    "extraHot": "बहुत तीखा"
+  },
+  "about": {
+    "pageTitle": "हमारे बारे में",
+    "ourStory": "हमारी कहानी",
+    "whoWeAre": "हम कौन हैं",
+    "ourMission": "हमारा मिशन",
+    "ourValues": "हमारे मूल्य",
+    "meetTeam": "हमारी टीम से मिलें",
+    "ordersServed": "ऑर्डर परोसे गए",
+    "happyCustomers": "खुश ग्राहक",
+    "rating": "रेटिंग",
+    "dailyOrders": "दैनिक ऑर्डर",
+    "fastDelivery": "तेज़ डिलीवरी",
+    "freshIngredients": "ताज़ी सामग्री",
+    "hygienic": "100% स्वच्छ",
+    "technology": "स्मार्ट तकनीक"
+  },
+  "contact": {
+    "pageTitle": "हमसे संपर्क करें",
+    "getInTouch": "संपर्क में रहें",
+    "contactUs": "हमसे संपर्क करें",
+    "sendMessage": "हमें संदेश भेजें",
+    "yourName": "आपका नाम",
+    "yourEmail": "आपका ईमेल",
+    "yourPhone": "आपका फ़ोन",
+    "yourMessage": "आपका संदेश",
+    "sendMessageBtn": "संदेश भेजें",
+    "messageSent": "संदेश सफलतापूर्वक भेजा गया!",
+    "phone": "फ़ोन",
+    "email": "ईमेल",
+    "address": "पता",
+    "hours": "समय",
+    "followUs": "फॉलो करें",
+    "mondayToSunday": "सोमवार - रविवार",
+    "timing": "सुबह 10:00 - रात 10:00"
+  },
+  "subscriptions": {
+    "pageTitle": "भोजन सब्सक्रिप्शन",
+    "mealPlans": "भोजन योजनाएं",
+    "choosePlan": "अपनी परफेक्ट प्लान चुनें",
+    "weeklyPlan": "साप्ताहिक प्लान",
+    "lunchPlan": "दैनिक लंच",
+    "fullMealPlan": "पूरे दिन का भोजन",
+    "save": "बचत",
+    "perWeek": "प्रति सप्ताह",
+    "perMonth": "प्रति माह",
+    "selectPlan": "प्लान चुनें",
+    "whySubscribe": "सब्सक्राइब क्यों करें?",
+    "saveTime": "समय बचाएं",
+    "saveTimeDesc": "दैनिक खाना पकाने की कोई परेशानी नहीं",
+    "saveQuality": "प्रीमियम क्वालिटी",
+    "saveQualityDesc": "रोजाना ताजी सामग्री",
+    "saveMoney": "पैसे बचाएं",
+    "saveMoneyDesc": "30% तक की बचत",
+    "freeDelivery": "मुफ़्त डिलीवरी",
+    "freeDeliveryDesc": "सभी सब्सक्रिप्शन पर"
+  },
+  "cart": {
+    "pageTitle": "शॉपिंग कार्ट",
+    "yourCart": "आपकी कार्ट",
+    "emptyCart": "आपकी कार्ट खाली है",
+    "emptyCartDesc": "शुरू करने के लिए कुछ स्वादिष्ट आइटम जोड़ें",
+    "continueShopping": "खरीदारी जारी रखें",
+    "subtotal": "उपयोग",
+    "delivery": "डिलीवरी",
+    "discount": "छूट",
+    "total": "कुल",
+    "checkout": "चेकआउट",
+    "removeItem": "हटाएं",
+    "quantity": "मात्रा",
+    "price": "कीमत"
+  },
+  "orders": {
+    "pageTitle": "मेरे ऑर्डर",
+    "orderHistory": "ऑर्डर इतिहास",
+    "orderDetails": "ऑर्डर विवरण",
+    "orderStatus": "ऑर्डर स्थिति",
+    "orderNumber": "ऑर्डर #",
+    "orderedOn": "ऑर्डर किया गया",
+    "preparing": "तैयार हो रहा है",
+    "outForDelivery": "डिलीवरी के लिए निकला",
+    "delivered": "डिलीवर किया गया",
+    "cancelled": "रद्द किया गया",
+    "reorder": "फिर से ऑर्डर करें",
+    "trackOrder": "ऑर्डर ट्रैक करें",
+    "noOrders": "अभी तक कोई ऑर्डर नहीं",
+    "noOrdersDesc": "अभी स्वादिष्ट भोजन ऑर्डर करना शुरू करें!"
+  },
+  "footer": {
+    "quickLinks": "त्वरित लिंक",
+    "newsletter": "न्यूज़लेटर",
+    "newsletterDesc": "विशेष ऑफ़र प्राप्त करने के लिए सब्सक्राइब करें",
+    "emailPlaceholder": "अपना ईमेल दर्ज करें",
+    "subscribe": "सब्सक्राइब करें",
+    "allRightsReserved": "सर्वाधिकार सुरक्षित",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfService": "सेवा की शर्तें",
+    "refundPolicy": "रिफंड नीति",
+    "copyrightText": "© 2026 स्वादिका डिलाइट्स"
+  },
+  "dishes": {
+    "daal-bhat-chokha": {
+      "story": "The quintessential meal of Bihar - a trinity that has nourished generations. Farmers would return home to this simple yet complete meal after long days in the fields. The combination of protein-rich dal, energy-giving rice, and vitamin-packed chokha represents balanced nutrition discovered through centuries of wisdom. In every Bihari household, the aroma of roasted eggplant and tomatoes signals the evening meal. This is comfort food that tells the story of resilience, hard work, and the beauty of simplicity.",
+      "ingredients": [
+        "1 cup basmati rice",
+        "1/2 cup arhar dal (pigeon pea lentils)",
+        "2 large eggplants",
+        "3 tomatoes",
+        "2 green chilies",
+        "1 onion, finely chopped",
+        "3 cloves garlic, minced",
+        "2 tbsp mustard oil",
+        "1 tsp cumin seeds",
+        "Fresh coriander leaves",
+        "Salt to taste",
+        "Lemon juice"
+      ],
+      "instructions": [
+        "Cook rice: Wash rice thoroughly and cook with 2 cups water until fluffy. Set aside.",
+        "Prepare dal: Pressure cook arhar dal with turmeric and salt for 3-4 whistles. Temper with cumin, garlic, and red chili.",
+        "Make chokha: Roast eggplants and tomatoes directly on flame until charred. Peel and mash them together.",
+        "Season chokha: Mix mashed vegetables with chopped onion, green chilies, mustard oil, salt, and lemon juice.",
+        "Garnish: Add fresh coriander to both dal and chokha.",
+        "Serve hot: Arrange rice, dal, and chokha in a thali with a dollop of ghee on top."
+      ]
+    },
+    "roti-sabji-combo": {
+      "story": "The everyday meal that unites all of North India. From village homes to city apartments, the sight of fresh rotis puffing up on the tawa is universal. This simple combination allows the seasonal vegetables to shine - in winter it might be sarson ka saag, in summer bhindi masala, in monsoon arbi curry. The beauty lies in its adaptability and the skill of making perfect rotis - soft, warm, and slightly charred. Every household has their secret to the perfect roti, passed down through mothers and grandmothers.",
+      "ingredients": [
+        "2 cups whole wheat flour (atta)",
+        "Water as needed",
+        "Salt",
+        "3 potatoes OR seasonal vegetables",
+        "2 tomatoes, pureed",
+        "1 onion, finely chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric",
+        "1 tsp coriander powder",
+        "1/2 tsp red chili powder",
+        "2 tbsp oil",
+        "Fresh coriander",
+        "Ginger-garlic paste"
+      ],
+      "instructions": [
+        "Make dough: Knead wheat flour with water and salt into soft, pliable dough. Rest for 15 minutes.",
+        "Prepare sabzi: Heat oil, add cumin seeds, then onions. Sauté until golden.",
+        "Add spices: Add ginger-garlic paste, tomatoes, and all spices. Cook until oil separates.",
+        "Cook vegetables: Add chopped vegetables with water. Cover and cook until tender.",
+        "Roll rotis: Divide dough into balls, roll into thin circles using dry flour.",
+        "Cook rotis: Heat tawa, cook rotis on both sides until brown spots appear. Apply ghee.",
+        "Serve: Stack hot rotis wrapped in cloth, serve with sabzi and pickle."
+      ]
+    },
+    "litti-chokha-meal": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "2 cups whole wheat flour",
+        "1 cup sattu (roasted gram flour)",
+        "2 tbsp mustard oil for dough",
+        "3 tbsp mustard oil for stuffing",
+        "1 tsp ajwain (carom seeds)",
+        "1 tsp kalonji (nigella seeds)",
+        "2 green chilies, finely chopped",
+        "1 tsp ginger paste",
+        "1 tsp garlic paste",
+        "Fresh coriander",
+        "Lemon juice",
+        "3 eggplants for chokha",
+        "4 tomatoes for chokha",
+        "Pickle masala",
+        "Ghee for serving"
+      ],
+      "instructions": [
+        "Make sattu filling: Mix sattu with mustard oil, pickle masala, ajwain, kalonji, green chili, ginger-garlic paste, and lemon juice. Add water to form crumbly mixture.",
+        "Prepare dough: Knead wheat flour with oil, salt and water into stiff dough.",
+        "Stuff littis: Make small dough balls, create cavity, fill with sattu mixture, seal completely.",
+        "Roast littis: Bake in oven at 200°C for 20-25 minutes until golden and crispy. Traditionally roasted on coal.",
+        "Make chokha: Roast eggplants and tomatoes on direct flame until charred. Peel, mash, and season with mustard oil, salt, and chopped onions.",
+        "Finish: Crack open hot littis, stuff with ghee. Serve with chokha and chutneys."
+      ]
+    },
+    "poori-bhaji-plate": {
+      "story": "The breakfast of celebrations! Whether it\\",
+      "ingredients": [
+        "2 cups whole wheat flour",
+        "1 tsp semolina (for crispy pooris)",
+        "Salt",
+        "Oil for frying",
+        "4 large potatoes, boiled",
+        "2 tomatoes, chopped",
+        "1 onion, chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric powder",
+        "1 tsp red chili powder",
+        "1 tsp coriander powder",
+        "1/2 tsp garam masala",
+        "Fresh coriander",
+        "2 green chilies"
+      ],
+      "instructions": [
+        "Make poori dough: Mix wheat flour, semolina, salt with water. Knead into firm dough, rest 20 minutes.",
+        "Prepare bhaji: Heat oil, add cumin seeds, then onions. Sauté until pink.",
+        "Add spices: Add tomatoes, turmeric, chili powder, coriander powder. Cook until mushy.",
+        "Cook potatoes: Mash boiled potatoes roughly, add to masala with water. Simmer for 5-7 minutes.",
+        "Season: Add garam masala and fresh coriander. Keep bhaji slightly dry, not watery.",
+        "Fry pooris: Roll small balls into thin circles. Deep fry in hot oil until puffed and golden.",
+        "Serve immediately: Serve hot pooris with piping hot bhaji and pickle."
+      ]
+    },
+    "khichdi-kadhi": {
+      "story": "The ultimate comfort food - when you\\",
+      "ingredients": [
+        "1/2 cup rice",
+        "1/2 cup moong dal (split yellow lentils)",
+        "1 tsp ghee",
+        "1/2 tsp turmeric",
+        "1 tsp cumin seeds",
+        "Salt to taste",
+        "1 cup yogurt (for kadhi)",
+        "2 tbsp gram flour (besan)",
+        "1/2 tsp fenugreek seeds",
+        "1/2 tsp mustard seeds",
+        "Curry leaves",
+        "2 dried red chilies",
+        "Hing (asafoetida)",
+        "Green chilies",
+        "Ginger, chopped"
+      ],
+      "instructions": [
+        "Cook khichdi: Wash rice and moong dal together. Pressure cook with turmeric, cumin, salt, ghee and 3 cups water for 3 whistles.",
+        "Make kadhi: Whisk yogurt with gram flour and water until smooth. Add turmeric and salt.",
+        "Cook kadhi: Simmer yogurt mixture on low heat, stirring continuously to prevent curdling. Add chopped green chilies.",
+        "Temper kadhi: Heat ghee in separate pan, add mustard seeds, fenugreek seeds, dried red chilies, curry leaves and hing. Pour over kadhi.",
+        "Combine: Let khichdi become mushy and soft. The consistency should be porridge-like.",
+        "Serve: Pour hot kadhi over khichdi. Top with fresh coriander and serve with papad."
+      ]
+    },
+    "thali-veg": {
+      "story": "The thali is not just a meal - it\\",
+      "ingredients": [
+        "4 rotis: 1 cup wheat flour",
+        "1 cup rice",
+        "1/2 cup dal (any variety)",
+        "Seasonal vegetable curry: potatoes, beans, cauliflower",
+        "1 cup yogurt for raita",
+        "1 cucumber, grated",
+        "Pickle (store-bought or homemade)",
+        "Papad",
+        "1 piece of jaggery or sweet",
+        "Green chutney",
+        "Spices: cumin, turmeric, chili powder, coriander",
+        "Ghee for serving",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Cook rice: Wash and cook basmati rice until fluffy.",
+        "Make dal: Pressure cook dal with turmeric. Temper with cumin, garlic, and whole spices.",
+        "Prepare sabzi: Make seasonal vegetable curry with onion-tomato base and traditional spices.",
+        "Make rotis: Knead soft dough, roll and cook rotis on tawa until spotted.",
+        "Prepare raita: Mix grated cucumber with yogurt, roasted cumin powder, and salt.",
+        "Roast papad: Roast papad on direct flame or microwave.",
+        "Arrange thali: Place all items in separate katoris on a large plate. Serve rice and rotis hot.",
+        "Final touch: Add a dollop of ghee on rice and dal. Serve pickle and green chutney on the side."
+      ]
+    },
+    "thali-nonveg": {
+      "story": "The grand feast thali - where meat takes center stage alongside traditional accompaniments. In UP and Bihar, serving meat curry is reserved for special occasions, guests, and celebrations. The curry is slow-cooked with pride, using family recipes that have been perfected over generations. Whether it\\",
+      "ingredients": [
+        "4 rotis: 1 cup wheat flour",
+        "1 cup basmati rice",
+        "1/2 cup dal",
+        "Seasonal sabzi",
+        "300g chicken or 250g mutton pieces",
+        "2 onions, pureed",
+        "3 tomatoes, pureed",
+        "Whole spices: bay leaf, cinnamon, cardamom, cloves",
+        "Ginger-garlic paste",
+        "Yogurt",
+        "1 cup yogurt for raita",
+        "Fresh coriander",
+        "Kashmiri red chili powder",
+        "Garam masala",
+        "Ghee"
+      ],
+      "instructions": [
+        "Marinate meat: Mix chicken/mutton with yogurt, ginger-garlic paste, chili powder, salt. Rest 30 minutes.",
+        "Cook curry: Heat ghee, add whole spices. Add onion paste, cook until golden. Add tomato paste and cook until oil separates.",
+        "Add meat: Add marinated meat, sauté on high heat. Add water, cover and cook until tender (20 mins for chicken, 45 mins for mutton).",
+        "Finish curry: Add garam masala and fresh coriander. The gravy should be thick and aromatic.",
+        "Prepare sides: Make dal, rice, rotis, sabzi, and raita as in veg thali.",
+        "Assemble: Arrange all items in thali with meat curry as the centerpiece.",
+        "Serve hot: Meat curry should be piping hot with ghee floating on top."
+      ]
+    },
+    "kachori": {
+      "story": "राजस्थान का उपहार! कचोरी कुरकुरी, तीखी, मसालेदार - नाश्ते की परफेक्ट शुरुआत। दाल भरी कचोरी गरमागरम जलेबी के साथ - यह स्वर्ग का स्वाद है। राजस्थान से UP और बिहार तक, कचोरी ने दिल जीत लिए हैं।",
+      "ingredients": [
+        "2 कप मैदा",
+        "3 बड़े चम्मच तेल",
+        "1 कप उड़द दाल (भिगोई)",
+        "1 छोटा चम्मच सौंफ",
+        "1/2 छोटा चम्मच हींग",
+        "1 छोटा चम्मच धनिया पाउडर",
+        "1 छोटा चम्मच लाल मिर्च",
+        "1/2 छोटा चम्मच गरम मसाला",
+        "नमक",
+        "तलने के लिए तेल"
+      ],
+      "instructions": [
+        "दाल भराई: भिगोई दाल दरदरा पीसें। तेल गर्म करें, सौंफ, हींग डालें, फिर दाल।",
+        "मसाले डालें: धीमी आंच पर भूनें। सब मसाले मिलाएं। ठंडा करें।",
+        "आटा गूंथें: मैदा में तेल, नमक मिलाकर सख्त आटा गूंथें।",
+        "कचोरी बनाएं: गोले बनाएं, भराई भरें, सील करें।",
+        "तलें: मध्यम आंच पर कुरकुरी और सुनहरी तलें।",
+        "परोसें: गरम कचोरी हरी चटनी के साथ परोसें।"
+      ]
+    },
+    "puchka": {
+      "story": "कई नामों से जानी जाने वाली - दिल्ली में गोलगप्पा, बिहार और बंगाल में पुचका, मुंबई में पानी पूरी। मुंह में तीखे-खट्टे पानी का फूटना - अद्भुत अनुभव। यह स्ट्रीट फूड नशा है जो सबको अपनी ओर खींच लेता है।",
+      "ingredients": [
+        "25-30 पूरी",
+        "3 आलू (उबले, मसले)",
+        "1 कप उबले चने",
+        "1 कप इमली का गूदा",
+        "1/2 कप पुदीना",
+        "1/2 कप धनिया",
+        "2 हरी मिर्च",
+        "1 बड़ा चम्मच भुना जीरा",
+        "1 छोटा चम्मच चाट मसाला",
+        "1 छोटा चम्मच काला नमक",
+        "2 बड़े चम्मच गुड़",
+        "नमक"
+      ],
+      "instructions": [
+        "पानी बनाएं: पुदीना, धनिया, हरी मिर्च पीसें। छान लें।",
+        "मिक्स करें: इमली गूदा, जीरा, चाट मसाला, काला नमक, गुड़ मिलाएं। ठंडा पानी डालें।",
+        "भराई तैयार करें: आलू में चने, चाट मसाला, नमक मिलाएं।",
+        "असेंबल करें: पूरी में छेद करें। आलू-चना भरें।",
+        "तुरंत परोसें: पूरी में पानी भरें और तुरंत परोसें।"
+      ]
+    },
+    "aloo-tikki": {
+      "story": "दिल्ली की सड़कों का सितारा! आलू टिक्की कुरकुरी, नरम, मसालेदार। तवे पर सिकती टिक्की की खुशबू अप्रतिरोध्य है। चटनी के साथ या चाट के रूप में - हर तरह से लाजवाब।",
+      "ingredients": [
+        "5 आलू (उबले, मसले)",
+        "2 बड़े चम्मच कॉर्नफ्लोर",
+        "1 छोटा चम्मच गरम मसाला",
+        "1 छोटा चम्मच लाल मिर्च",
+        "1 छोटा चम्मच आमचूर",
+        "ताजा धनिया",
+        "तलने के लिए तेल",
+        "नमक"
+      ],
+      "instructions": [
+        "मिश्रण: आलू में कॉर्नफ्लोर, मसाले, धनिया, नमक मिलाएं।",
+        "टिक्की बनाएं: गोले बनाएं, मोटी टिक्की बनाएं।",
+        "तलें: तवे पर तेल में सुनहरी तलें।",
+        "परोसें: हरी चटनी और इमली चटनी के साथ परोसें।"
+      ]
+    },
+    "pakora": {
+      "story": "बारिश का सबसे अच्छा साथी! जब बारिश की पहली बूंदें पड़ती हैं, भारत पकोड़े की मांग करता है। गर्म तेल में बेसन के पकोड़े सिकने की आवाज़, मसालों की खुशबू, चाय की गर्माहट - यह खुशी की रेसिपी है।",
+      "ingredients": [
+        "1.5 कप बेसन",
+        "1 प्याज (कटी)",
+        "1 आलू (पतला कटा)",
+        "1/2 कप पालक",
+        "2 हरी मिर्च",
+        "1 छोटा चम्मच अजवाइन",
+        "1/2 छोटा चम्मच बेकिंग सोडा",
+        "1 छोटा चम्मच लाल मिर्च",
+        "1/2 छोटा चम्मच हल्दी",
+        "ताजा धनिया",
+        "नमक",
+        "तलने के लिए तेल"
+      ],
+      "instructions": [
+        "बैटर बनाएं: बेसन में मसाले, अजवाइन, बेकिंग सोडा मिलाएं। पानी डालकर गाढ़ा बैटर बनाएं।",
+        "सब्जियां मिलाएं: सब सब्जियां बैटर में मिलाएं।",
+        "तलें: चम्मच से बैटर तेल में डालें। सुनहरा और कुरकुरा तलें।",
+        "परोसें: गरम पकोड़े हरी चटनी और चाय के साथ परोसें।"
+      ]
+    },
+    "bread-pakora": {
+      "story": "ब्रिटिश ब्रेड और भारतीय पकोड़े का शानदार फ्यूजन! मसालेदार आलू भराई, बेसन बैटर में डुबाकर सुनहरा तला - ब्रेड पकोड़ा शाम के नाश्ते का राजा बन गया।",
+      "ingredients": [
+        "8 ब्रेड स्लाइस",
+        "3 आलू (उबले, मसले)",
+        "1 प्याज (कटा)",
+        "2 हरी मिर्च",
+        "1 छोटा चम्मच गरम मसाला",
+        "ताजा धनिया",
+        "1 कप बेसन",
+        "1/2 छोटा चम्मच बेकिंग सोडा",
+        "1/2 छोटा चम्मच हल्दी",
+        "नमक",
+        "तलने के लिए तेल"
+      ],
+      "instructions": [
+        "भराई: आलू में प्याज, हरी मिर्च, गरम मसाला, धनिया मिलाएं।",
+        "ब्रेड भरें: एक ब्रेड पर आलू फैलाएं, दूसरी से ढकें।",
+        "बैटर: बेसन में हल्दी, बेकिंग सोडा, पानी मिलाएं।",
+        "डुबाएं: ब्रेड को बैटर में डुबाएं।",
+        "तलें: मध्यम आंच पर सुनहरा तलें।",
+        "परोसें: चटनी के साथ परोसें।"
+      ]
+    },
+    "chana-chaat": {
+      "story": "सेहतमंद स्ट्रीट फूड! चना चाट प्रोटीन से भरपूर, हल्की और स्वादिष्ट। काबुली चने, ताजी सब्जियां, तीखी-मीठी चटनी - गिल्ट-फ्री नाश्ता।",
+      "ingredients": [
+        "2 कप उबले चने",
+        "1 प्याज (कटा)",
+        "2 टमाटर (कटे)",
+        "1 खीरा (कटा)",
+        "1 छोटा चम्मच चाट मसाला",
+        "1 छोटा चम्मच भुना जीरा",
+        "1/2 छोटा चम्मच काला नमक",
+        "ताजा धनिया",
+        "नींबू का रस",
+        "सेव",
+        "नमक"
+      ],
+      "instructions": [
+        "चने तैयार: उबले चने लें।",
+        "मिलाएं: चने, प्याज, टमाटर, खीरा मिलाएं।",
+        "मसाले: चाट मसाला, जीरा, काला नमक छिड़कें।",
+        "नींबू: नींबू रस निचोड़ें।",
+        "सजावट: धनिया और सेव डालें।",
+        "तुरंत परोसें।"
+      ]
+    },
+    "dahi-vada": {
+      "story": "भारतीय चाट का ठंडा चैंपियन! नरम स्पंजी दाल के पकोड़े मलाईदार दही में तैरते, मीठी-तीखी चटनी के साथ। राजस्थान से पूरे भारत में त्योहार का पसंदीदा।",
+      "ingredients": [
+        "1 कप उड़द दाल",
+        "1 छोटा चम्मच जीरा",
+        "2 कप दही (फेंटा)",
+        "2 बड़े चम्मच चीनी",
+        "हरी चटनी",
+        "इमली चटनी",
+        "1 छोटा चम्मच भुना जीरा",
+        "सेव",
+        "ताजा धनिया",
+        "नमक",
+        "तलने के लिए तेल"
+      ],
+      "instructions": [
+        "दाल भिगोएं: उड़द दाल 4-5 घंटे भिगोएं।",
+        "बैटर: दाल फूला-फूला पीसें। जीरा, नमक मिलाएं।",
+        "वड़े तलें: बैटर की बूंदें तेल में डालें। सुनहरा तलें।",
+        "भिगोएं: वड़े गुनगुने पानी में 15 मिनट भिगोएं।",
+        "दही: दही में चीनी मिलाकर फेंटें।",
+        "असेंबल: वड़े दही में डालें। चटनी, जीरा, सेव डालें।",
+        "ठंडा करें: 30 मिनट फ्रिज में रखें।"
+      ]
+    },
+    "paneer-pakora": {
+      "story": "जब पनीर पकोड़े की ट्रीटमेंट मिलता है, जादू होता है! कॉटेज चीज़ की मलाईदारी और कुरकुरे मसालेदार कोटिंग का संगम। पंजाब और दिल्ली में लोकप्रिय।",
+      "ingredients": [
+        "250 ग्राम पनीर",
+        "1 कप बेसन",
+        "2 बड़े चम्मच चावल का आटा",
+        "1 छोटा चम्मच लाल मिर्च",
+        "1/2 छोटा चम्मच हल्दी",
+        "1 छोटा चम्मच अजवाइन",
+        "1/4 छोटा चम्मच बेकिंग सोडा",
+        "2 हरी मिर्च",
+        "धनिया",
+        "नमक",
+        "तलने के लिए तेल"
+      ],
+      "instructions": [
+        "पनीर: पनीर मोटे टुकड़ों में काटें।",
+        "बैटर: बेसन, चावल का आटा, मसाले मिलाएं। पानी डालें।",
+        "तेल गर्म करें: मध्यम-तेज़ आंच पर।",
+        "कोट करें: पनीर बैटर में डुबाएं।",
+        "तलें: सुनहरा और कुरकुरा तलें।",
+        "परोसें: चाट मसाला छिड़कें, हरी चटनी के साथ परोसें।"
+      ]
+    },
+    "aloo-bhujia": {
+      "story": "The crispy companion to evening tea! Bhujia, especially the famous Bikaner wala, has been India\\",
+      "ingredients": [
+        "1 cup gram flour (besan)",
+        "1/2 cup rice flour",
+        "2 potatoes, boiled and mashed",
+        "1 tsp red chili powder",
+        "1/2 tsp turmeric",
+        "1 tsp ajwain (carom seeds)",
+        "1/4 tsp hing (asafoetida)",
+        "1/2 tsp black pepper",
+        "Oil for deep frying",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Make dough: Mix gram flour, rice flour, mashed potatoes, all spices, and salt.",
+        "Bind: Add water gradually to make a thick, smooth dough. It should be pipeable.",
+        "Prepare sev maker: Fill bhujia/sev maker with dough. Use fine-holed disc.",
+        "Heat oil: Heat oil in a wide kadhai for deep frying.",
+        "Press bhujia: Press dough directly into hot oil in circular motion to form nests.",
+        "Fry crispy: Fry on medium heat until golden and crispy, about 3-4 minutes.",
+        "Drain: Remove with slotted spoon, drain excess oil on paper towels.",
+        "Store: Cool completely and store in airtight container. Stays crispy for weeks."
+      ]
+    },
+    "papri-chaat": {
+      "story": "The king of chaats! Papri chaat is where crunch meets cream, sweet meets spicy, and soft meets crispy. Layers of crispy papri (crackers), boiled potatoes and chickpeas, smooth yogurt, tangy chutneys, and crunchy sev create a masterpiece. Old Delhi\\",
+      "ingredients": [
+        "20-25 papri (store-bought or homemade)",
+        "2 potatoes, boiled and cubed",
+        "1 cup boiled chickpeas",
+        "1 cup yogurt, whisked",
+        "Green chutney",
+        "Tamarind chutney",
+        "1 tsp chaat masala",
+        "1 tsp roasted cumin powder",
+        "1/2 tsp red chili powder",
+        "Sev (fine and thick)",
+        "Fresh pomegranate seeds (optional)",
+        "Fresh coriander, chopped",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prepare base: Arrange papris on serving plates.",
+        "Add potato-chickpea: Top each papri with boiled potato cubes and chickpeas.",
+        "Yogurt layer: Whisk yogurt with salt, drizzle generously over the papris.",
+        "Chutneys: Add spoonfuls of green chutney and sweet tamarind chutney.",
+        "Spice it up: Sprinkle chaat masala, cumin powder, and red chili powder.",
+        "Crunch factor: Add generous amounts of fine sev and thick sev.",
+        "Garnish: Top with pomegranate seeds and fresh coriander.",
+        "Serve immediately: Eat within 2-3 minutes before papris get soggy!"
+      ]
+    },
+    "momos": {
+      "story": "The Himalayan gift to Indian street food! Momos traveled from Tibet through Nepal and conquered Indian hearts. What started as a specialty in Darjeeling and Shimla is now sold in every Indian city. The art of pleating momos is a skill - those perfect folds require practice. Street vendors steam dozens at a time, serving them piping hot with fiery red chutney. The debate between steamed vs fried momos is eternal - steamed is healthier, fried is crispier. College students, office goers, everyone lines up at momo stalls. The simple pleasure of biting into a hot momo and the burst of flavorful filling is unmatched. From fancy restaurants to roadside carts, momos rule!",
+      "ingredients": [
+        "For dough: 2 cups all-purpose flour",
+        "Water as needed",
+        "Pinch of salt",
+        "For filling: 2 cups cabbage, finely chopped",
+        "1 carrot, grated",
+        "1 onion, finely chopped",
+        "2-3 green chilies, chopped",
+        "1 tsp ginger-garlic paste",
+        "2 tbsp soy sauce",
+        "1 tsp vinegar",
+        "1/2 tsp black pepper",
+        "Spring onions, chopped",
+        "Oil for cooking",
+        "For red chutney: Dried red chilies",
+        "Tomatoes, garlic, vinegar",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Make dough: Knead flour with salt and water into smooth, firm dough. Rest covered for 30 minutes.",
+        "Prepare filling: Heat oil, sauté ginger-garlic, add all vegetables. Stir-fry on high heat for 2-3 minutes.",
+        "Season filling: Add soy sauce, vinegar, pepper, salt. The filling should be moist but not watery. Cool.",
+        "Shape momos: Roll small dough portions into thin circles. Place filling in center.",
+        "Pleat: Fold and pleat edges to seal completely. The traditional shape has multiple pleats.",
+        "Steam: Place momos in greased steamer, steam for 10-12 minutes until translucent.",
+        "Alternative - Fry: For fried momos, shallow fry steamed momos until golden.",
+        "Make chutney: Blend roasted red chilies, tomatoes, garlic with vinegar and salt.",
+        "Serve hot: Serve momos immediately with spicy red chutney and clear soup."
+      ]
+    },
+    "spring-roll": {
+      "story": "The Chinese import that became thoroughly Indian! Indo-Chinese cuisine\\",
+      "ingredients": [
+        "12 spring roll wrappers",
+        "1 cup cabbage, shredded",
+        "1 carrot, julienned",
+        "1/2 cup capsicum, julienned",
+        "1/2 cup glass noodles, soaked",
+        "2-3 green chilies, chopped",
+        "1 tbsp ginger-garlic paste",
+        "2 tbsp soy sauce",
+        "1 tbsp vinegar",
+        "1 tsp black pepper",
+        "Spring onions, chopped",
+        "2 tbsp cornflour (for sealing)",
+        "Oil for deep frying",
+        "Sweet chili sauce for serving",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prepare filling: Heat oil, add ginger-garlic, vegetables. Stir-fry on high heat for 2 minutes.",
+        "Add noodles: Add soaked glass noodles, soy sauce, vinegar, pepper, salt. Mix well and cool.",
+        "Make paste: Mix cornflour with water to make sealing paste.",
+        "Fill wrappers: Place wrapper diagonally, put filling in center, fold bottom corner over filling.",
+        "Roll: Fold sides inward, roll tightly. Seal the edge with cornflour paste.",
+        "Chill: Refrigerate rolled spring rolls for 15 minutes for better shape.",
+        "Deep fry: Heat oil, fry spring rolls on medium heat until golden and crispy.",
+        "Drain: Remove when evenly browned, drain on paper towels.",
+        "Serve: Cut diagonally, serve hot with sweet chili sauce and schezwan chutney."
+      ]
+    },
+    "vegetable-cutlet": {
+      "story": "The healthier cousin of pakoras! Vegetable cutlets are loved by mothers trying to sneak vegetables into kids\\",
+      "ingredients": [
+        "3 potatoes, boiled",
+        "1 carrot, grated",
+        "1/2 cup peas",
+        "1/2 cup beans, chopped",
+        "2 bread slices, crumbled",
+        "2 green chilies",
+        "1 tsp garam masala",
+        "1/2 tsp red chili powder",
+        "Fresh coriander",
+        "1/2 cup bread crumbs for coating",
+        "2 tbsp cornflour",
+        "Oil for shallow frying",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Mix vegetables: Mash potatoes, add grated carrot, peas, beans, bread crumbs, spices, coriander.",
+        "Bind mixture: Add cornflour to bind. The mixture should hold shape when formed into patties.",
+        "Shape cutlets: Make equal-sized flat oval patties.",
+        "Coat: Roll each cutlet in dry bread crumbs, coating well.",
+        "Refrigerate: Chill cutlets for 15 minutes for better shape retention.",
+        "Shallow fry: Heat oil, fry cutlets on medium heat until golden brown on both sides.",
+        "Serve hot: Serve immediately with green chutney and tomato ketchup."
+      ]
+    },
+    "chana-jor-garam": {
+      "story": "The street vendor\\",
+      "ingredients": [
+        "1 cup flattened chickpeas (chana jor)",
+        "1 onion, chopped",
+        "1 tomato, chopped",
+        "1 cucumber, chopped",
+        "2 green chilies",
+        "2 tsp chaat masala",
+        "1 tsp roasted cumin",
+        "Lemon juice",
+        "Fresh coriander",
+        "Sev for topping",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prepare base: Take crispy chana jor garam in a bowl.",
+        "Add vegetables: Mix in chopped onion, tomato, cucumber, green chilies.",
+        "Season: Add chaat masala, cumin powder, salt, squeeze lemon juice.",
+        "Toss well: Mix everything thoroughly.",
+        "Garnish: Top with fresh coriander and sev.",
+        "Serve immediately: Best eaten fresh and crunchy."
+      ]
+    },
+    "sattu-chaat": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "3 tbsp sattu (roasted gram flour)",
+        "1 onion, finely chopped",
+        "2 tomatoes, chopped",
+        "2 green chilies",
+        "1 tsp roasted cumin powder",
+        "1 tsp chaat masala",
+        "Fresh coriander",
+        "Lemon juice",
+        "Sev for topping",
+        "Cold water",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Mix sattu: Take sattu in a bowl, add cold water to form crumbly mixture (not paste).",
+        "Add vegetables: Mix in chopped onion, tomatoes, green chilies.",
+        "Season: Add cumin powder, chaat masala, salt, squeeze lemon juice.",
+        "Mix well: Toss everything, ensuring sattu coats all vegetables.",
+        "Top: Garnish with fresh coriander and generous sev.",
+        "Serve fresh: Eat immediately before it gets soggy."
+      ]
+    },
+    "litti-plain": {
+      "story": "For purists who want to enjoy litti in its most authentic form! These baked wheat balls stuffed with spiced sattu are complete in themselves. Traditionally eaten by travelers and soldiers who couldn\\",
+      "ingredients": [
+        "2 cups whole wheat flour",
+        "1 cup sattu",
+        "3 tbsp mustard oil",
+        "1 tsp ajwain",
+        "1 tsp kalonji",
+        "Pickle masala",
+        "2 green chilies",
+        "Ginger-garlic paste",
+        "Lemon juice",
+        "Ghee for serving",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Make filling: Mix sattu with mustard oil, spices, pickle masala, chilies, ginger-garlic, lemon juice.",
+        "Prepare dough: Knead wheat flour with oil and water into stiff dough.",
+        "Stuff: Make balls, fill with sattu mixture, seal completely.",
+        "Bake: Roast in oven at 200°C for 20-25 minutes until golden. Traditionally done on coal.",
+        "Finish: Crack open hot littis, stuff with ghee.",
+        "Serve hot: Best enjoyed immediately while piping hot."
+      ]
+    },
+    "singhara-fry": {
+      "story": "The seasonal delight from Bihar\\",
+      "ingredients": [
+        "300g fresh water chestnuts (singhara)",
+        "3 tbsp rice flour",
+        "1 tsp red chili powder",
+        "1/2 tsp black pepper",
+        "1/2 tsp chaat masala",
+        "Oil for frying",
+        "Lemon wedges",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prepare singharas: Peel fresh water chestnuts, wash and pat dry. Cut larger ones in half.",
+        "Make coating: Mix rice flour with chili powder, pepper, salt in a bowl.",
+        "Coat: Toss singharas in the spiced flour mixture, coating lightly.",
+        "Heat oil: Heat oil for deep frying on medium-high.",
+        "Fry: Fry coated singharas until golden and crispy, about 3-4 minutes.",
+        "Drain: Remove and drain on paper towels.",
+        "Serve: Sprinkle chaat masala, serve hot with lemon wedges."
+      ]
+    },
+    "bajre-roti-garlic-chutney": {
+      "story": "Rajasthan and Haryana\\",
+      "ingredients": [
+        "For roti: 2 cups bajra flour",
+        "Warm water",
+        "Salt",
+        "Ghee for serving",
+        "For chutney: 15 garlic cloves",
+        "4-5 dried red chilies",
+        "1 tbsp peanuts",
+        "1/2 tsp cumin seeds",
+        "Lemon juice",
+        "Salt"
+      ],
+      "instructions": [
+        "Make dough: Knead bajra flour with warm water and salt into soft dough. It will be more delicate than wheat.",
+        "Roll rotis: Divide into balls. Pat between hands or use plastic sheets to make thick rotis (bajra breaks easily).",
+        "Cook: Heat tawa, cook rotis on medium heat, pressing edges. Apply ghee generously.",
+        "Make chutney: Roast garlic, chilies, peanuts, cumin until aromatic. Grind coarsely with salt and lemon juice.",
+        "Serve: Serve hot bajra rotis with garlic chutney, white butter, and jaggery."
+      ]
+    },
+    "aloo-tamatar": {
+      "story": "The everyday hero of North Indian kitchens! When you ask \"Aaj kya bana hai?\" (What\\",
+      "ingredients": [
+        "4 medium potatoes, cubed",
+        "3 large tomatoes, pureed",
+        "1 onion, finely chopped",
+        "2 green chilies, slit",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric powder",
+        "1 tsp coriander powder",
+        "1/2 tsp red chili powder",
+        "1/2 tsp garam masala",
+        "1 tsp ginger-garlic paste",
+        "2 tbsp oil",
+        "Fresh coriander leaves",
+        "Salt to taste",
+        "For rotis: 2 cups whole wheat flour",
+        "Water as needed"
+      ],
+      "instructions": [
+        "Make roti dough: Knead wheat flour with water and salt into soft dough. Rest for 15 minutes.",
+        "Start sabzi: Heat oil in pan, add cumin seeds. When they splutter, add chopped onions.",
+        "Add aromatics: Sauté onions until golden, add ginger-garlic paste and green chilies. Cook for a minute.",
+        "Add tomatoes: Add tomato puree, turmeric, coriander powder, chili powder. Cook until oil separates (5-7 minutes).",
+        "Cook potatoes: Add cubed potatoes with 1 cup water and salt. Cover and cook until potatoes are tender (10-12 minutes).",
+        "Finish sabzi: Add garam masala and fresh coriander. The gravy should be medium-thick.",
+        "Make rotis: Roll dough balls into thin circles, cook on hot tawa until brown spots appear. Apply ghee if desired.",
+        "Serve: Serve hot rotis with aloo tamatar sabzi, pickle, and raw onions."
+      ]
+    },
+    "dal-pithi": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "For pithi: 1 cup whole wheat flour",
+        "2 tbsp sattu (optional, for stuffing)",
+        "1/2 tsp ajwain",
+        "Water for dough",
+        "For dal: 1 cup arhar/chana dal",
+        "1 onion, chopped",
+        "2 tomatoes, chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric",
+        "1 tsp coriander powder",
+        "2-3 green chilies",
+        "1 tsp ginger paste",
+        "2 tbsp ghee",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Cook dal: Pressure cook dal with turmeric and salt for 3-4 whistles until soft but not mushy.",
+        "Make pithi dough: Knead wheat flour with ajwain, salt, and water into soft, pliable dough. Make small balls.",
+        "Optional stuffing: If stuffing, mix sattu with spices, fill in dough balls, and seal.",
+        "Prepare dal tempering: Heat ghee, add cumin seeds, chopped onions, and ginger paste. Sauté until golden.",
+        "Add tomatoes: Add chopped tomatoes, coriander powder, green chilies. Cook until mushy.",
+        "Combine: Add cooked dal to the tempering. Bring to boil, add water if needed for gravy consistency.",
+        "Cook pithi: Gently drop pithi balls into boiling dal. Cover and cook for 8-10 minutes until pithi are cooked through.",
+        "Finish: Pithi will float when cooked. Garnish with fresh coriander and ghee. Serve hot."
+      ]
+    },
+    "sattu-paratha": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "For filling: 1 cup sattu",
+        "1 onion, finely chopped",
+        "2-3 green chilies, chopped",
+        "1 tsp mustard oil",
+        "1 tsp kalonji (nigella seeds)",
+        "1/2 tsp ajwain",
+        "Fresh coriander, chopped",
+        "Lemon juice",
+        "Pickle masala",
+        "For dough: 2 cups whole wheat flour",
+        "Water and salt",
+        "Ghee for cooking",
+        "To serve: Fresh curd (yogurt)",
+        "Mango or lemon pickle"
+      ],
+      "instructions": [
+        "Make sattu filling: Mix sattu with chopped onion, green chilies, mustard oil, kalonji, ajwain, pickle masala, coriander, and lemon juice. Add water to make crumbly (not wet) mixture.",
+        "Prepare dough: Knead wheat flour with salt and water into soft dough. Rest for 15 minutes.",
+        "Stuff parathas: Roll dough ball into small circle, place sattu filling in center, gather edges and seal. Flatten gently.",
+        "Roll carefully: Roll stuffed ball into paratha (medium thickness) using dry flour. Be gentle to prevent tearing.",
+        "Cook: Heat tawa/griddle, place paratha and cook on medium heat. Flip when bubbles appear.",
+        "Apply ghee: Apply ghee on both sides, cook until golden brown with crispy spots.",
+        "Serve hot: Serve immediately with fresh cold curd, pickle, and butter."
+      ]
+    },
+    "baigan-bharta": {
+      "story": "The smoky masterpiece of Indian vegetarian cuisine! Baigan Bharta is what happens when eggplant meets fire - literally. Roasting the eggplant directly on flame until the skin chars and the flesh becomes soft and smoky is an art passed down through generations. That smoky flavor is irreplaceable - it\\",
+      "ingredients": [
+        "3 large eggplants (baingan)",
+        "2 large tomatoes, chopped",
+        "1 large onion, finely chopped",
+        "2-3 green chilies, chopped",
+        "1 tbsp ginger-garlic paste",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric powder",
+        "1 tsp coriander powder",
+        "1/2 tsp red chili powder",
+        "1/2 tsp garam masala",
+        "3 tbsp mustard oil (or regular oil)",
+        "Fresh coriander leaves",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Roast eggplants: Roast eggplants directly on gas flame or in oven at 200°C, turning occasionally until skin is completely charred and flesh is soft (15-20 minutes).",
+        "Peel and mash: Let cool slightly, peel off charred skin completely. Mash the flesh roughly with fork - keep some texture.",
+        "Temper spices: Heat mustard oil until smoking, let it cool slightly. Add cumin seeds.",
+        "Sauté aromatics: Add chopped onions, sauté until golden brown. Add ginger-garlic paste, green chilies.",
+        "Add tomatoes: Add chopped tomatoes, turmeric, coriander powder, chili powder. Cook until tomatoes are mushy and oil separates.",
+        "Mix eggplant: Add mashed eggplant, salt, and garam masala. Mix well and cook for 5-7 minutes on medium heat.",
+        "Finish: Add fresh coriander. The bharta should be slightly moist, not dry. Drizzle ghee on top.",
+        "Serve: Serve hot with rotis, parathas, or rice."
+      ]
+    },
+    "rajma-masala": {
+      "story": "The Sunday special that brings families together! Rajma-chawal (kidney beans with rice) is North India\\",
+      "ingredients": [
+        "1 cup dried rajma (kidney beans), soaked overnight",
+        "2 large tomatoes, pureed",
+        "1 onion, finely chopped",
+        "1 tbsp ginger-garlic paste",
+        "2 green chilies, slit",
+        "1 tsp cumin seeds",
+        "1 bay leaf",
+        "1 tsp coriander powder",
+        "1/2 tsp turmeric powder",
+        "1 tsp red chili powder",
+        "1 tsp garam masala",
+        "1/2 tsp kasuri methi (dried fenugreek leaves)",
+        "3 tbsp oil",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Cook rajma: Pressure cook soaked rajma with salt and water for 6-7 whistles until very soft. Don\\",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      "
+      ]
+    },
+    "chana-masala": {
+      "story": "Delhi\\",
+      "ingredients": [
+        "1.5 cups boiled chickpeas",
+        "2 tomatoes, pureed",
+        "1 onion, finely chopped",
+        "1 tbsp ginger-garlic paste",
+        "2 green chilies",
+        "1 tsp cumin seeds",
+        "2 tbsp chole masala",
+        "1 tsp coriander powder",
+        "1/2 tsp turmeric",
+        "1 tsp red chili powder",
+        "1 tsp amchur (dry mango powder)",
+        "1/2 tsp garam masala",
+        "1 tea bag (for dark color)",
+        "3 tbsp oil",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Cook chickpeas: Pressure cook chickpeas with tea bag, salt for 4-5 whistles until very soft. Reserve water.",
+        "Temper: Heat oil, add cumin seeds. When spluttering, add chopped onions.",
+        "Golden brown: Cook onions until deep golden (this is key for flavor and color).",
+        "Aromatics: Add ginger-garlic paste, green chilies, cook for 2 minutes.",
+        "Spice mix: Add tomato puree, turmeric, coriander powder, chili powder, chole masala. Cook until oil separates (8-10 minutes).",
+        "Add chickpeas: Add boiled chickpeas with some reserved water. Mix well.",
+        "Simmer: Cook on medium heat for 15 minutes, mashing some chickpeas to thicken gravy.",
+        "Finish: Add amchur, garam masala, fresh coriander. The gravy should be thick and clingy.",
+        "Serve: Serve hot with bhature, kulcha, or rice. Top with onion rings and lemon wedges."
+      ]
+    },
+    "kaddu-sabzi": {
+      "story": "The sweet surprise of Indian vegetables! Kaddu (pumpkin) sabzi divides people - some love its natural sweetness, others are skeptical. But when made right, with the perfect balance of sweet and spicy, it converts even the doubters. In UP and Bihar, kaddu ki sabzi is monsoon and winter favorite, when pumpkins are abundant. The trick is to cook it with minimal water, letting the pumpkin release its natural sugars and caramelize slightly. Some add jaggery for extra sweetness, some balance it with tomatoes. The soft, melt-in-mouth texture and the interplay of sweet pumpkin with savory spices make it unique. It\\",
+      "ingredients": [
+        "500g pumpkin (kaddu), cubed",
+        "1 tomato, chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp fenugreek seeds",
+        "2 dried red chilies",
+        "1/2 tsp turmeric powder",
+        "1 tsp coriander powder",
+        "1/2 tsp red chili powder",
+        "1/2 tsp fennel powder (saunf)",
+        "1 tsp jaggery (optional)",
+        "2 tbsp oil",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prepare pumpkin: Peel and cut pumpkin into medium cubes (not too small, they\\",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      "
+      ]
+    },
+    "matar-paneer": {
+      "story": "The vegetarian classic that needs no introduction! Matar Paneer is India\\",
+      "ingredients": [
+        "200g paneer, cubed",
+        "1 cup green peas (fresh or frozen)",
+        "3 tomatoes, pureed",
+        "1 onion, finely chopped",
+        "1 tbsp ginger-garlic paste",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric powder",
+        "1 tsp coriander powder",
+        "1 tsp red chili powder",
+        "1/2 tsp garam masala",
+        "1/4 cup fresh cream",
+        "1 tsp kasuri methi",
+        "3 tbsp oil/butter",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prep paneer: Cut paneer into cubes. Lightly fry in oil until golden (optional, or use as is).",
+        "Temper: Heat oil/butter, add cumin seeds. When crackling, add chopped onions.",
+        "Sauté: Cook onions until golden, add ginger-garlic paste, cook for 2 minutes.",
+        "Make gravy: Add tomato puree, turmeric, coriander powder, chili powder. Cook on medium heat until oil separates (8-10 minutes).",
+        "Add peas: Add green peas and 1/2 cup water. Cook covered for 5 minutes until peas are tender.",
+        "Add paneer: Add paneer cubes gently, simmer for 5 minutes. Don\\",
+        ",\n      ",
+        ",\n      "
+      ]
+    },
+    "kadhi-chawal": {
+      "story": "The comfort food that soothes body and soul! Kadhi-chawal is what Indians crave when they need gentle, nourishing food. The tangy yogurt curry with crispy pakoras, paired with hot steamed rice, creates a perfect balance. Each region has its version - Gujarat makes it sweet, Punjab adds pakoras, Rajasthan makes it spicy, Bihar keeps it simple. The art is in tempering - mustard seeds, curry leaves, and dried red chilies sizzling in ghee create the signature aroma. Kadhi is cooling, digestive, and perfect for hot summer days or upset stomachs. The sound of kadhi simmering, the aroma of tempering, the sight of pakoras floating - it\\",
+      "ingredients": [
+        "1.5 cups yogurt",
+        "3 tbsp gram flour (besan)",
+        "1 tsp cumin seeds",
+        "1/2 tsp fenugreek seeds",
+        "1/2 tsp mustard seeds",
+        "Pinch of hing (asafoetida)",
+        "8-10 curry leaves",
+        "2 dried red chilies",
+        "1/2 tsp turmeric",
+        "2 green chilies, slit",
+        "1 tsp ginger, chopped",
+        "2 tbsp ghee",
+        "For pakoras: 1/2 cup besan, onions, spices",
+        "1.5 cups basmati rice",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Cook rice: Wash and cook basmati rice until fluffy. Keep warm.",
+        "Make kadhi base: Whisk yogurt with gram flour, turmeric, salt, and 3 cups water until smooth and lump-free.",
+        "Cook kadhi: Simmer yogurt mixture on low heat, stirring continuously to prevent curdling, for 15-20 minutes.",
+        "Make pakoras: Mix besan with chopped onions, spices, water to make batter. Fry small pakoras until golden. Add to kadhi.",
+        "Tempering: Heat ghee, add mustard seeds, cumin seeds, fenugreek seeds, hing. When crackling, add curry leaves and red chilies.",
+        "Pour tempering: Pour hot tempering over simmering kadhi. Add green chilies and ginger.",
+        "Final simmer: Let kadhi simmer for 5 more minutes. Consistency should be slightly thick, pourable.",
+        "Serve: Serve hot kadhi over rice, with papad and pickle on the side."
+      ]
+    },
+    "mix-veg": {
+      "story": "The rainbow on your plate! Mix veg sabzi is India\\",
+      "ingredients": [
+        "1 potato, cubed",
+        "1 carrot, cubed",
+        "1/2 cup beans, chopped",
+        "1/2 cup peas",
+        "1/2 cauliflower, florets",
+        "1 capsicum, cubed",
+        "2 tomatoes, chopped",
+        "1 onion, chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric",
+        "1 tsp coriander powder",
+        "1/2 tsp garam masala",
+        "1 tsp ginger-garlic paste",
+        "2 tbsp oil",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prep vegetables: Cut all vegetables into uniform cubes for even cooking.",
+        "Temper: Heat oil, add cumin seeds. When crackling, add chopped onions.",
+        "Sauté onions: Cook until translucent, add ginger-garlic paste, cook for 1 minute.",
+        "Add hard vegetables: Add potatoes and carrots first with turmeric and salt. Sauté for 3-4 minutes.",
+        "Add remaining: Add cauliflower, beans, peas. Mix well with spices.",
+        "Add tomatoes: Add chopped tomatoes, coriander powder. Cover and cook for 5 minutes.",
+        "Cook vegetables: Add capsicum and a little water. Cover and cook until vegetables are tender but not mushy (10-12 minutes).",
+        "Finish: Add garam masala, fresh coriander. The sabzi can be dry or slightly gravy-based. Serve hot."
+      ]
+    },
+    "bhindi-masala": {
+      "story": "The vegetable that divides the world! Okra (bhindi/lady\\",
+      "ingredients": [
+        "300g okra (bhindi), washed and dried",
+        "1 onion, sliced",
+        "2 tomatoes, chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric powder",
+        "1 tsp coriander powder",
+        "1/2 tsp red chili powder",
+        "1/2 tsp amchur (dry mango powder)",
+        "1/2 tsp garam masala",
+        "2 tbsp oil",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prep okra: Wash okra and dry completely (moisture makes it slimy). Trim ends and cut into 1-inch pieces.",
+        "Heat pan: Heat oil in wide pan on high heat. Oil should be hot.",
+        "Fry okra: Add okra pieces, spread them in single layer. Don\\",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      ",
+        ",\n      "
+      ]
+    },
+    "plain-rice": {
+      "story": "The canvas for countless curries! Plain steamed rice is the foundation of Indian meals, especially in the east and south. The perfect rice - each grain separate, fluffy, aromatic - is an art. Basmati rice from the foothills of Himalayas brings fragrance, while everyday rice provides sustenance. The ritual of washing rice, the right water ratio, the timing - mothers teach daughters, passing down wisdom. Rice isn\\",
+      "ingredients": [
+        "1 cup basmati rice",
+        "Water (1.5 to 2 times the rice)",
+        "Salt to taste",
+        "Optional: 1 tsp ghee"
+      ],
+      "instructions": [
+        "Wash rice: Rinse rice 3-4 times until water runs clear. This removes excess starch.",
+        "Soak: Soak rice in water for 15-20 minutes (for basmati). Drain.",
+        "Cook: Bring water to boil with salt. Add rice, stir once gently.",
+        "Simmer: Cover and cook on low heat for 12-15 minutes until water is absorbed.",
+        "Rest: Turn off heat, keep covered for 5 minutes. Steam will finish cooking.",
+        "Fluff: Gently fluff with fork. Each grain should be separate.",
+        "Serve: Serve hot with ghee drizzled on top, paired with dal and curry."
+      ]
+    },
+    "aloo-baingan": {
+      "story": "The dynamic duo of Indian vegetables! Potato and eggplant come together in perfect harmony in this classic North Indian curry. Aloo-baingan is everyday cooking that tastes extraordinary. The trick is cooking eggplant until it\\",
+      "ingredients": [
+        "2 potatoes, cubed",
+        "2 medium eggplants, cubed",
+        "2 tomatoes, chopped",
+        "1 onion, chopped",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric",
+        "1 tsp coriander powder",
+        "1/2 tsp red chili powder",
+        "1/2 tsp garam masala",
+        "1 tsp ginger-garlic paste",
+        "3 tbsp oil",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Prep vegetables: Cut potatoes and eggplants into similar-sized cubes. Soak eggplant in salted water for 10 minutes, drain.",
+        "Temper: Heat oil, add cumin seeds. When crackling, add chopped onions.",
+        "Sauté: Cook onions until golden, add ginger-garlic paste.",
+        "Add spices: Add tomatoes, turmeric, coriander powder, chili powder. Cook until oil separates.",
+        "Cook vegetables: Add potato and eggplant cubes, salt. Mix well with masala.",
+        "Cover and cook: Add a little water, cover and cook on medium heat until vegetables are tender (15-20 minutes). Stir occasionally.",
+        "Finish: Add garam masala, fresh coriander. The curry should be semi-dry. Serve hot."
+      ]
+    },
+    "masoor-dal": {
+      "story": "The quickest path to comfort! Masoor dal (red lentils) is the weeknight savior - cooks fast, tastes delicious, and nourishes deeply. Of all dals, masoor is the fastest cooking, going from raw to creamy in 15 minutes. It\\",
+      "ingredients": [
+        "1 cup masoor dal (red lentils)",
+        "1 onion, chopped",
+        "2 tomatoes, chopped",
+        "2 cloves garlic, minced",
+        "1 tsp cumin seeds",
+        "1/2 tsp turmeric",
+        "1/2 tsp red chili powder",
+        "1 tsp coriander powder",
+        "2 green chilies, slit",
+        "2 tbsp ghee",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Wash dal: Rinse masoor dal 2-3 times until water runs clear.",
+        "Cook dal: Pressure cook dal with turmeric, salt, and 2.5 cups water for 3 whistles. Or simmer for 15-20 minutes until soft.",
+        "Prepare tempering: Heat ghee, add cumin seeds. When crackling, add minced garlic and onions.",
+        "Sauté: Cook onions until golden, add tomatoes, chili powder, coriander powder.",
+        "Cook masala: Cook until tomatoes are mushy and oil separates (5-7 minutes).",
+        "Add dal: Add cooked dal to the tempering. Mix well, adjust water for consistency.",
+        "Simmer: Add green chilies, simmer for 5 minutes to blend flavors.",
+        "Garnish: Add fresh coriander. Serve hot with rice or rotis, ghee on top."
+      ]
+    },
+    "mughlai-korma": {
+      "story": "The royal legacy on your plate! Mughlai Korma comes from the grand kitchens of Mughal emperors, where cooking was an art form and food was poetry. This rich, creamy curry represents the pinnacle of Awadhi cuisine - slow-cooked meat in a gravy enriched with nuts, cream, and aromatic spices. The name \"korma\" comes from Turkish \"kavurma\" meaning braised meat. The signature is its creamy white-to-golden gravy, mild yet intensely flavored with whole spices, saffron, and rose water. Making authentic korma requires patience - the meat must be tender enough to fall off the bone, the gravy smooth as silk. From Mughal durbars to modern weddings, korma remains the dish that signifies celebration, hospitality, and culinary excellence.",
+      "ingredients": [
+        "300g chicken/mutton pieces",
+        "1 cup yogurt",
+        "2 onions, fried golden (birista)",
+        "1/4 cup cashew paste",
+        "1/4 cup fresh cream",
+        "2 tbsp ginger-garlic paste",
+        "Whole spices: 4 green cardamom, 2 bay leaves, 4 cloves, 1 cinnamon",
+        "1/2 tsp saffron in milk",
+        "1 tsp white pepper",
+        "1/2 tsp mace-nutmeg powder",
+        "4 tbsp ghee",
+        "2 tbsp rose water",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Marinate: Marinate meat with yogurt, ginger-garlic paste, salt for 30 minutes.",
+        "Fry onions: Fry sliced onions until deep golden brown, grind to paste.",
+        "Sauté meat: Heat ghee, add whole spices. Add marinated meat, sear on high heat.",
+        "Cook meat: Add fried onion paste, cook on low heat until meat is 70% done.",
+        "Make gravy: Add cashew paste and water, simmer until meat is completely tender.",
+        "Enrich: Add cream, white pepper, mace-nutmeg powder. Simmer for 5 minutes.",
+        "Finish: Add saffron milk and rose water. The gravy should be creamy and aromatic.",
+        "Serve: Garnish with fried nuts, saffron strands. Serve with naan or roomali roti."
+      ]
+    },
+    "chicken-curry-bihari": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "500g chicken pieces with bone",
+        "2 onions, finely chopped",
+        "3 tomatoes, pureed",
+        "3 tbsp yogurt",
+        "2 tbsp ginger-garlic paste",
+        "Whole spices: 3 bay leaves, 4 green cardamom, 4 cloves, 1 cinnamon",
+        "2 tsp coriander powder",
+        "1 tsp cumin powder",
+        "1.5 tsp red chili powder",
+        "1 tsp garam masala",
+        "4 tbsp mustard oil",
+        "3-4 green chilies, slit",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Marinate: Mix chicken with yogurt, half the ginger-garlic paste, salt. Marinate 30 minutes.",
+        "Heat mustard oil: Heat mustard oil until smoking, let it cool slightly (reduces pungency).",
+        "Temper spices: Add whole spices, let them crackle. Add chopped onions.",
+        "Brown onions: Cook onions until deep golden brown - this is key for color and flavor.",
+        "Add aromatics: Add remaining ginger-garlic paste, cook for 2 minutes.",
+        "Make gravy: Add tomato puree, coriander powder, cumin powder, chili powder. Cook until oil separates (8-10 minutes).",
+        "Cook chicken: Add marinated chicken, green chilies, sauté on high heat for 5 minutes.",
+        "Simmer: Add water, cover and cook on low heat until chicken is tender (20-25 minutes).",
+        "Finish: Add garam masala, fresh coriander. The gravy should be thick and clingy. Serve hot."
+      ]
+    },
+    "mutton-curry-bihari": {
+      "story": "The crown jewel of Bihari non-vegetarian cuisine! Mutton curry in Bihar is serious business - slow-cooked for hours until the meat falls off the bone, in a gravy that\\",
+      "ingredients": [
+        "500g mutton pieces with bone",
+        "2 large onions, chopped",
+        "3 tomatoes, pureed",
+        "4 tbsp yogurt",
+        "3 tbsp ginger-garlic paste",
+        "Whole spices: 4 bay leaves, 6 green cardamom, 6 cloves, 2 cinnamon sticks, 1 black cardamom",
+        "2 tsp coriander powder",
+        "1 tsp cumin powder",
+        "2 tsp red chili powder",
+        "1 tsp garam masala",
+        "5 tbsp mustard oil",
+        "4-5 green chilies",
+        "1 tsp black pepper",
+        "Fresh coriander",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Marinate: Marinate mutton with yogurt, half the ginger-garlic paste, turmeric, salt for 1 hour.",
+        "Heat oil: Heat mustard oil until smoking, cool slightly.",
+        "Brown mutton: Sear marinated mutton pieces on high heat until browned. Remove and set aside.",
+        "Make base: In the same oil, add whole spices. Add chopped onions, cook until deep brown.",
+        "Aromatics: Add remaining ginger-garlic paste, cook until raw smell disappears.",
+        "Create gravy: Add tomato puree, all spice powders. Cook on medium heat until oil separates (10 minutes).",
+        "Cook mutton: Add browned mutton, green chilies, mix well. Add hot water (1.5 cups).",
+        "Slow cook: Cover tightly, cook on low heat for 60-75 minutes until mutton is very tender. Check and add water if needed.",
+        "Finish: Add garam masala, black pepper, fresh coriander. The gravy should be thick and rich.",
+        "Rest: Let it rest for 10 minutes before serving. Serve hot with rice or litti."
+      ]
+    },
+    "makki-roti": {
+      "story": "Punjab\\",
+      "ingredients": [
+        "2 cups makki atta (corn flour)",
+        "Warm water",
+        "Pinch of salt",
+        "White butter for serving"
+      ],
+      "instructions": [
+        "Make dough: Mix corn flour with salt. Add warm water gradually and knead. The dough will be more crumbly than wheat, that\\",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", "
+      ]
+    },
+    "bajra-roti": {
+      "story": "Rajasthan\\",
+      "ingredients": [
+        "2 cups bajra flour (pearl millet)",
+        "Warm water",
+        "Pinch of salt",
+        "Ghee for applying"
+      ],
+      "instructions": [
+        "Prepare dough: Mix bajra flour with salt. Add warm water and knead into soft dough. The dough will be softer and more delicate than wheat.",
+        "Rest: Cover with damp cloth and rest for 10 minutes.",
+        "Shape: Make medium balls. Dip hands in water, pat ball between palms to form thick circle (traditional method). Or use plastic sheets to roll gently.",
+        "Keep thick: Bajra rotis are thick (about 1/4 to 1/3 inch), not thin like wheat rotis.",
+        "Cook: Heat tawa on medium heat. Place roti and cook for 2-3 minutes.",
+        "Flip: Turn and cook other side. Press edges gently with spatula.",
+        "Finish: The roti should have golden spots and be cooked through. Apply ghee generously.",
+        "Serve: Serve hot with garlic chutney, white butter, and jaggery."
+      ]
+    },
+    "missi-roti": {
+      "story": "The spiced bread that\\",
+      "ingredients": [
+        "1 cup wheat flour",
+        "1 cup gram flour (besan)",
+        "1 onion, finely chopped",
+        "2 green chilies, chopped",
+        "1 tsp carom seeds (ajwain)",
+        "1/2 tsp turmeric",
+        "1/2 tsp red chili powder",
+        "1 tsp coriander powder",
+        "Fresh coriander, chopped",
+        "2 tbsp oil",
+        "Salt to taste",
+        "Water as needed"
+      ],
+      "instructions": [
+        "Mix flours: Combine wheat flour and gram flour in bowl. Add salt, ajwain, turmeric, chili powder, coriander powder.",
+        "Add ingredients: Add chopped onions, green chilies, coriander leaves, oil. Mix well.",
+        "Make dough: Add water gradually and knead into medium-soft dough. The dough should be softer than regular roti dough.",
+        "Rest: Cover and rest for 15 minutes.",
+        "Roll: Make balls, roll into circles (medium thickness - between regular roti and paratha).",
+        "Cook: Heat tawa, place missi roti. Cook on medium heat.",
+        "Apply ghee: Flip when bubbles appear, apply ghee/oil on both sides. Cook until golden spots appear.",
+        "Serve: Serve hot with pickle, curd, or butter."
+      ]
+    },
+    "naan": {
+      "story": "The restaurant favorite that conquered the world! Naan is Persian bread that became thoroughly Indian through Mughal influence. Unlike rotis, naan is leavened (uses yeast), giving it that soft, fluffy texture and slightly sour taste. Traditionally cooked in tandoor (clay oven) where it sticks to the hot walls and cooks with intense heat, getting characteristic charred spots. The sound of naan slapping against tandoor walls, the aroma of baking bread, the sight of bubbling, puffed naans - it\\",
+      "ingredients": [
+        "2 cups all-purpose flour (maida)",
+        "1 tsp active dry yeast",
+        "1 tsp sugar",
+        "1/2 cup warm milk",
+        "2 tbsp yogurt",
+        "1 tbsp oil",
+        "1/2 tsp salt",
+        "1 tsp kalonji/sesame seeds",
+        "Butter for brushing",
+        "Warm water if needed"
+      ],
+      "instructions": [
+        "Activate yeast: Mix yeast with sugar and warm milk. Let it sit for 10 minutes until frothy.",
+        "Make dough: Mix flour, salt, yogurt, oil, and yeast mixture. Knead into soft, smooth dough. Add warm water if needed.",
+        "Proof: Cover dough with damp cloth, let it rise in warm place for 1-1.5 hours until doubled in size.",
+        "Divide: Punch down dough, divide into balls. Let rest for 10 minutes.",
+        "Shape: Roll each ball into tear-drop or oval shape (medium thickness). Sprinkle kalonji/sesame seeds.",
+        "Cook: Heat oven to maximum (or use tawa). If using tawa, place naan and press gently. Cover and cook.",
+        "Flip: Flip and cook other side. For traditional charred spots, hold directly on flame for few seconds.",
+        "Brush butter: Brush generously with melted butter. Serve hot."
+      ]
+    },
+    "roomali-roti": {
+      "story": "The handkerchief bread that\\",
+      "ingredients": [
+        "1.5 cups all-purpose flour (maida)",
+        "1/2 cup whole wheat flour",
+        "1 tbsp oil",
+        "1/2 tsp salt",
+        "3/4 cup warm water (approximately)",
+        "Butter for brushing"
+      ],
+      "instructions": [
+        "Mix flours: Combine maida, wheat flour, salt, and oil.",
+        "Make soft dough: Add warm water gradually and knead into very soft, pliable dough (softer than regular roti dough).",
+        "Rest: Cover with damp cloth and rest for 30 minutes minimum. This makes stretching easier.",
+        "Divide: Make small balls, coat lightly with oil.",
+        "Roll thin: Roll each ball into very thin circle (as thin as possible without tearing). Use flour for dusting.",
+        "Cook method 1 - Tawa: Heat tawa on high heat. Place thin roti, cook for 30 seconds, flip and cook other side briefly.",
+        "Cook method 2 - Inverted kadhai: Heat inverted kadhai, stretch dough over it, cook for few seconds.",
+        "Serve: Brush with butter, fold into quarters. Serve immediately."
+      ]
+    },
+    "malpua": {
+      "story": "The ancient pancake that predates modern desserts! Malpua is mentioned in ancient Sanskrit texts, making it one of India\\",
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "2 tbsp semolina (sooji)",
+        "1/2 cup milk",
+        "1/4 cup sugar (for batter)",
+        "1/2 tsp fennel seeds, crushed",
+        "2-3 green cardamom, powdered",
+        "Pinch of baking soda",
+        "Ghee for frying",
+        "For syrup: 1 cup sugar",
+        "1/2 cup water",
+        "Few saffron strands",
+        "Cardamom powder"
+      ],
+      "instructions": [
+        "Make syrup: Boil sugar with water, add saffron and cardamom. Cook until one-string consistency. Keep warm.",
+        "Prepare batter: Mix flour, semolina, sugar, fennel seeds, cardamom, baking soda.",
+        "Add milk: Add milk gradually to make flowing but thick batter (like dosa batter). Rest for 20 minutes.",
+        "Heat ghee: Heat ghee in flat pan on medium heat.",
+        "Fry malpuas: Pour ladleful of batter, spread slightly. The edges should be lacy and crispy.",
+        "Cook both sides: Fry until golden brown on both sides (about 2-3 minutes total).",
+        "Soak in syrup: Immediately dip fried malpua in warm sugar syrup for 2-3 minutes.",
+        "Serve: Remove from syrup, serve hot with rabri or as is. Garnish with nuts."
+      ]
+    },
+    "pua": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "1.5 cups rice flour (or wheat flour)",
+        "3/4 cup jaggery, grated",
+        "1/2 tsp cardamom powder",
+        "1/4 tsp fennel seeds",
+        "1/4 cup water",
+        "Oil for deep frying"
+      ],
+      "instructions": [
+        "Melt jaggery: Heat jaggery with water until completely melted. Strain and cool slightly.",
+        "Make batter: Mix rice flour, cardamom powder, fennel seeds. Add jaggery syrup.",
+        "Adjust consistency: Add water if needed to make thick, dropping batter (thicker than malpua).",
+        "Rest: Let batter rest for 10-15 minutes.",
+        "Heat oil: Heat oil for deep frying on medium heat.",
+        "Fry pua: Drop spoonfuls of batter into oil. They should sink and rise slowly.",
+        "Cook thoroughly: Fry on medium heat until deep golden brown (about 5-6 minutes). They should be cooked through, not raw inside.",
+        "Drain and serve: Remove when crispy outside, drain on paper. Serve warm or at room temperature."
+      ]
+    },
+    "tilkut": {
+      "story": "Winter\\",
+      "ingredients": [
+        "2 cups white sesame seeds (til)",
+        "1.5 cups jaggery, grated",
+        "1/2 tsp cardamom powder",
+        "Ghee for greasing"
+      ],
+      "instructions": [
+        "Roast sesame: Dry roast sesame seeds on low heat until aromatic and slightly golden (don\\",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", "
+      ]
+    },
+    "anarsa": {
+      "story": "The patient sweet that rewards waiting! Anarsa is Bihar and Jharkhand\\",
+      "ingredients": [
+        "2 cups rice (preferably old rice)",
+        "1 cup jaggery, grated",
+        "1/2 cup white sesame seeds",
+        "1/4 tsp cardamom powder",
+        "Ghee for frying"
+      ],
+      "instructions": [
+        "Day 1 - Soak: Wash and soak rice in water for 6-8 hours. Drain completely.",
+        "Day 1-2 - Dry: Spread rice on cloth, dry in shade for 24 hours until completely moisture-free.",
+        "Day 2 - Grind: Grind dried rice to fine powder. Sieve to remove coarse particles.",
+        "Day 2 - Mix: Melt jaggery with minimal water, mix with rice powder and cardamom. Make stiff dough.",
+        "Day 2-3 - Ferment: Cover and keep in warm place for 24 hours. Dough will ferment and soften slightly.",
+        "Day 3 - Shape: Make small balls, flatten into thick discs. Press sesame seeds on top.",
+        "Day 3 - Fry: Heat ghee, fry anarsa on low heat for 10-12 minutes until crispy and golden. Patience is key!",
+        "Cool and store: Cool completely. Store in airtight container. Stays crispy for weeks."
+      ]
+    },
+    "sattu-ladoo": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "2 cups sattu (roasted gram flour)",
+        "1 cup jaggery powder",
+        "1/2 cup ghee, melted",
+        "1/4 cup mixed nuts (almonds, cashews), chopped",
+        "2 tbsp sesame seeds",
+        "1 tsp cardamom powder",
+        "2 tbsp grated coconut (optional)"
+      ],
+      "instructions": [
+        "Roast sattu: Lightly roast sattu in dry pan for 2-3 minutes to enhance aroma. Cool.",
+        "Mix dry ingredients: Combine sattu, jaggery powder, chopped nuts, sesame seeds, cardamom, coconut.",
+        "Add ghee: Add melted ghee gradually and mix. The mixture should hold shape when pressed.",
+        "Shape ladoos: Take portions and shape into tight balls (lime-sized). Press firmly so they don\\",
+        ", ",
+        ", ",
+        ", "
+      ]
+    },
+    "khaja": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1/2 cup ghee (for dough and layering)",
+        "1/4 tsp baking soda",
+        "Water as needed",
+        "Ghee for deep frying",
+        "For syrup: 1.5 cups sugar",
+        "3/4 cup water",
+        "1/2 tsp cardamom powder"
+      ],
+      "instructions": [
+        "Make dough: Mix flour, baking soda, 2 tbsp ghee. Add water to make stiff dough. Knead well. Rest 30 minutes.",
+        "Create layers: Divide into portions. Roll each very thin, apply ghee, fold like envelope. Roll again. Repeat 3-4 times to create layers.",
+        "Final shape: Roll into rectangle, cut into 2-inch squares or diamonds.",
+        "Deep fry: Heat ghee, fry khaja on medium-low heat. They will puff up and develop layers. Fry until golden (5-7 minutes).",
+        "Make syrup: Boil sugar and water to one-string consistency. Add cardamom.",
+        "Soak: Dip fried khaja in warm syrup for 3-4 minutes.",
+        "Drain: Remove from syrup, let excess drip off.",
+        "Serve: Cool completely. The khaja should be crispy with absorbed sweetness. Store in airtight container."
+      ]
+    },
+    "balushahi-regional": {
+      "story": "The Indian doughnut that\\",
+      "ingredients": [
+        "2 cups all-purpose flour",
+        "1/2 cup ghee",
+        "1/4 cup yogurt",
+        "1/4 tsp baking soda",
+        "Pinch of cardamom powder",
+        "Ghee for deep frying",
+        "For syrup: 1.5 cups sugar",
+        "3/4 cup water",
+        "Few saffron strands",
+        "Sliced pistachios for garnish"
+      ],
+      "instructions": [
+        "Make dough: Mix flour, baking soda, cardamom. Add 1/2 cup ghee, rub until crumbly. Add yogurt and make stiff dough. Rest 30 minutes.",
+        "Shape: Make small balls (walnut-sized), flatten slightly. Make depression in center with thumb.",
+        "Fry slowly: Heat ghee for deep frying. FRY ON VERY LOW HEAT - this is crucial! Fry for 15-20 minutes until pale golden.",
+        "Test: Balushahi should be cooked through - break one to check. Outside should be crispy, inside cooked.",
+        "Make syrup: Boil sugar, water, saffron to one-string consistency.",
+        "Soak: Dip hot balushahi in warm syrup for 5 minutes. They will absorb syrup.",
+        "Garnish: Remove, place on wire rack. Fill center depression with thick syrup and pistachios.",
+        "Set: Let them set for few hours. They develop better texture overnight."
+      ]
+    },
+    "kachori-chaat": {
+      "story": "When kachori meets chaat magic! Kachori chaat transforms the humble stuffed kachori into a flavor explosion. Breaking open crispy kachori, topping it with boiled potatoes, chickpeas, yogurt, tangy chutneys, and crunchy sev creates layers of taste and texture. Every region has their style - some add hot potato curry, some keep it cold with yogurt. The contrast of hot crispy kachori with cold yogurt, sweet chutney with spicy green chutney, soft potatoes with crunchy sev - it\\",
+      "ingredients": [
+        "4 kachoris (ready-made or homemade)",
+        "1 cup boiled chickpeas",
+        "2 potatoes, boiled and cubed",
+        "1 cup yogurt, whisked",
+        "Green chutney",
+        "Tamarind chutney",
+        "1 tsp chaat masala",
+        "1 tsp roasted cumin powder",
+        "1/2 tsp red chili powder",
+        "Sev (fine and thick)",
+        "Boondi (fried gram flour balls)",
+        "Fresh coriander",
+        "Pomegranate seeds (optional)"
+      ],
+      "instructions": [
+        "Prepare kachoris: If using ready kachoris, heat them slightly. Break open at the center.",
+        "Add chickpea-potato: Fill kachoris with boiled chickpeas and potato cubes.",
+        "Yogurt layer: Pour whisked yogurt generously over kachoris.",
+        "Chutneys: Drizzle green chutney and sweet tamarind chutney in artistic patterns.",
+        "Spice it up: Sprinkle chaat masala, cumin powder, red chili powder.",
+        "Crunch factor: Top with generous sev, boondi for texture.",
+        "Garnish: Add fresh coriander and pomegranate seeds.",
+        "Serve immediately: Eat within 2-3 minutes before kachoris get soggy. The contrast of crispy and creamy is the essence!"
+      ]
+    },
+    "chura-matar": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "2 cups thick poha (flattened rice)",
+        "1 cup fresh/frozen peas",
+        "1 onion, chopped",
+        "2 green chilies, chopped",
+        "1 tsp mustard seeds",
+        "8-10 curry leaves",
+        "1/2 tsp turmeric",
+        "1 tsp sugar",
+        "2 tbsp peanuts (optional)",
+        "2 tbsp oil",
+        "Fresh coriander",
+        "Lemon juice",
+        "Salt to taste"
+      ],
+      "instructions": [
+        "Rinse poha: Wash poha gently in water, drain immediately. Let it sit for 5 minutes to soften (don\\",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", ",
+        ", "
+      ]
+    },
+    "panjeeri": {
+      "story": "The healing sweet from Ayurveda! Panjeeri (also called panjiri) is traditional postpartum food given to new mothers for strength and lactation. Made with whole wheat flour roasted in ghee, loaded with nuts, seeds, and warming spices, it\\",
+      "ingredients": [
+        "2 cups whole wheat flour",
+        "1 cup ghee",
+        "3/4 cup jaggery powder",
+        "1/4 cup almonds, chopped",
+        "1/4 cup cashews, chopped",
+        "2 tbsp melon seeds",
+        "2 tbsp gum Arabic (gondh), fried",
+        "2 tbsp edible gum (dink), fried",
+        "1 tsp fennel seeds, roasted",
+        "1 tsp dry ginger powder",
+        "1/2 tsp cardamom powder",
+        "2 tbsp grated coconut"
+      ],
+      "instructions": [
+        "Fry gondh: Heat little ghee, fry gum Arabic until it puffs up. Remove and cool. Crush slightly.",
+        "Roast flour: Heat ghee in heavy pan, add wheat flour. Roast on low heat, stirring continuously for 15-20 minutes until aromatic and golden.",
+        "Add nuts: Add chopped almonds, cashews, melon seeds. Roast for 3-4 minutes.",
+        "Add dry ingredients: Turn off heat. Add fried gondh, coconut, fennel, dry ginger, cardamom, jaggery powder.",
+        "Mix well: Mix thoroughly while still warm. The mixture should be crumbly but hold shape when pressed.",
+        "Cool: Spread on plate to cool completely.",
+        "Store: Store in airtight glass jar. Stays fresh for 2-3 months.",
+        "Serve: Take 1-2 tbsp with milk daily, or shape into ladoos to eat as sweet."
+      ]
+    },
+    "raita": {
+      "story": "The cooling companion to spicy Indian meals! Raita is yogurt-based side dish that brings balance, relief, and refreshment to meals. When curries are too spicy, raita cools. When meals are heavy, raita lightens. The varieties are endless - cucumber raita with its crunch, boondi raita with crispy balls, mixed raita with vegetables. The preparation is simple - whisk yogurt, add ingredients, season with roasted cumin and salt. But the effect is profound. Raita aids digestion (thanks to yogurt\\",
+      "ingredients": [
+        "2 cups fresh yogurt/curd",
+        "For cucumber raita: 1 cucumber, grated",
+        "For boondi raita: 1/2 cup boondi",
+        "For mixed raita: cucumber, tomato, onion, all chopped",
+        "1 tsp roasted cumin powder",
+        "1/2 tsp black salt",
+        "1/4 tsp red chili powder",
+        "Fresh coriander and mint, chopped",
+        "Regular salt to taste"
+      ],
+      "instructions": [
+        "Whisk yogurt: Take fresh yogurt in bowl, whisk until smooth and creamy. If too thick, add 2-3 tbsp water.",
+        "Prepare ingredients: For cucumber - grate and squeeze excess water. For boondi - soak in water for 5 minutes, squeeze and add.",
+        "Mix: Add your choice of ingredients to yogurt.",
+        "Season: Add roasted cumin powder, black salt, regular salt, chili powder. Mix well.",
+        "Chill: Refrigerate for 15-20 minutes for best taste.",
+        "Garnish: Just before serving, add chopped coriander and mint.",
+        "Serve: Serve cold as side dish with any meal."
+      ]
+    },
+    "pickles": {
+      "story": "The flavor bomb in tiny portions! Indian pickles (achar) are not side dishes - they\\",
+      "ingredients": [
+        "For basic pickle mix: Raw mangoes/lemons/mixed vegetables",
+        "1/4 cup mustard oil",
+        "2 tbsp mustard seeds, coarsely ground",
+        "1 tbsp fennel seeds",
+        "1 tbsp fenugreek seeds, roasted and ground",
+        "2 tbsp red chili powder",
+        "1 tbsp turmeric",
+        "1/4 cup salt",
+        "1 tsp hing (asafoetida)"
+      ],
+      "instructions": [
+        "Prepare vegetables: Cut mangoes/lemons into pieces. Dry completely in sun or wipe clean (no moisture).",
+        "Make masala: Mix all spice powders - mustard, fennel, fenugreek, chili, turmeric, salt, hing.",
+        "Mix: In glass/ceramic jar, mix vegetables with spice mixture.",
+        "Add oil: Heat mustard oil until smoking, cool completely. Pour over pickle.",
+        "Mix well: Mix thoroughly ensuring all pieces are coated.",
+        "Mature: Keep jar in sunlight for 7-15 days, shaking daily. Pickle will mature and oil will separate.",
+        "Store: Once matured, store in cool place. Lasts for months/years.",
+        "Serve: Serve small portions as accompaniment to meals."
+      ]
+    },
+    "papad": {
+      "story": "The crunch that completes the meal! Papad (or papadum) is thin, crispy wafer made from lentil flour that\\",
+      "ingredients": [
+        "Papad (store-bought)",
+        "Oil for frying (if making fried papad)",
+        "For serving: Chaat masala, lemon juice (optional)"
+      ],
+      "instructions": [
+        "Roasted method: Hold papad with tongs directly over gas flame. It will puff up and cook in 5-10 seconds. Flip and roast other side. Keep rotating to avoid burning.",
+        "Microwave method: Place papad on microwave-safe plate, cook for 30-40 seconds until it puffs up and crisps.",
+        "Fried method: Heat oil in pan, slide in papad. It will puff up immediately. Remove within 5 seconds and drain.",
+        "Season: Sprinkle chaat masala or squeeze lemon if desired.",
+        "Serve: Break into pieces and serve immediately while crispy."
+      ]
+    },
+    "green-chutney": {
+      "story": "The green magic that transforms snacks! Green chutney (hari chutney) is THE accompaniment to Indian street food and snacks. Made with fresh coriander, mint, green chilies, and spices, it\\",
+      "ingredients": [
+        "2 cups fresh coriander leaves with tender stems",
+        "1/2 cup fresh mint leaves",
+        "3-4 green chilies (adjust to taste)",
+        "1 inch ginger",
+        "2 cloves garlic",
+        "1/4 cup grated coconut (optional)",
+        "2 tbsp lemon juice",
+        "1 tsp roasted cumin powder",
+        "1/2 tsp black salt",
+        "Regular salt to taste",
+        "Water as needed"
+      ],
+      "instructions": [
+        "Wash herbs: Wash coriander and mint thoroughly. Remove thick stems from coriander, keep tender ones.",
+        "Blend: Add all ingredients to blender - coriander, mint, chilies, ginger, garlic, coconut, lemon juice, cumin, salts.",
+        "Grind: Add 2-3 tbsp water and grind to smooth paste. Don\\",
+        ", ",
+        ", ",
+        ", "
+      ]
+    },
+    "tamarind-chutney": {
+      "story": "The sweet-sour symphony! Tamarind chutney (imli ki chutney or meethi chutney) is the perfect balance of sweet and tangy that makes Indian chaats irresistible. Made from tamarind pulp, jaggery/sugar, and aromatic spices, it\\",
+      "ingredients": [
+        "1 cup tamarind pulp (from 100g tamarind)",
+        "1 cup jaggery or sugar",
+        "1/2 cup dates, chopped",
+        "1 tsp roasted cumin powder",
+        "1 tsp fennel powder",
+        "1/2 tsp dry ginger powder",
+        "1/4 tsp black salt",
+        "1/2 tsp red chili powder",
+        "1/4 tsp black pepper",
+        "Salt to taste",
+        "2 cups water"
+      ],
+      "instructions": [
+        "Extract tamarind: Soak tamarind in warm water for 30 minutes. Mash and strain to get pulp. Discard seeds and fiber.",
+        "Cook: In pan, add tamarind pulp, chopped dates, water. Bring to boil.",
+        "Add jaggery: Add jaggery/sugar, cook on medium heat for 10-12 minutes, stirring.",
+        "Add spices: Add cumin powder, fennel powder, ginger powder, black salt, chili powder, pepper, salt.",
+        "Thicken: Cook until thick, coating consistency. It will thicken more as it cools.",
+        "Cool: Cool completely. The chutney should be smooth and glossy.",
+        "Store: Store in glass bottle in fridge. Lasts 2-3 weeks.",
+        "Serve: Serve with chaats, snacks, or as dip."
+      ]
+    },
+    "curd": {
+      "story": "The probiotic powerhouse that\\",
+      "ingredients": [
+        "1 liter full-fat milk",
+        "2-3 tbsp curd (as starter culture)"
+      ],
+      "instructions": [
+        "Boil milk: Boil milk and let it cool to lukewarm (around 40-45°C/105-110°F). Test by dipping finger - should be comfortably warm, not hot.",
+        "Add culture: Add 2-3 tbsp of previous day\\",
+        ", ",
+        ", ",
+        ", ",
+        "s thick and doesn\\",
+        ", ",
+        ", "
+      ]
+    },
+    "phirni": {
+      "story": "The royal dessert served in earthy elegance! Phirni is Mughlai dessert that\\",
+      "ingredients": [
+        "1/4 cup basmati rice",
+        "1 liter full-fat milk",
+        "1/2 cup sugar",
+        "Few saffron strands",
+        "1/2 tsp cardamom powder",
+        "2 tbsp chopped pistachios",
+        "2 tbsp chopped almonds",
+        "Few drops kewra/rose water",
+        "Silver leaf for garnish"
+      ],
+      "instructions": [
+        "Prepare rice: Wash and soak rice for 30 minutes. Drain and coarsely grind to powder (not too fine).",
+        "Boil milk: In heavy pan, bring milk to boil. Lower heat to medium.",
+        "Add rice: Add ground rice to milk, stirring continuously to prevent lumps.",
+        "Cook: Keep stirring and cooking for 20-25 minutes. The rice will dissolve and milk will thicken.",
+        "Add flavors: Add sugar, saffron, cardamom, half the nuts. Cook for 5 more minutes.",
+        "Add essence: Remove from heat, add kewra or rose water.",
+        "Set: Pour into small earthen pots or serving bowls. Let cool to room temperature.",
+        "Chill: Refrigerate for at least 3-4 hours. Garnish with remaining nuts and silver leaf before serving."
+      ]
+    },
+    "kheer": {
+      "story": "The comfort dessert of every Indian household! Kheer (also called payasam) is rice pudding that\\",
+      "ingredients": [
+        "1/4 cup basmati rice",
+        "1 liter full-fat milk",
+        "1/2 cup sugar (adjust to taste)",
+        "1/2 tsp cardamom powder",
+        "2 tbsp chopped almonds",
+        "2 tbsp chopped cashews",
+        "2 tbsp raisins",
+        "Few saffron strands (optional)",
+        "Silver leaf for special occasions"
+      ],
+      "instructions": [
+        "Wash rice: Wash rice thoroughly and soak for 20 minutes. Drain.",
+        "Boil milk: In heavy-bottomed pan, bring milk to boil on medium heat.",
+        "Add rice: Add drained rice to boiling milk. Lower heat.",
+        "Cook: Cook on low-medium heat for 30-35 minutes, stirring frequently. Rice should be completely cooked and starting to break down.",
+        "Thicken: As it cooks, milk will reduce and thicken. Stir to prevent sticking.",
+        "Add sugar: When rice is soft and milk has thickened, add sugar and cardamom. Mix well.",
+        "Add nuts: Add half the nuts and raisins, reserve rest for garnish. Add saffron if using.",
+        "Final touch: Cook for 2-3 more minutes. Remove from heat. Kheer thickens more as it cools.",
+        "Serve: Serve hot or cold, garnished with remaining nuts. Both ways are delicious!"
+      ]
+    },
+    "gulab-jamun": {
+      "story": "India\\",
+      "ingredients": [
+        "1 cup khoya (mawa), crumbled",
+        "1/4 cup paneer, grated",
+        "3 tbsp all-purpose flour",
+        "1/4 tsp cardamom powder",
+        "Pinch of baking soda",
+        "Ghee for deep frying",
+        "For syrup: 2 cups sugar",
+        "1.5 cups water",
+        "4-5 green cardamom",
+        "1 tsp rose water",
+        "Few saffron strands"
+      ],
+      "instructions": [
+        "Make syrup first: Boil sugar and water with cardamom until one-string consistency. Add rose water and saffron. Keep warm.",
+        "Make dough: Mix khoya, paneer, flour, cardamom powder, tiny pinch of baking soda. Knead gently to smooth dough. Don\\",
+        ", ",
+        "ll break while frying. If dough is dry, add tiny bit of milk.",
+        "Heat ghee: Heat ghee for deep frying on LOW heat. This is crucial!",
+        "Fry slowly: Add balls to low heat ghee. Fry very slowly, rotating constantly for even browning (8-10 minutes). They should be deep golden, cooked through.",
+        "Soak: Remove fried balls directly into warm sugar syrup.",
+        "Absorb: Let them soak for at least 2-3 hours. They\\",
+        ", "
+      ]
+    },
+    "jalebi": {
+      "story": "The breakfast sweet that\\",
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "2 tbsp besan (gram flour)",
+        "1/4 tsp baking powder",
+        "Pinch of turmeric or orange food color",
+        "1/2 cup yogurt",
+        "Water as needed",
+        "Ghee for deep frying",
+        "For syrup: 1.5 cups sugar",
+        "3/4 cup water",
+        "Few saffron strands",
+        "1/2 tsp cardamom powder",
+        "Few drops lemon juice"
+      ],
+      "instructions": [
+        "Make batter: Mix flour, besan, baking powder, color. Add yogurt and water to make flowing batter (like dosa batter). Ferment for 8-12 hours or overnight.",
+        "Make syrup: Boil sugar and water with saffron and cardamom to one-string consistency. Add lemon juice. Keep warm.",
+        "Heat ghee: Heat ghee in wide pan for deep frying on medium heat.",
+        "Pipe jalebis: Pour batter in squeeze bottle or cloth with small hole. Pipe spirals directly into hot ghee.",
+        "Fry: Fry until crispy and golden on both sides (about 2 minutes total). The ghee should be sizzling but not smoking hot.",
+        "Soak: Remove and immediately dip in warm sugar syrup for 15-20 seconds.",
+        "Drain: Take out and place on rack to drain excess syrup.",
+        "Serve: Serve immediately while crispy-warm. Fresh jalebi is the best jalebi!"
+      ]
+    },
+    "malpua-rabri": {
+      "story": "The royal combination that defines indulgence! Malpua with rabri is the ultimate dessert duo - sweet, crispy malpua pancakes paired with rich, creamy rabri. Together, they create perfect balance - warm and cold, crispy and creamy, light and rich. This combination is festival royalty, appearing during Holi and other celebrations. The presentation is beautiful - golden malpuas stacked, topped with thick rabri, garnished with nuts and silver leaf. Each bite offers contrasting textures and complementary flavors. In Rajasthan, this is wedding dessert. In Varanasi and Bihar, this is Holi special. The effort is significant - both malpua and rabri require time and skill. But the result is worth it - a dessert that impresses, delights, and satisfies completely. This is celebration on a plate!",
+      "ingredients": [
+        "For malpua: See malpua recipe",
+        "For rabri: See rabri recipe",
+        "Additional garnish: Extra pistachios",
+        "Almonds",
+        "Silver leaf",
+        "Rose petals"
+      ],
+      "instructions": [
+        "Make rabri: Prepare rabri following full recipe. Chill completely.",
+        "Make sugar syrup: For malpuas, prepare sugar syrup with saffron and cardamom.",
+        "Prepare malpua batter: Make malpua batter and let it rest.",
+        "Fry malpuas: Fry malpuas until golden and crispy. Soak in syrup.",
+        "Assemble: Place 2-3 warm malpuas on serving plate.",
+        "Top with rabri: Generously pour chilled rabri over warm malpuas.",
+        "Garnish: Garnish with chopped nuts, silver leaf, and rose petals.",
+        "Serve immediately: The contrast of warm crispy malpua with cold creamy rabri is the magic! Serve right away."
+      ]
+    },
+    "imarti": {
+      "story": "Jalebi\\",
+      "ingredients": [
+        "1 cup urad dal (skinless black gram)",
+        "1/4 tsp baking soda",
+        "Orange/red food color",
+        "Ghee for deep frying",
+        "For syrup: 2 cups sugar",
+        "1 cup water",
+        "Few saffron strands",
+        "1/2 tsp cardamom powder",
+        "Few drops lemon juice"
+      ],
+      "instructions": [
+        "Soak dal: Wash and soak urad dal for 4-5 hours. Drain.",
+        "Grind: Grind to smooth, thick, flowing paste without water (or minimal water). The consistency should be thick like idli batter.",
+        "Ferment: Add baking soda and color, mix well. Ferment for 8-10 hours or overnight in warm place. Batter will become airy.",
+        "Make syrup: Boil sugar, water, saffron, cardamom to one-string consistency. Add lemon juice. Keep warm.",
+        "Heat ghee: Heat ghee in wide pan on medium heat.",
+        "Pipe imarti: Pour batter in cloth with small hole or squeeze bottle. Pipe flower/star patterns directly into hot ghee. The pattern should be intricate.",
+        "Fry: Fry until crispy and deep orange on both sides (2-3 minutes total).",
+        "Soak: Immediately dip in warm syrup for 1 minute. Remove and drain excess.",
+        "Serve: Serve fresh and warm for best taste!"
+      ]
+    },
+    "balushahi-dessert": {
+      "story": "See balushahi-regional for full story. This rich, flaky sweet is wedding favorite and celebration essential. The slow-fried dough balls with their characteristic depression filled with syrup are pure indulgence. Every bite crumbles delicately, releasing sweetness. Perfect with tea or as standalone sweet!",
+      "ingredients": [
+        "See balushahi-regional recipe for complete ingredients"
+      ],
+      "instructions": [
+        "Follow balushahi-regional recipe for detailed instructions. Key points: Use ghee in dough, fry on very low heat for 15-20 minutes, soak in one-string sugar syrup, fill center with thick syrup."
+      ]
+    },
+    "cham-cham": {
+      "story": "Bengal\\",
+      "ingredients": [
+        "For chhena: 1 liter full-fat milk",
+        "3 tbsp lemon juice",
+        "For syrup: 2 cups sugar",
+        "3 cups water",
+        "3-4 green cardamom",
+        "For coating: 1/2 cup desiccated coconut or khoya",
+        "Orange/pink food color (optional)"
+      ],
+      "instructions": [
+        "Make chhena: Boil milk, add lemon juice to curdle. Strain through cloth, wash under cold water to remove sourness. Hang for 30 minutes to remove excess water.",
+        "Knead: Knead chhena for 8-10 minutes until smooth and fatty (very important for texture).",
+        "Shape: Divide into portions, shape into thick cylinders (about 2 inches long).",
+        "Make syrup: Boil sugar and water with cardamom. Add color if using.",
+        "Cook cham cham: Add shaped chhena cylinders to boiling syrup. Cook on medium heat for 15-20 minutes. They will puff up and become spongy.",
+        "Cool: Remove from syrup, let cool to room temperature. They will shrink slightly.",
+        "Coat: Roll in desiccated coconut or crumbled khoya.",
+        "Serve: Serve at room temperature or chilled. Store in syrup if not serving immediately."
+      ]
+    },
+    "khaja-dessert": {
+      "story": "See khaja in Regional Delights for full story. Bihar\\",
+      "ingredients": [
+        "See khaja recipe in Regional Delights for complete ingredients"
+      ],
+      "instructions": [
+        "Follow khaja recipe for detailed layering technique. Key: repeated rolling and folding with ghee creates layers, slow frying puffs them up, syrup soaking adds sweetness while maintaining crispiness."
+      ]
+    },
+    "rasmalai": {
+      "story": "The dessert that defines elegance! Rasmalai is soft, spongy cottage cheese discs soaked in thick, creamy, saffron-flavored milk. Each piece is cloud-like - so soft it almost dissolves on the tongue. The contrast of the cheese disc with the creamy milk, the subtle cardamom and saffron flavors, the garnish of pistachios - every element is refined. Bengali sweet shops created this masterpiece, and it has conquered India and beyond. Rasmalai is special occasion dessert - celebrations, festivals, dinner parties. The presentation in bowls with generous rabri-like milk, the cold serving temperature, the delicate sweetness - it\\",
+      "ingredients": [
+        "For chhena: 1.5 liters milk + 4 tbsp lemon juice",
+        "For syrup: 2 cups sugar + 4 cups water",
+        "For rabri: 1 liter milk + 1/2 cup sugar + saffron + cardamom powder + 3 tbsp chopped pistachios + 2 tbsp almonds"
+      ],
+      "instructions": [
+        "Make chhena: Boil milk, curdle with lemon juice, strain, wash, hang for 30 minutes.",
+        "Knead: Knead chhena for 10 minutes until absolutely smooth.",
+        "Shape: Make small balls, flatten into thick discs (they\\",
+        ", ",
+        "ll double in size.",
+        "Make rabri: In another pan, boil milk, reduce to half, add sugar, saffron, cardamom, half the nuts.",
+        "Squeeze: Remove cooked discs from syrup, gently squeeze between palms to remove excess syrup.",
+        "Soak in rabri: Add squeezed discs to prepared rabri. Soak for 2-3 hours in fridge.",
+        "Serve: Serve cold in bowls with rabri, garnished with nuts. Pure bliss!"
+      ]
+    },
+    "sattu-drink": {
+      "story": "Bihar\\",
+      "ingredients": [
+        "3 tbsp sattu (roasted gram flour)",
+        "1 cup cold water",
+        "For sweet version: 2 tbsp sugar/jaggery powder + 1/4 tsp cardamom powder",
+        "For salty version: 1/2 tsp black salt + 1/4 tsp roasted cumin powder + 1 green chili, chopped + 1 tbsp lemon juice + fresh coriander",
+        "Ice cubes"
+      ],
+      "instructions": [
+        "Sweet sattu: Mix sattu, sugar, cardamom in glass. Add little water to make paste (prevents lumps).",
+        "Add water: Add remaining cold water, stir vigorously until smooth.",
+        "Serve sweet: Add ice cubes, serve immediately. Some prefer it thick, some add more water.",
+        "Salty sattu: Mix sattu with little water to paste. Add black salt, cumin powder, chopped chili, coriander.",
+        "Complete: Add remaining water, stir well. Add lemon juice.",
+        "Serve salty: Add ice, serve with coriander garnish. It\\",
+        ", "
+      ]
+    },
+    "lassi": {
+      "story": "Punjab\\",
+      "ingredients": [
+        "2 cups fresh yogurt/curd",
+        "1 cup cold water or ice cubes",
+        "For sweet: 3-4 tbsp sugar + 1/4 tsp cardamom powder + few saffron strands + cream for topping",
+        "For salted: 1 tsp salt + 1/2 tsp roasted cumin powder + fresh mint leaves + black salt",
+        "Ice cubes"
+      ],
+      "instructions": [
+        "Sweet lassi: Blend yogurt, sugar, cardamom, saffron with half cup water until frothy.",
+        "Add ice: Add ice cubes and remaining water, blend again until very frothy.",
+        "Serve sweet: Pour in tall glasses, top with cream and chopped nuts. Should be thick and frothy.",
+        "Salted lassi: Blend yogurt with salt, cumin powder, mint, black salt, and half cup water.",
+        "Blend with ice: Add ice and remaining water, blend until frothy.",
+        "Serve salted: Pour in glasses, garnish with mint leaves and cumin powder sprinkle.",
+        "Note: Adjust sweetness/saltiness to taste. Lassi should be thick enough to coat glass sides."
+      ]
+    },
+    "nimbu-pani": {
+      "story": "India\\",
+      "ingredients": [
+        "2 tbsp fresh lime juice (1-2 limes)",
+        "1 cup water",
+        "For sweet: 2 tbsp sugar",
+        "For salty: 1/4 tsp black salt + pinch regular salt + 1/4 tsp roasted cumin powder",
+        "For masala: Above spices + chat masala + pinch black pepper",
+        "Ice cubes",
+        "Fresh mint leaves (optional)",
+        "Soda water for fizzy version"
+      ],
+      "instructions": [
+        "Extract juice: Squeeze fresh limes to get juice. Remove seeds.",
+        "Sweet version: Mix sugar with little water to dissolve. Add lime juice and remaining water.",
+        "Salty version: Mix black salt, regular salt, cumin powder in glass. Add lime juice and water.",
+        "Masala version: Add all spices to glass, add lime juice, water, and chaat masala.",
+        "Mix well: Stir vigorously. Taste and adjust.",
+        "Add ice: Add ice cubes generously. Add mint leaves.",
+        "Soda option: Replace half water with soda water for fizzy nimbu pani.",
+        "Serve: Serve immediately, garnished with lime slice. Perfect refreshment!"
+      ]
+    },
+    "aam-panna": {
+      "story": "Summer\\",
+      "ingredients": [
+        "2 large raw mangoes",
+        "1/2 cup sugar (adjust)",
+        "1 tsp black salt",
+        "1/2 tsp regular salt",
+        "1 tsp roasted cumin powder",
+        "Few fresh mint leaves",
+        "1/4 tsp black pepper powder",
+        "Water as needed",
+        "Ice cubes"
+      ],
+      "instructions": [
+        "Roast mangoes: Roast raw mangoes directly on flame or in oven until skin is charred and fruit is soft (15-20 minutes).",
+        "Extract pulp: Cool, peel off skin, extract pulp, discard seed.",
+        "Blend: Blend mango pulp with sugar, both salts, cumin powder, mint, black pepper, and 1 cup water until smooth.",
+        "Make concentrate: This is your aam panna concentrate. It\\",
+        ", ",
+        ", ",
+        ", ",
+        ", "
+      ]
+    },
+    "thandai": {
+      "story": "Holi\\",
+      "ingredients": [
+        "3 cups chilled milk",
+        "3 tbsp sugar",
+        "2 tbsp almonds",
+        "1 tbsp cashews",
+        "1 tbsp pistachios",
+        "1 tbsp melon seeds",
+        "1 tbsp fennel seeds",
+        "1 tsp black peppercorns",
+        "4-5 green cardamom",
+        "1 tbsp poppy seeds",
+        "1 tsp dried rose petals",
+        "Few saffron strands",
+        "Ice cubes",
+        "Rose petals and nuts for garnish"
+      ],
+      "instructions": [
+        "Soak: Soak almonds, cashews, pistachios, melon seeds, poppy seeds in water for 2-3 hours.",
+        "Make paste: Drain and grind soaked nuts with fennel, peppercorns, cardamom, rose petals, little milk to fine paste.",
+        "Mix with milk: Add paste to chilled milk, add sugar, stir well.",
+        "Strain: Strain through fine strainer to remove coarse particles (optional - some like it with texture).",
+        "Add saffron: Add saffron strands for color and flavor.",
+        "Chill: Refrigerate for 1-2 hours for flavors to meld.",
+        "Serve: Serve chilled with ice cubes, garnished with rose petals and chopped nuts.",
+        "Enjoy: Sip slowly - thandai is rich and meant to be savored!"
+      ]
+    },
+    "khus-sharbat": {
+      "story": "The ancient cooler from Ayurveda! Khus (vetiver) sharbat is made from vetiver roots that have natural cooling properties. The concentrated green syrup has distinctive earthy-sweet aroma that\\",
+      "ingredients": [
+        "2-3 tbsp khus syrup (store-bought)",
+        "1 cup chilled water",
+        "1 tbsp lemon juice",
+        "1 tbsp sugar (if syrup not sweet enough)",
+        "Ice cubes",
+        "Lemon slices for garnish"
+      ],
+      "instructions": [
+        "Mix: In glass, add khus syrup.",
+        "Add water: Add chilled water, stir well.",
+        "Add lemon: Add lemon juice for tangy balance.",
+        "Sweeten: Add sugar if needed. Commercial syrups are usually pre-sweetened.",
+        "Add ice: Add generous ice cubes.",
+        "Stir: Mix well until syrup is evenly distributed.",
+        "Garnish: Add lemon slice.",
+        "Serve: Serve immediately. The earthy-sweet aroma is distinctive!"
+      ]
+    },
+    "extra-chutney": {
+      "story": "Never enough chutney! Both green chutney (coriander-mint) and sweet tamarind chutney are so essential that one serving is rarely sufficient. Extra chutneys mean more dipping, more drizzling, more flavor. See individual chutney recipes for full stories - these flavor enhancers transform simple snacks into spectacular experiences!",
+      "ingredients": [
+        "See green-chutney or tamarind-chutney recipes"
+      ],
+      "instructions": [
+        "Serve extra portion of chosen chutney in small bowl."
+      ]
+    },
+    "extra-pickle": {
+      "story": "The flavor bomb that\\",
+      "ingredients": [
+        "See pickles recipe for varieties"
+      ],
+      "instructions": [
+        "Serve extra portion of chosen pickle variety in small bowl."
+      ]
+    },
+    "extra-papad": {
+      "story": "Because one papad is never enough! The satisfying crunch of papad makes it dangerously easy to finish. Extra papads mean you can enjoy that crispiness throughout your meal. See papad recipe for full story - these lentil wafers are the unsung heroes of Indian dining!",
+      "ingredients": [
+        "See papad recipe"
+      ],
+      "instructions": [
+        "Roast/fry additional papad as per papad recipe. Serve hot and crispy."
+      ]
+    },
+    "extra-curd": {
+      "story": "Cool relief on demand! When curries are spicy or meals are heavy, extra curd/raita provides additional cooling comfort. The probiotic benefits, digestive aid, and refreshing taste make it worth ordering extra. See curd and raita recipes for full stories - these yogurt-based sides are essential for balanced Indian meals!",
+      "ingredients": [
+        "See curd or raita recipes"
+      ],
+      "instructions": [
+        "Serve additional portion of fresh curd or prepared raita in small bowl, chilled."
+      ]
+    }
+  }
+}

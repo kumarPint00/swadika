@@ -38,12 +38,14 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
 import { menuData } from "@/lib/menuData";
+import { useLocale } from "@/context/LocaleContext";
 
 const MotionCard = motion(Card);
 const MotionBox = motion(Box);
 const MotionChip = motion(Chip);
 
 export default function BlogPage() {
+  const { t, getDishTranslation } = useLocale();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -186,7 +188,7 @@ export default function BlogPage() {
               transition={{ duration: 2, repeat: Infinity }}
             >
               <Chip 
-                label="📚 Recipe Collection" 
+                label={`📚 ${t("recipe.recipeCollection")}`} 
                 size="medium"
                 sx={{ 
                   mb: 3, 
@@ -211,16 +213,7 @@ export default function BlogPage() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Traditional{" "}
-              <Box component="span" sx={{ 
-                background: "linear-gradient(90deg, #FFD700 0%, #FFA500 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}>
-                Recipes
-              </Box>
-              {" "}& Stories
+              {t("recipe.traditionalRecipes")}
             </Typography>
             
             <Typography 
@@ -234,8 +227,7 @@ export default function BlogPage() {
                 lineHeight: 1.8,
               }}
             >
-              Discover {recipeDishes.length}+ authentic Bihar & UP recipes with complete 
-              cooking instructions and cultural stories
+              {t("recipe.discoverRecipes").replace("{count}", recipeDishes.length.toString())}
             </Typography>
 
             {/* Stats Row */}
@@ -257,7 +249,7 @@ export default function BlogPage() {
                   {recipeDishes.length}+
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.95 }}>
-                  Total Recipes
+                  {t("recipe.totalRecipes")}
                 </Typography>
               </MotionBox>
               {favorites.length > 0 && (
@@ -278,7 +270,7 @@ export default function BlogPage() {
                     ❤️ {favorites.length}
                   </Typography>
                   <Typography variant="body2" sx={{ opacity: 0.95 }}>
-                    Your Favorites
+                    {t("recipe.yourFavorites")}
                   </Typography>
                 </MotionBox>
               )}
@@ -305,7 +297,7 @@ export default function BlogPage() {
             {/* Search Bar - Enhanced */}
             <TextField 
               fullWidth 
-              placeholder="Search recipes by name, ingredients, or story..." 
+              placeholder={t("recipe.searchRecipes")} 
               value={searchQuery} 
               onChange={(e) => setSearchQuery(e.target.value)} 
               sx={{ 
@@ -413,7 +405,7 @@ export default function BlogPage() {
               }}
             >
               <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                📖 {filteredDishes.length} recipes found
+                📖 {filteredDishes.length} {t("recipe.recipesFound")}
               </Typography>
             </Box>
           </MotionBox>
@@ -564,7 +556,7 @@ export default function BlogPage() {
                             }}
                           />
                           <Chip 
-                            label={dish.isVeg ? "🌱 Veg" : "🍖 Non-Veg"} 
+                            label={dish.isVeg ? `🌱 ${t("menu.veg")}` : `🍖 ${t("menu.nonVeg")}`} 
                             size="small" 
                             sx={{
                               fontWeight: 600,
@@ -618,7 +610,7 @@ export default function BlogPage() {
                         }}>
                           <Box>
                             <Typography variant="caption" color="text.secondary" sx={{ display: "block" }}>
-                              Servings
+                              {t("recipe.servings")}
                             </Typography>
                             <Typography variant="h6" sx={{ fontWeight: 700 }}>
                               🍽️ {dish.servings}
@@ -627,7 +619,7 @@ export default function BlogPage() {
                           <Divider orientation="vertical" flexItem />
                           <Box>
                             <Typography variant="caption" color="text.secondary" sx={{ display: "block" }}>
-                              Price
+                              {t("common.viewDetails").split(" ")[1] || "Price"}
                             </Typography>
                             <Typography 
                               variant="h6" 
@@ -647,7 +639,7 @@ export default function BlogPage() {
                               <Divider orientation="vertical" flexItem />
                               <Box>
                                 <Typography variant="caption" color="text.secondary" sx={{ display: "block" }}>
-                                  Calories
+                                  {t("recipe.calories")}
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
                                   🔥 {dish.nutrition.calories}
@@ -684,12 +676,12 @@ export default function BlogPage() {
                               }}
                             >
                               <Typography variant="h6" sx={{ fontWeight: 700, display: "flex", alignItems: "center", gap: 1 }}>
-                                📖 Story & Origin
+                                📖 {t("recipe.story")}
                               </Typography>
                             </AccordionSummary>
                             <AccordionDetails sx={{ pt: 0 }}>
                               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8, mb: 2 }}>
-                                {dish.story}
+                                {getDishTranslation(dish.id, 'story') || dish.story}
                               </Typography>
                               {dish.origin && (
                                 <Box sx={{ 
@@ -742,7 +734,7 @@ export default function BlogPage() {
                             >
                               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                                  🥘 Ingredients
+                                  🥘 {t("recipe.ingredients")}
                                 </Typography>
                                 <Chip 
                                   label={dish.ingredients.length} 
@@ -761,7 +753,7 @@ export default function BlogPage() {
                                 gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
                                 gap: 1.5,
                               }}>
-                                {dish.ingredients.map((ing, i) => (
+                                {(getDishTranslation(dish.id, 'ingredients') as string[] || dish.ingredients).map((ing, i) => (
                                   <MotionBox
                                     key={i}
                                     initial={{ opacity: 0, x: -10 }}
@@ -814,10 +806,10 @@ export default function BlogPage() {
                             >
                               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                                  👨‍🍳 Cooking Steps
+                                  👨‍🍳 {t("recipe.instructions")}
                                 </Typography>
                                 <Chip 
-                                  label={`${dish.instructions.length} steps`} 
+                                  label={`${dish.instructions.length} ${t("recipe.instructionsCount")}`} 
                                   size="small" 
                                   sx={{ 
                                     background: "linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)",
@@ -829,7 +821,7 @@ export default function BlogPage() {
                             </AccordionSummary>
                             <AccordionDetails>
                               <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                                {dish.instructions.map((inst, i) => (
+                                {(getDishTranslation(dish.id, 'instructions') as string[] || dish.instructions).map((inst, i) => (
                                   <MotionBox
                                     key={i}
                                     initial={{ opacity: 0, x: -20 }}
@@ -899,7 +891,7 @@ export default function BlogPage() {
                                 }}
                               >
                                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                                  📊 Nutrition
+                                  📊 {t("recipe.nutrition")}
                                 </Typography>
                               </AccordionSummary>
                               <AccordionDetails>
@@ -951,7 +943,7 @@ export default function BlogPage() {
                                 }}
                               >
                                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                                  🍽️ Pairings
+                                  🍽️ {t("recipe.pairings")}
                                 </Typography>
                               </AccordionSummary>
                               <AccordionDetails>
@@ -999,7 +991,7 @@ export default function BlogPage() {
                               },
                             }}
                           >
-                            Order Now - ₹{dish.price}
+                            {t("common.order")} - ₹{dish.price}
                           </Button>
                         </MotionBox>
                         <MotionBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -1028,7 +1020,7 @@ export default function BlogPage() {
                               },
                             }}
                           >
-                            Share Recipe
+                            {t("recipe.shareRecipe")}
                           </Button>
                         </MotionBox>
                       </Box>
@@ -1080,10 +1072,10 @@ export default function BlogPage() {
               </Box>
             </MotionBox>
             <Typography variant="h4" sx={{ mb: 2, fontWeight: 700 }}>
-              No recipes found
+              {t("recipe.noRecipesFound")}
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-              Try adjusting your filters or search terms
+              {t("recipe.tryDifferentSearch")}
             </Typography>
             <Button
               variant="outlined"
@@ -1099,7 +1091,7 @@ export default function BlogPage() {
                 fontWeight: 600,
               }}
             >
-              Clear Filters
+              {t("common.clearFilters")}
             </Button>
           </MotionBox>
         )}
